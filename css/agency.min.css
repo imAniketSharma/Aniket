@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-section h2.section-heading {
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 0;
     margin-bottom: 15px
 }
@@ -190,7 +190,7 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 header.masthead .intro-text .intro-heading {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 50px;
     margin-top: 0;
@@ -580,7 +580,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-    background-color: #21252050;
+    background-color: #21252030;
     background-repeat: no-repeat;
     background-position: center
 }
