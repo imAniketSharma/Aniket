@@ -55,6 +55,9 @@
             <a class="nav-link js-scroll-trigger" href="#about"><strong>Blogs</strong></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#github"><strong>Github</strong></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact"><strong>Contact</strong></a>
           </li>
         </ul>
@@ -390,6 +393,31 @@
 
 
 
+  <!-- Prepare a container for your calendar. -->
+
+  <section class="bg-light page-section" id="github">
+    <div class="container">
+      <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
+      </script>
+
+      <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+      <link rel="stylesheet"
+        href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+
+      <!-- Prepare a container for your calendar. -->
+      <div class="calendar">
+        <!-- Loading stuff -->
+        Loading the data just for you.
+      </div>
+
+      <script>
+        new GitHubCalendar(".calendar", "imAniketSharma");
+      </script>
+
+    </div>
+  </section>
+
+
 
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -487,31 +515,36 @@
                 <h3 class="text-uppercase">Spam Classification System</h3>
                 <p class="item-intro text-muted">Trace your message whether its spam or ham.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/spam2.png" alt="">
-
-                <p><strong>Spam : </strong> Spam, also referred to as junk messages, is unsolicited messages sent in
-                  bulk by email (spamming).
-                  Since the expense of the spam is borne mostly by the recipient, it is effectively postage due
-                  advertising. This makes
-                  it an excellent example of a negative externality. Most spam messages are commercial in nature.
-                </p>
-                <p>
-                  <strong>Ham (not spam) : </strong>"Ham" is e-mail that is not Spam. In other words, "non-spam", or
-                  "good mail". It should be considered a shorter,
-                  snappier synonym for "non-spam". Its usage is particularly common among anti-spam software developers,
-                  and not widely
-                  known elsewhere; in general it is probably better to use the term "non-spam", instead.
-                </p>
-                <h4>What does Spam Classifiers do?</h4>
-                <p>Spam classifiers detect unsolicited, unwanted, and virus-infested email (called spam) and stop it
-                  from getting into email inboxes. Internet Service Providers (ISPs) use spam filters to make sure they
-                  aren't
-                  distributing spam.!</p>
+                <div class="project-details">
+                  <p><strong>Spam : </strong> Spam, also referred to as junk messages, is unsolicited messages sent in
+                    bulk by email (spamming).
+                    Since the expense of the spam is borne mostly by the recipient, it is effectively postage due
+                    advertising. This makes
+                    it an excellent example of a negative externality. Most spam messages are commercial in nature.
+                  </p>
+                  <p>
+                    <strong>Ham (not spam) : </strong>"Ham" is e-mail that is not Spam. In other words, "non-spam", or
+                    "good mail". It should be considered a shorter,
+                    snappier synonym for "non-spam". Its usage is particularly common among anti-spam software
+                    developers,
+                    and not widely
+                    known elsewhere; in general it is probably better to use the term "non-spam", instead.
+                  </p>
+                  <h4>What does Spam Classifiers do?</h4>
+                  <p>Spam classifiers detect unsolicited, unwanted, and virus-infested email (called spam) and stop it
+                    from getting into email inboxes. Internet Service Providers (ISPs) use spam filters to make sure
+                    they
+                    aren't
+                    distributing spam.!</p>
+                </div>
 
                 <ul class="list-inline">
                   <li><strong>Project Link : </strong><a href="https://spamclassiifier.herokuapp.com/"><strong>Click
                         Here</strong></a></li>
                   <br>
-                  <li><strong>Github Link : </strong><a href=""><strong>Click Here</strong></a></li>
+                  <li><strong>Github Link : </strong><a
+                      href="https://github.com/imAniketSharma/spam-classifier-system"><strong>Click Here</strong></a>
+                  </li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
@@ -541,12 +574,21 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h3 class="text-uppercase">Project Under construction ..</h3>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                  blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
-                  expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h3 class="text-uppercase">Car detection - Autonomous driving</h3>
+                <p class="item-intro text-muted">Object Detection using YOLO</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/object.jpg" alt="">
+
+                <p><strong>* Use object detection on a car detection dataset.</strong><br>
+                  <strong>* Deal with bounding boxes</strong><br>
+                <div class="project-details">
+                  <strong>"You Only Look Once" (YOLO) </strong> is a popular algorithm because it achieves high accuracy
+                  while also being able to run in
+                  real-time. This algorithm "only looks once" at the image in the sense that it requires only one
+                  forward propagation pass
+                  through the network to make predictions. After non-max suppression, it then outputs recognized objects
+                  together with the
+                  bounding boxes.!</p>
+                </div>
                 <ul class="list-inline">
                   <li><strong>Project Link : </strong><a href=""><strong>Click Here</strong></a></li>
                   <br>
@@ -582,17 +624,32 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h3 class="text-uppercase">Project Under construction ..</h3>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Trigger word detection is the technology that allows devices like Amazon Alexa, Google Home and Apple
-                  Siri to wake up upon hearing a certain word.</p>
-                <p>our trigger word will be "Activate." Every time it hears you say "activate," it will make a "chiming"
-                  sound</p>
+                <h3 class="text-uppercase">Trigger Word Detection</h3>
+                <p class="item-intro text-muted">Final Project of My DeepLearning Specialization CNN Course.</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/alexa.jpg" alt="">
+                <div class="project-details">
+                  <p>Trigger word detection is the technology that allows devices like Amazon Alexa, Google Home and
+                    Apple
+                    Siri to wake up upon hearing a certain word.</p>
+                  <p>For this Project Our trigger word will be <b>"Activate."</b> Every time it hears you say
+                    "activate," it
+                    will make a "chiming"
+                    sound</p>
+                  <p><b>Used these audio files to synthesize a dataset to train the model.</b><br>
+                    * The <b>"activate"</b> directory contains positive examples of people saying the word
+                    "activate".<br>
+                    * The <b>"negatives"</b> directory contains negative examples of people saying random words other
+                    than
+                    "activate".<br>
+                    * There is one word per audio recording.<br>
+                    * The <b>"backgrounds"</b> directory contains 10 second clips of background noise in different
+                    environments.</p>
+                </div>
                 <ul class="list-inline">
                   <li><strong>Project Link : </strong><a href=""><strong>Click Here</strong></a></li>
                   <br>
-                  <li><strong>Github Link : </strong><a href=""><strong>Click
+                  <li><strong>Github Link : </strong><a
+                      href="https://github.com/imAniketSharma/Trigger-word-detection-system "><strong>Click
                         Here</strong></a></li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -626,12 +683,20 @@
                 <h3 class="text-uppercase">Tic Tac Toe</h3>
                 <p class="item-intro text-muted">Fun nd Play Python Package Shell Game .</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/tictactoe.png" alt="">
-                <p><strong>Tic Tac Toe</strong>, is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The
-                player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.</p>
-                <p>This is a working Python Package and can be installed either locally or via pip from the pypi repository! You can install it into your Python environment using command : 
-                <br> <strong>pip install my-tic-tac-toe</strong><br> and can be played in the python shell by importing this package using : <br><strong>import my_tic_tac_toe</strong></p>
+                <div class="project-details">
+                  <p><strong>Tic Tac Toe</strong>, is a paper-and-pencil game for two players, X and O, who take turns
+                    marking the spaces in a 3×3 grid. The
+                    player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is
+                    the
+                    winner.</p>
+                  <p>This is a working Python Package and can be installed either locally or via pip from the pypi
+                    repository! You can install it into your Python environment using command :
+                    <br> <strong>pip install my-tic-tac-toe</strong><br> and can be played in the python shell by
+                    importing this package using : <br><strong>import my_tic_tac_toe</strong></p>
+                </div>
                 <ul class="list-inline">
-                  <li><strong>Project Link : </strong><a href="https://pypi.org/project/my-tic-tac-toe/"><strong>Click Here</strong></a></li>
+                  <li><strong>Project Link : </strong><a href="https://pypi.org/project/my-tic-tac-toe/"><strong>Click
+                        Here</strong></a></li>
                   <br>
                   <li><strong>Github Link : </strong><a href=""><strong>Click
                         Here</strong></a></li>
@@ -664,16 +729,27 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h3 class="text-uppercase">Project Under construction ..</h3>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-                  blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
-                  expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <h3 class="text-uppercase">Artistic Image Generation</h3>
+                <p class="item-intro text-muted">Deep Learning & Art: Neural Style Transfer.</p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/artistics.png" alt="">
+                <div class="project-details">
+                  <p><b>Neural Style Transfer(NST)</b> is one of the most fun techniques in deep learning. It merges two
+                    images, namely: <b>a
+                      "content" image (C) and a "style" image (S), to create a "generated" image (G).</b>
+
+                    The generated image G combines the "content" of the image C with the "style" of image S.!</p>
+                  <p>Neural Style Transfer (NST) uses a previously trained convolutional network, and builds on top of
+                    that. We used the <b>VGG Network.</b> Specifically, we'll use VGG-19, a 19-layer version of the VGG
+                    network. This model has
+                    already been trained on the very large ImageNet database, and thus has learned to recognize a
+                    variety of low level
+                    features (at the shallower layers) and high level features (at the deeper layers).</p>
+                </div>
                 <ul class="list-inline">
                   <li><strong>Project Link : </strong><a href=""><strong>Click Here</strong></a></li>
                   <br>
-                  <li><strong>Github Link : </strong><a href=""><strong>Click
+                  <li><strong>Github Link : </strong><a
+                      href="https://github.com/imAniketSharma/Artistic-Image-Generation"><strong>Click
                         Here</strong></a></li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -706,13 +782,17 @@
                 <h3 class="text-uppercase">Urban Winner</h3>
                 <p class="item-intro text-muted">A Flask Web App (Blog)</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/avengers.jpg" alt="">
-                <p><strong>Urban Winner </strong>is basically a flask web app built on PostgreSql database. It is a fun
-                  blog app about the Characters of Marvel Cinematic Universe. </p>
-                <p>
-                  All the heros (Avengers) of MCU are characterized in this app.</p>
+                <div class="project-details">
+                  <p><strong>Urban Winner </strong>is basically a flask web app built on PostgreSql database. It is a
+                    fun
+                    blog app about the Characters of Marvel Cinematic Universe. </p>
+                  <p>
+                    All the heros (Avengers) of MCU are characterized in this app.</p>
+                </div>
                 <ul class="list-inline">
 
-                  <li><strong>Project Link : </strong><a href="http://urbanwinner.herokuapp.com/"><strong>Click Here</strong></a></li>
+                  <li><strong>Project Link : </strong><a href="http://urbanwinner.herokuapp.com/"><strong>Click
+                        Here</strong></a></li>
                   <br>
                   <li><strong>Github Link : </strong><a
                       href="https://github.com/imAniketSharma/urbanwinner"><strong>Click
