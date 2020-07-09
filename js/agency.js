@@ -63,6 +63,7 @@ $(function () {
 //  Owl Carousel Services
 // ========================================================================= //
 
+$(function () {
 $('.services-carousel').owlCarousel({
   autoplay: true,
   loop: true,
@@ -83,3 +84,4 @@ $('.services-carousel').owlCarousel({
   }
 });
 
+});
