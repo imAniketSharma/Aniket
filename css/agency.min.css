@@ -1,4 +1,3 @@
-
 body {
     overflow-x: hidden;
     font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
@@ -743,4 +742,78 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .hero-content .list-social li i {
     color: #fff;
     font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+#portfolio {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#portfolio .portfolio-list {
+    margin-bottom: 50px;
+}
+
+#portfolio .portfolio-list .nav {
+    display: inline-block;
+    margin: 0;
+}
+
+#portfolio .portfolio-list .nav li {
+    margin: 0 40px 0 0;
+    float: left;
+    font-size: 14px;
+    color: #999999;
+    line-height: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', helvetica;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active {
+    color: #b8a07e;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#portfolio .portfolio-container {
+    display: inline-block;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.portfolio-thumbnail {
+    margin-bottom: 30px;
+    overflow: hidden;
+    min-height: 260px;
+}
+
+.portfolio-thumbnail img {
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Git
+--------------------------------------------------------------*/
+
+/* Show in default resolution screen*/
+
+#gitcontainer {
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+    line-height: 1.4em;
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
+
+@media only screen and (max-width: 479px) {
+    #gitcontainer {
+        width: 90%;
+    }
 }
