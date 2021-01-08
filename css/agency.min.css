@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-section h2.section-heading {
     font-size: 35px;
+    /* color: #173b6c; */
     margin-top: 0;
     margin-bottom: 15px
 }
@@ -96,6 +97,10 @@ img::-moz-selection {
     box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5)!important
 }
 
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
 #mainNav {
     background-color: #212529
 }
@@ -159,6 +164,10 @@ img::-moz-selection {
     }
 }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
 header.masthead {
     text-align: center;
     color: #fff;
@@ -212,11 +221,217 @@ header.masthead .intro-text .intro-heading {
     }
 }
 
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+
+#hero {
+    background: url("../img/home-bg.jpg") repeat scroll center center/cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#hero .hero-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-content .list-social li {
+    float: left;
+    margin-right: 20px;
+}
+
+.hero-content .list-social li i {
+    color: #fff;
+    font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+section#about {
+    background-color: white;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+
+section#resume {
+    background-color: #f5f8fd;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+
+#services {
+    background: white;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
 .service-heading {
     margin: 6px 10px;
     font-size: 1.0rem;
     font-family: Montserrat;
     text-transform: inherit
+}
+
+.owl-item {
+    float: left;
+}
+
+.services-block span {
+    margin: 10px 0;
+    position: relative;
+    font-size: 15px;
+    color: #212529;
+    letter-spacing: 0.1em;
+    font-weight: 750;
+    text-transform: uppercase;
+    display: block;
+}
+
+.services-block .separator {
+    margin: 0;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 22px;
+}
+
+.services-block i {
+    font-size: 44px;
+    color: #b8a07e;
+    line-height: 44px;
+}
+
+.services-carousel .owl-stage-outer {
+    overflow: hidden;
+}
+
+.services-carousel .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.services-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    border: 0;
+    padding: 0 !important;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.services-carousel .owl-dot.active {
+    background-color: #b8a07e;
+}
+
+.owl-nav {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+section#portfolio {
+    background-color: #f5f8fd;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 #portfolio .portfolio-item {
@@ -369,6 +584,10 @@ header.masthead .intro-text .intro-heading {
     transform: rotate(90deg);
     background-color: #212529
 }
+
+/*--------------------------------------------------------------
+# Blogs
+--------------------------------------------------------------*/
 
 .timeline {
     position: relative;
@@ -577,19 +796,199 @@ header.masthead .intro-text .intro-heading {
     margin-top: 0
 }
 
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
 section#contact {
-    background-color: #e8ebec;
-    background-repeat: no-repeat;
-    background-position: center
+    background-color: #f5f8fd;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
-section#contact .section-heading {
-    color: #fff
+.contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
+
+.contact .info i {
+    font-size: 20px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #050d18;
+}
+
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #173b6c;
+}
+
+.contact .info .email p {
+    padding-top: 5px;
+}
+
+.contact .info .social-links {
+    padding-left: 60px;
+}
+
+.contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #149ddd;
+    color: #fff;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #149ddd;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #37b3ed;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
 
 .footer {
     padding: 25px 0;
-    background-color: #f8f9fa;
+    background-color: white;
     text-align: center
 }
 
@@ -630,119 +1029,20 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 /*--------------------------------------------------------------
-# Services
+# Contact
 --------------------------------------------------------------*/
 
-#services {
-    background: white;
-    position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+/* section#contact {
+    background-color: #e8ebec;
+    background-repeat: no-repeat;
+    background-position: center
 }
 
-.owl-item {
-    float: left;
+section#contact .section-heading {
+    color: #fff
 }
 
-.services-block span {
-    margin: 10px 0;
-    position: relative;
-    font-size: 15px;
-    color: #212529;
-    letter-spacing: 0.1em;
-    font-weight: 750;
-    text-transform: uppercase;
-    display: block;
-}
-
-.services-block .separator {
-    margin: 0;
-    font-size: 13px;
-    text-align: justify;
-    line-height: 22px;
-}
-
-.services-block i {
-    font-size: 44px;
-    color: #b8a07e;
-    line-height: 44px;
-}
-
-.services-carousel .owl-stage-outer {
-    overflow: hidden;
-}
-
-.services-carousel .owl-dots {
-    margin-top: 5px;
-    text-align: center;
-}
-
-.services-carousel .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50%;
-    border: 0;
-    padding: 0 !important;
-    background-color: #ddd;
-    cursor: pointer;
-}
-
-.services-carousel .owl-dot.active {
-    background-color: #b8a07e;
-}
-
-.owl-nav {
-    display: none;
-}
-
-/*--------------------------------------------------------------
-# Hero
---------------------------------------------------------------*/
-
-#hero {
-    background: url("../img/home-bg.jpg") repeat scroll center center/cover;
-    height: 100vh;
-    width: 100%;
-}
-
-#hero .hero-content {
-    height: 100vh;
-    text-align: left;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.hero-content h1 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.hero-content p {
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-    color: #fff;
-    font-weight: 500;
-}
-
-.hero-content .list-social li {
-    float: left;
-    margin-right: 20px;
-}
-
-.hero-content .list-social li i {
-    color: #fff;
-    font-size: 15px;
-}
+*/
 
 /*--------------------------------------------------------------
 # Portfolio filter list
