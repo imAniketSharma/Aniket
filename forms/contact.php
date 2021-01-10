@@ -1,24 +1,33 @@
 <?php
 
-  $server = "localhost";
-  $username = "root";
-  $password = "";
+$Name = $_POST['Name'];
+$Email = $_POST['Email'];
+$Subject = $_POST['Subject'];
+$Message = $_POST['Message'];
 
-  $con = mysqli_connect($server, $username, $password);
 
-  if(!$con){
-    die("connection to this database failed due to" . mysqli_connect_error());
+  // $server = "localhost";
+  // $username = "root";
+  // $password = "";
+
+  $conn = new mysqli('localhost','root', '', 'portfolio_contact_us');
+
+  if($conn->connect_error){
+    die("connection to this database failed due to " .$conn->connect_error);
+  }else{
+    $stmt = $conn->prepare("Inserting(Name, Email, Subject, Message) values(?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $Name, $Email, $Subject, $Message);
+    $stmt->execute();
+    echo "Your message is Sent, Thank You!";
+    $stmt->close();
+    $conn->close();
   }
   // echo"Success connecting to the db";
 
-  $Name = $_POST['Name'];
-  $Email = $_POST['Email'];
-  $Subject = $_POST['Subject'];
-  $Message = $_POST['Message'];
 
-  $sql = "INSERT INTO `contact_us` (`Name`, `Email`, `Subject`, `Message`, `Date_Time`) VALUES ('$Name', '$Email', '$Subject', '$Message', current_timestamp());";
+  // $sql = "INSERT INTO `contact_us` (`Name`, `Email`, `Subject`, `Message`, `Date_Time`) VALUES ('$Name', '$Email', '$Subject', '$Message', current_timestamp());";
 
-  echo $sql;
+  // echo $sql;
   
   // // Replace contact@example.com with your real receiving email address
   // $receiving_email_address = 'aniketsharma552@gmail.com';
