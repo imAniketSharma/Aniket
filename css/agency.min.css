@@ -12,7 +12,7 @@ a {
 }
 
 a:hover {
-    color: #074874
+    color: #149ddd
 }
 
 .text-primary {
@@ -88,8 +88,8 @@ img::-moz-selection {
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #fec810!important;
-    border-color: #fec810!important;
+    background-color: #149ddd!important;
+    border-color: #149ddd!important;
     color: #fff
 }
 
@@ -122,7 +122,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #074874
+    color: #149ddd
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -135,7 +135,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #074874
+    color: #149ddd
 }
 
 @media (min-width:992px) {
@@ -390,7 +390,7 @@ section#resume {
 
 .services-block i {
     font-size: 44px;
-    color: #b8a07e;
+    color: #050d18;
     line-height: 44px;
 }
 
@@ -416,7 +416,7 @@ section#resume {
 }
 
 .services-carousel .owl-dot.active {
-    background-color: #b8a07e;
+    background-color: #050d18;
 }
 
 .owl-nav {
