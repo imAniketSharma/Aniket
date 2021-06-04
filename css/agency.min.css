@@ -15,11 +15,12 @@ a:hover {
     color: #149ddd
 }
 
-.text-primary {
-    color: #074874!important
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
 }
@@ -87,15 +88,19 @@ img::-moz-selection {
     border-color: #212529;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
     background-color: #149ddd!important;
     border-color: #149ddd!important;
     color: #fff
 }
 
-.btn-primary:active, .btn-primary:focus {
+.btn-primary:active,
+.btn-primary:focus {
     box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5)!important
 }
+
 
 /*--------------------------------------------------------------
 # Navbar
@@ -121,7 +126,10 @@ img::-moz-selection {
     font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
 }
 
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
     color: #149ddd
 }
 
@@ -134,7 +142,8 @@ img::-moz-selection {
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #149ddd
 }
 
@@ -163,6 +172,7 @@ img::-moz-selection {
         padding: 12px 0
     }
 }
+
 
 /*--------------------------------------------------------------
 # Header
@@ -221,6 +231,58 @@ header.masthead .intro-text .intro-heading {
     }
 }
 
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+}
+
+.section-title h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -268,6 +330,7 @@ header.masthead .intro-text .intro-heading {
     font-size: 15px;
 }
 
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -275,19 +338,20 @@ header.masthead .intro-text .intro-heading {
 section#about {
     background-color: white;
     position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
+
 
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 
 section#resume {
-    background-color: #f5f8fd;
+    background-color: whitesmoke;
     position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 0px;
 }
 
 .resume .resume-title {
@@ -348,15 +412,16 @@ section#resume {
     border: 2px solid #1f5297;
 }
 
+
 /*--------------------------------------------------------------
-# Services
+# Skills
 --------------------------------------------------------------*/
 
-#services {
-    background: white;
+section#services {
+    background-color: white;
     position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .service-heading {
@@ -382,8 +447,8 @@ section#resume {
 }
 
 .services-block .separator {
-    margin: 0;
-    font-size: 13px;
+    margin: 15px;
+    font-size: 14px;
     text-align: justify;
     line-height: 22px;
 }
@@ -423,6 +488,7 @@ section#resume {
     display: none;
 }
 
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -430,8 +496,8 @@ section#resume {
 section#portfolio {
     background-color: #f5f8fd;
     position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #portfolio .portfolio-item {
@@ -479,7 +545,8 @@ section#portfolio {
     margin-top: -12px
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0
 }
 
@@ -585,6 +652,7 @@ section#portfolio {
     background-color: #212529
 }
 
+
 /*--------------------------------------------------------------
 # Blogs
 --------------------------------------------------------------*/
@@ -612,7 +680,8 @@ section#portfolio {
     margin-bottom: 50px
 }
 
-.timeline>li:after, .timeline>li:before {
+.timeline>li:after,
+.timeline>li:before {
     display: table;
     content: ' '
 }
@@ -696,7 +765,8 @@ section#portfolio {
     text-transform: none
 }
 
-.timeline .timeline-body>p, .timeline .timeline-body>ul {
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
     margin-bottom: 0;
     text-align: justify;
 }
@@ -796,15 +866,16 @@ section#portfolio {
     margin-top: 0
 }
 
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 
 section#contact {
-    background-color: #f5f8fd;
+    background-color: whitesmoke;
     position: relative;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .contact .info {
@@ -871,7 +942,9 @@ section#contact {
     color: #fff;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
     background: #149ddd;
     color: #fff;
 }
@@ -937,7 +1010,8 @@ section#contact {
     animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -982,6 +1056,7 @@ section#contact {
     }
 }
 
+
 /*--------------------------------------------------------------
 # footer
 --------------------------------------------------------------*/
@@ -1024,13 +1099,17 @@ ul.social-buttons li a {
     background-color: #212529
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fec810!important;
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+    background-color: #149ddd!important;
 }
+
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 
 /* section#contact {
     background-color: #e8ebec;
@@ -1044,9 +1123,11 @@ section#contact .section-heading {
 
 */
 
+
 /*--------------------------------------------------------------
 # Portfolio filter list
 --------------------------------------------------------------*/
+
 
 /* #portfolio {
     position: relative;
@@ -1076,10 +1157,12 @@ section#contact .section-heading {
     transition: all 0.5s ease-in-out 0s;
 }
 
-#portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active {
+#portfolio .portfolio-list .nav li:hover,
+#portfolio .portfolio-list .nav li.filter-active {
     color: #b8a07e;
     transition: all 0.5s ease-in-out 0s;
 }
+
 
 /* #portfolio .portfolio-container {
     display: inline-block;
@@ -1097,9 +1180,11 @@ section#contact .section-heading {
     max-width: 100%;
 } */
 
+
 /*--------------------------------------------------------------
 # Git
 --------------------------------------------------------------*/
+
 
 /* Show in default resolution screen*/
 
@@ -1109,6 +1194,7 @@ section#contact .section-heading {
     margin: 0 auto;
     line-height: 1.4em;
 }
+
 
 /* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
 
