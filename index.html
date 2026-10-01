@@ -222,6 +222,149 @@
     }
   </style>
 
+
+  <style>
+    .about-modern {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    .about-modern .section-subheading {
+      margin-bottom: 35px;
+    }
+    .about-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 42px;
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .about-profile-wrap {
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 10px 10px 28px;
+    }
+    .about-profile-image {
+      width: 100%;
+      max-width: 270px;
+      border-radius: 18px !important;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .about-profile-badge {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      background: #fff;
+      padding: 10px 16px;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+    }
+    .about-profile-badge i { margin: 0; }
+    .about-content { padding-left: 22px; }
+    .about-intro-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 17px 18px;
+      margin-bottom: 14px;
+      border-radius: 13px;
+      background: #f8f9fa;
+      border: 1px solid rgba(0, 0, 0, 0.045);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .about-intro-card:hover,
+    .about-info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+    }
+    .about-intro-card > i,
+    .about-info-card > i {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 17px;
+      margin: 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    }
+    .about-intro-card h4,
+    .about-info-card h4 {
+      margin: 0 0 3px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+    }
+    .about-intro-card p,
+    .about-info-card p {
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .about-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .about-info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 16px;
+      border-radius: 13px;
+      background: #fff;
+      border: 1px solid #eee;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .about-info-card p strong { color: #555; }
+    .about-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .about-action-btn {
+      border-radius: 25px;
+      padding: 10px 18px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .about-action-btn i { margin-left: 6px; }
+    @media (max-width: 991px) {
+      .about-content { padding-left: 0; margin-top: 35px; }
+      .about-card { padding: 32px; }
+    }
+    @media (max-width: 767px) {
+      .about-modern { padding-top: 65px; padding-bottom: 65px; }
+      .about-modern .section-subheading { line-height: 1.5; margin: 0 15px 28px; }
+      .about-card { padding: 25px 18px; border-radius: 15px; }
+      .about-profile-wrap { max-width: 245px; padding-bottom: 25px; }
+      .about-profile-image { max-width: 225px; }
+      .about-profile-badge { font-size: 10px; padding: 8px 12px; }
+      .about-content { margin-top: 30px; }
+      .about-intro-card { padding: 14px; }
+      .about-card-grid { grid-template-columns: 1fr; gap: 9px; }
+      .about-info-card { padding: 13px 14px; }
+      .about-actions { flex-direction: column; }
+      .about-action-btn { width: 100%; text-align: center; }
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -290,43 +433,68 @@
   </header>
   <!-- End Hero -->
   <!-- ======= About Section ======= -->
-  <section class="about" id="about">
+  <section class="about about-modern" id="about">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
-          <h3 class="section-subheading text-muted"> </h3>
-          <br />
+          <h2 class="section-heading text-uppercase">About Me</h2>
+          <h3 class="section-subheading text-muted">Backend engineering, systems development &amp; scalable technology</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img alt="Aniket Sharma" class="img-fluid" src="img/Aniket.png" style="border-radius: 15%" />
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Senior Software Engineer @ Samsung</h3>
-          <!-- <p>
-                        A Passionate Coder, Learner and Full-Stack Developer!
-                    </p> -->
-          <br />
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded"></i> <strong>Birthday:</strong> 9th September</li><br />
-                <li><i class="icofont-rounded"></i> <strong>Phone:</strong> +91 93041 47267</li><br />
-                <li><i class="icofont-rounded"></i> <strong>City:</strong> Bangalore, Karnataka</li><br />
-                <li><i class="icofont-rounded"></i> <strong>Email:</strong> aniketsharma552@gmail.com
-                </li><br />
-              </ul>
+
+      <div class="about-card">
+        <div class="row align-items-center">
+          <div class="col-lg-4 text-center" data-aos="fade-right">
+            <div class="about-profile-wrap">
+              <img alt="Aniket Sharma - Senior Software Engineer" class="img-fluid about-profile-image" src="img/Aniket.png" />
+              <div class="about-profile-badge">
+                <i class="fas fa-code"></i>
+                <span>Senior Software Engineer</span>
+              </div>
             </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded"></i> <strong>Degree:</strong> B.Tech</li><br />
-                <li><i class="icofont-rounded"></i> <strong>Website:</strong><a href="https://datascienceepicenter.com"
-                    rel="noopener noreferrer" target="_blank">
-                    datascienceepicenter.com</a></li><br />
-                <li><i class="icofont-rounded"></i> <strong>Freelance:</strong> Available</li><br />
-              </ul>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="about-content">
+              <div class="about-intro-card">
+                <i class="fas fa-server"></i>
+                <div>
+                  <h4>Backend &amp; Distributed Systems</h4>
+                  <p>Building high-performance services, APIs and scalable backend systems.</p>
+                </div>
+              </div>
+
+              <div class="about-intro-card">
+                <i class="fas fa-network-wired"></i>
+                <div>
+                  <h4>Telecom &amp; 4G/5G</h4>
+                  <p>Working on LTE/5G core-network systems, secure certificate management and SMS over NAS.</p>
+                </div>
+              </div>
+
+              <div class="about-card-grid">
+                <div class="about-info-card">
+                  <i class="fas fa-briefcase"></i>
+                  <div><h4>Experience</h4><p><strong>5+ years</strong> in software engineering</p></div>
+                </div>
+                <div class="about-info-card">
+                  <i class="fas fa-code"></i>
+                  <div><h4>Core Stack</h4><p><strong>C++ · Python · APIs</strong></p></div>
+                </div>
+                <div class="about-info-card">
+                  <i class="fas fa-building"></i>
+                  <div><h4>Current Role</h4><p><strong>Samsung Electronics</strong> · Bengaluru</p></div>
+                </div>
+                <div class="about-info-card">
+                  <i class="fas fa-graduation-cap"></i>
+                  <div><h4>Education</h4><p><strong>B.Tech, CSE</strong> · NIT Patna</p></div>
+                </div>
+              </div>
+
+              <div class="about-actions">
+                <a class="btn btn-primary about-action-btn" href="#resume">View Resume <i class="fas fa-arrow-right"></i></a>
+                <a class="btn btn-outline-primary about-action-btn" href="#contact">Get In Touch <i class="fas fa-envelope"></i></a>
+              </div>
             </div>
           </div>
         </div>
