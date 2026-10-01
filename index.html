@@ -142,7 +142,30 @@
       }
 
       .masthead .hero-content h1 {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .masthead .hero-content h1 .typed {
+        white-space: nowrap;
+      }
+
+      /* Isotope can temporarily absolutely-position portfolio cards while
+         images/animations are initializing. On small screens, keep the cards
+         in normal document flow so they never overlap after a reload. */
+      .portfolio-container {
+        display: flex !important;
+        flex-wrap: wrap;
+      }
+
+      .portfolio-container .portfolio-item {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        margin-bottom: 30px;
       }
 
       .masthead .hero-content .typed-items {
@@ -247,7 +270,7 @@
       <div class="container" data-aos="zoom-in" data-aos-delay="200">
         <div class="hero-content">
           <h1>I'm <span class="typed"></span></h1>
-          <p class="typed-items" data-typed-person="Aniket Sharma">Backend Engineer, Systems Developer, Technology Enthusiast
+          <p class="typed-items" data-typed-person="Aniket Sharma">Backend Developer, Systems Engineer, Technology Enthusiast
           </p>
           <ul class="list-unstyled list-social">
             <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer"
