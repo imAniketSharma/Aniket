@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
-  <meta content="Aniket Sharma - Senior Software Engineer, software developer and technology enthusiast."
-    name="description" />
-  <meta content="Aniket Sharma" name="author" />
-  <title>Aniket Sharma</title>
-  <!-- add icon link -->
-  <link href="img/as.png" rel="icon" type="image/x-icon" />
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
-    type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-  <!-- Custom styles for this template -->
-  <link href="css/agency.min.css" rel="stylesheet" />
-  <link href="vendor/hover/hover.min.css" rel="stylesheet" />
-  <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet" />
-  <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
-  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-  <link href="vendor/venobox/venobox.css" rel="stylesheet" />
-  <link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="Aniket Sharma - Senior Software Engineer, software developer and technology enthusiast." name="description"/>
+<meta content="Aniket Sharma" name="author"/>
+<title>Aniket Sharma</title>
+<!-- add icon link -->
+<link href="img/as.png" rel="icon" type="image/x-icon"/>
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Custom fonts for this template -->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+<!-- Custom styles for this template -->
+<link href="css/agency.min.css" rel="stylesheet"/>
+<link href="vendor/hover/hover.min.css" rel="stylesheet"/>
+<link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet"/>
+<link href="vendor/icofont/icofont.min.css" rel="stylesheet"/>
+<link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+<link href="vendor/venobox/venobox.css" rel="stylesheet"/>
+<link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css" rel="stylesheet"/>
+<style>
     /* Keep selected text readable on the light/dark sections. */
     ::selection {
       background: #b3d7ff;
@@ -41,10 +37,135 @@
       background: #b3d7ff;
       color: #111111;
     }
-  </style>
+  
+    /* Project cards: cleaner hierarchy while preserving the existing portfolio behavior. */
+    .portfolio-container {
+      margin-top: 10px;
+    }
 
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 4px 18px rgba(0,0,0,.07);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
 
-  <style>
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+
+    .project-card-link {
+      display: block;
+      position: relative;
+    }
+
+    .project-media {
+      position: relative;
+      height: 215px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.04);
+    }
+
+    .project-card .portfolio-hover {
+      z-index: 2;
+    }
+
+    .project-card .portfolio-hover-content i {
+      font-size: 1.15rem;
+    }
+
+    .project-card-body {
+      padding: 22px 22px 18px;
+      min-height: 178px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-category {
+      display: inline-block;
+      width: fit-content;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #edf6ff;
+      color: #4b82b8;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .project-card-body h4 {
+      margin: 0 0 12px;
+      font-size: 19px;
+      line-height: 1.3;
+      min-height: 49px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .project-tags span {
+      font-size: 11px;
+      color: #777;
+      background: #f7f7f7;
+      border: 1px solid #ececec;
+      border-radius: 4px;
+      padding: 4px 7px;
+    }
+
+    .project-card-footer {
+      margin-top: auto;
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #777;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .project-card-footer i {
+      color: #b3d7ff;
+      transition: transform .2s ease;
+    }
+
+    .project-card:hover .project-card-footer i {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 767.98px) {
+      .project-media {
+        height: 210px;
+      }
+      .project-card-body {
+        min-height: 0;
+        padding: 18px;
+      }
+      .project-card-body h4 {
+        min-height: 0;
+        font-size: 18px;
+      }
+    }
+</style>
+<style>
     /* Responsive polish: preserve the existing desktop design while making
        navigation, filters, cards, forms and the GitHub calendar usable on phones. */
     #mainNav .navbar-brand {
@@ -208,9 +329,7 @@
       }
     }
   </style>
-
-
-  <style>
+<style>
     #mainNav .nav-link:focus-visible,
     #mainNav .navbar-toggler:focus-visible,
     .portfolio-link:focus-visible,
@@ -221,9 +340,7 @@
       outline-offset: 3px;
     }
   </style>
-
-
-  <style>
+<style>
     .about-modern {
       padding-top: 90px;
       padding-bottom: 90px;
@@ -364,7 +481,6 @@
       .about-action-btn { width: 100%; text-align: center; }
     }
   </style>
-
 <style>
 
     /* Modern Resume */
@@ -421,878 +537,1004 @@
       .resume-download-btn { width:100%; }
     }
 </style>
+<style>
+/* Project cards: image + concise information, with the original plus interaction. */
+.project-card .portfolio-hover-content i { font-size: 1.35rem; }
+.project-card .portfolio-hover-content { transition: transform .2s ease; }
+.project-card:hover .portfolio-hover-content { transform: scale(1.08); }
+.project-card-body { min-height: 150px; padding: 20px 22px 22px; }
+.project-card-body h4 { min-height: 0; margin-bottom: 12px; }
+
+/* Project detail modal: clearer two-column presentation on desktop. */
+.portfolio-modal .modal-dialog { max-width: 1120px; }
+.portfolio-modal .modal-content { border: 0; border-radius: 12px; overflow: hidden; }
+.portfolio-modal .container { max-width: 1080px; padding: 0 24px; }
+.portfolio-modal .project-modal-layout { display: flex; align-items: stretch; gap: 34px; }
+.portfolio-modal .project-modal-main { flex: 1.35; min-width: 0; }
+.portfolio-modal .project-modal-side { flex: .8; min-width: 260px; display: flex; }
+.portfolio-modal .modal-body { padding: 52px 0 42px; text-align: left; }
+.portfolio-modal .modal-body > h3 { margin-bottom: 8px; font-size: 28px; line-height: 1.2; }
+.portfolio-modal .modal-body > .item-intro { margin-bottom: 22px; font-size: 15px; line-height: 1.7; }
+.portfolio-modal .project-modal-main img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 8px; background: #f7f7f7; margin-bottom: 24px !important; }
+.portfolio-modal .project-details { font-size: 14px; line-height: 1.75; color: #555; }
+.portfolio-modal .project-details p { margin-bottom: 12px; }
+.portfolio-modal .portfolio-info { width: 100%; align-self: center; background: #f7faff; border-left: 3px solid #b3d7ff; border-radius: 8px; padding: 25px; }
+.portfolio-modal .portfolio-info h3 { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
+.portfolio-modal .portfolio-info p { color: #666; font-size: 14px; line-height: 1.7; margin-bottom: 18px; }
+.portfolio-modal .project-tech { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 20px; }
+.portfolio-modal .project-tech span { background: #fff; border: 1px solid #dcecff; color: #4b82b8; border-radius: 999px; padding: 5px 9px; font-size: 11px; font-weight: 700; }
+.portfolio-modal .project-links { list-style: none; padding: 0; margin: 0 0 22px; }
+.portfolio-modal .project-links li { margin-bottom: 9px; font-size: 13px; }
+.portfolio-modal .project-links a { color: #4b82b8; }
+.portfolio-modal .project-modal-side .btn { margin-top: 4px; }
+@media (max-width: 767.98px) {
+  .portfolio-modal .container { padding: 0 18px; }
+  .portfolio-modal .project-modal-layout { display: block; }
+  .portfolio-modal .modal-body { padding: 40px 0 30px; }
+  .portfolio-modal .modal-body > h3 { font-size: 22px; }
+  .portfolio-modal .project-modal-main img { max-height: 300px; }
+  .portfolio-modal .project-modal-side { display: block; min-width: 0; }
+  .portfolio-modal .portfolio-info { margin-top: 22px; padding: 20px; }
+}
+</style><style>
+/* v19 project polish */
+.project-card-body { min-height: 145px; justify-content: center; }
+.project-card .portfolio-hover-content i { font-size: 2rem !important; }
+.project-card .portfolio-hover-content { transform: scale(1); }
+.project-card:hover .portfolio-hover-content { transform: scale(1.12); }
+.project-card-body h4 { margin-bottom: 14px; }
+.project-tags { margin-top: 2px; }
+/* Keep a clean 3-column desktop grid; the seventh card starts the next row normally. */
+@media (min-width: 992px) {
+  #portfolio .portfolio-container > .portfolio-item { margin-left: 0; }
+}
+.portfolio-modal .portfolio-info { display:flex; flex-direction:column; }
+.portfolio-modal .project-actions { display:flex; flex-direction:column; gap:10px; margin: 4px 0 12px; }
+.portfolio-modal .project-action-btn { display:block; width:100%; text-align:center; border-radius:4px; padding:10px 14px; font-size:12px; font-weight:700; letter-spacing:.03em; }
+.portfolio-modal .project-close-btn { width:100%; margin-top:2px !important; border-radius:4px; padding:10px 14px; font-size:12px; font-weight:700; }
+.portfolio-modal .project-close-btn i { margin-right:6px; }
+@media (max-width: 767.98px) {
+  .portfolio-modal .project-actions { flex-direction:column; }
+  .portfolio-modal .project-action-btn, .portfolio-modal .project-close-btn { width:100%; }
+}
+</style>
+<style>
+/* v20 project grid + filter redesign */
+#portfolio .portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#portfolio .portfolio-container > .portfolio-item {
+  display: flex;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#portfolio .project-card {
+  width: 100%;
+  height: auto;
+  align-self: flex-start;
+}
+
+#portfolio-flters.portfolio-filter-pills {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px auto 38px;
+  padding: 6px;
+  list-style: none;
+  background: #f5f8fb;
+  border: 1px solid #e5edf5;
+  border-radius: 999px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.04);
+}
+#portfolio-flters.portfolio-filter-pills li {
+  margin: 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #666;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1;
+  transition: all .2s ease;
+}
+#portfolio-flters.portfolio-filter-pills li:hover {
+  color: #4b82b8;
+  background: #fff;
+  border-color: #dcecff;
+}
+#portfolio-flters.portfolio-filter-pills li.filter-active {
+  color: #fff;
+  background: #4b82b8;
+  border-color: #4b82b8;
+  box-shadow: 0 5px 14px rgba(75,130,184,.22);
+}
+#portfolio-flters.portfolio-filter-pills li:focus-visible {
+  outline: 2px solid #b3d7ff;
+  outline-offset: 2px;
+}
+@media (max-width: 767.98px) {
+  #portfolio-flters.portfolio-filter-pills {
+    display: flex;
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    padding: 6px;
+  }
+  #portfolio-flters.portfolio-filter-pills li {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+    padding: 10px 8px;
+  }
+}
+@media (max-width: 575.98px) {
+  #portfolio .portfolio-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #portfolio .portfolio-container > .portfolio-item {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* v23: Bootstrap grid now uses col-lg-4 for exactly 3 cards per row. */
+#portfolio-flters.portfolio-filter-pills li {
+  color: #4b82b8 !important;
+}
+#portfolio-flters.portfolio-filter-pills li:hover {
+  color: #2f6f9f !important;
+}
+#portfolio-flters.portfolio-filter-pills li.filter-active {
+  color: #ffffff !important;
+  background: #4b82b8 !important;
+  border-color: #4b82b8 !important;
+}
+@media (max-width: 767.98px) {
+  #portfolio .portfolio-container > .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #portfolio .portfolio-container > .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* v22: make the project plus icon visually comparable to the modal close icon */
+#portfolio .project-card .portfolio-hover-content i {
+  font-size: 3rem !important;
+  line-height: 1;
+  font-weight: 300;
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+#portfolio .project-card .portfolio-hover-content {
+  transform: scale(1);
+}
+#portfolio .project-card:hover .portfolio-hover-content {
+  transform: scale(1.06);
+}
+@media (max-width: 767.98px) {
+  #portfolio .project-card .portfolio-hover-content i {
+    font-size: 2.7rem !important;
+  }
+}
+</style>
+
+<style id="v24-project-grid-fix">
+/* v24: deterministic project grid; do not let Isotope/Bootstrap inline positioning collapse the cards. */
+#portfolio .portfolio-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-rows: max-content !important;
+  align-items: start !important;
+  gap: 30px !important;
+  margin: 10px 0 0 !important;
+  width: 100% !important;
+}
+#portfolio .portfolio-container > .portfolio-item {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+#portfolio .project-card {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  align-self: start !important;
+}
+#portfolio .project-card-link {
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+#portfolio .project-media {
+  position: relative !important;
+  overflow: hidden !important;
+}
+#portfolio .project-card .portfolio-hover {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .25s ease, visibility .25s ease !important;
+}
+#portfolio .project-card .portfolio-hover-content {
+  position: relative !important;
+  z-index: 6 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#portfolio .project-card .portfolio-hover-content .project-plus {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 4.5rem !important;
+  line-height: .85 !important;
+  color: #fff !important;
+  font-weight: 300 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.25) !important;
+}
+#portfolio .project-card-link:hover .portfolio-hover,
+#portfolio .project-card-link:focus .portfolio-hover,
+#portfolio .project-card:hover .portfolio-hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+@media (max-width: 991.98px) {
+  #portfolio .portfolio-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  #portfolio .portfolio-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 30px !important;
+  }
+  #portfolio .project-card .portfolio-hover-content .project-plus {
+    font-size: 4rem !important;
+  }
+}
+</style>
+
+
+<style id="v26-project-plus-fix">
+/* v26: centered, larger, crisp project plus icon */
+#portfolio .project-card .portfolio-hover {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+#portfolio .project-card .portfolio-hover-content {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 72px !important;
+  height: 72px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+#portfolio .project-card:hover .portfolio-hover-content {
+  transform: translate(-50%, -50%) scale(1.08) !important;
+}
+#portfolio .project-card .portfolio-hover-content .project-plus {
+  position: relative !important;
+  display: block !important;
+  width: 64px !important;
+  height: 64px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+}
+#portfolio .project-card .portfolio-hover-content .project-plus::before,
+#portfolio .project-card .portfolio-hover-content .project-plus::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  display: block !important;
+  width: 58px !important;
+  height: 6px !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25) !important;
+  transform: translate(-50%, -50%) !important;
+}
+#portfolio .project-card .portfolio-hover-content .project-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+@media (max-width: 767.98px) {
+  #portfolio .project-card .portfolio-hover-content { width: 64px !important; height: 64px !important; }
+  #portfolio .project-card .portfolio-hover-content .project-plus { width: 56px !important; height: 56px !important; }
+  #portfolio .project-card .portfolio-hover-content .project-plus::before,
+  #portfolio .project-card .portfolio-hover-content .project-plus::after { width: 50px !important; height: 5px !important; }
+}
+</style>
 </head>
-
 <body id="page-top">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container" data-aos="fade-up">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Aniket Sharma</a>
-      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
-        class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
-        type="button">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about"><i class="fas fa-user"></i><strong>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<div class="container" data-aos="fade-up">
+<a class="navbar-brand js-scroll-trigger" href="#page-top">Aniket Sharma</a>
+<button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+<i class="fas fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav text-uppercase ml-auto">
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#about"><i class="fas fa-user"></i><strong>
                 About</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#resume"><i class="fas fa-file-alt"></i><strong>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#resume"><i class="fas fa-file-alt"></i><strong>
                 Resume</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services"><i class="fas fa-cogs"></i><strong>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#services"><i class="fas fa-cogs"></i><strong>
                 Skills</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio"><i class="fas fa-code"></i><strong>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#portfolio"><i class="fas fa-code"></i><strong>
                 Projects</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://datascienceepicenter.com" rel="noopener noreferrer"
-              target="_blank"><i class="fas fa-blog"></i><strong> Blogs</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact"><i class="fas fa-envelope"></i><strong>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://datascienceepicenter.com" rel="noopener noreferrer" target="_blank"><i class="fas fa-blog"></i><strong> Blogs</strong></a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#contact"><i class="fas fa-envelope"></i><strong>
                 Contact</strong></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- ======= Hero Section ======= -->
-  <header class="masthead">
-    <div class="home" id="hero">
-      <div class="container" data-aos="zoom-in" data-aos-delay="200">
-        <div class="hero-content">
-          <h1>I'm <span class="typed"></span></h1>
-          <p class="typed-items" data-typed-person="Aniket Sharma">Backend Developer, Systems Engineer, Technology Enthusiast
-          </p>
-          <ul class="list-unstyled list-social">
-            <li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer"
-                target="_blank"><i class="bx bxl-linkedin"></i></a></li>
-            <li><a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer"
-                target="_blank"><i class="bx bxl-github"></i></a></li>
-            <li><a aria-label="Twitter" href="https://twitter.com/this_is_Anik" rel="noopener noreferrer"
-                target="_blank"><i class="bx bxl-twitter"></i></a></li>
-            <li><a aria-label="Instagram" href="https://www.instagram.com/aniket.sharma___" rel="noopener noreferrer"
-                target="_blank"><i class="bx bxl-instagram"></i></a></li>
-            <li><a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer"
-                target="_blank"><i class="fab fa-kaggle"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- End Hero -->
-  <!-- ======= About Section ======= -->
-  <section class="about about-modern" id="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">About Me</h2>
-          <h3 class="section-subheading text-muted">Backend engineering, systems development &amp; scalable technology</h3>
-        </div>
-      </div>
-
-      <div class="about-card">
-        <div class="row align-items-center">
-          <div class="col-lg-4 text-center" data-aos="fade-right">
-            <div class="about-profile-wrap">
-              <img alt="Aniket Sharma - Senior Software Engineer" class="img-fluid about-profile-image" src="img/Aniket.png" />
-              <div class="about-profile-badge">
-                <i class="fas fa-code"></i>
-                <span>Senior Software Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-left">
-            <div class="about-content">
-              <div class="about-intro-card">
-                <i class="fas fa-server"></i>
-                <div>
-                  <h4>Backend &amp; Distributed Systems</h4>
-                  <p>Building high-performance services, APIs and scalable backend systems.</p>
-                </div>
-              </div>
-
-              <div class="about-intro-card">
-                <i class="fas fa-network-wired"></i>
-                <div>
-                  <h4>Telecom &amp; 4G/5G</h4>
-                  <p>Working on LTE/5G core-network systems, secure certificate management and SMS over NAS.</p>
-                </div>
-              </div>
-
-              <div class="about-card-grid">
-                <div class="about-info-card">
-                  <i class="fas fa-briefcase"></i>
-                  <div><h4>Experience</h4><p><strong>5+ years</strong> in software engineering</p></div>
-                </div>
-                <div class="about-info-card">
-                  <i class="fas fa-code"></i>
-                  <div><h4>Core Stack</h4><p><strong>C++ · Python · APIs</strong></p></div>
-                </div>
-                <div class="about-info-card">
-                  <i class="fas fa-building"></i>
-                  <div><h4>Current Role</h4><p><strong>Samsung Electronics</strong> · Bengaluru</p></div>
-                </div>
-                <div class="about-info-card">
-                  <i class="fas fa-graduation-cap"></i>
-                  <div><h4>Education</h4><p><strong>B.Tech, CSE</strong> · NIT Patna</p></div>
-                </div>
-              </div>
-
-              <div class="about-actions">
-                <a class="btn btn-primary about-action-btn" href="#resume">View Resume <i class="fas fa-arrow-right"></i></a>
-                <a class="btn btn-outline-primary about-action-btn" href="#contact">Get In Touch <i class="fas fa-envelope"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-  <!-- ======= Resume Section ======= -->
-  <section class="resume resume-modern" id="resume">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title text-center">
-        <h2 class="section-heading text-uppercase">Resume</h2>
-        <p class="section-subheading text-muted">A snapshot of my experience, education and engineering journey.</p>
-      </div>
-
-      <div class="resume-overview">
-        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-briefcase"></i></span><div><strong>5+ Years</strong><span>Professional Experience</span></div></div>
-        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-server"></i></span><div><strong>Backend &amp; Systems</strong><span>Scalable, high-performance software</span></div></div>
-        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-broadcast-tower"></i></span><div><strong>Telecom &amp; 4G/5G</strong><span>Core-network systems &amp; protocols</span></div></div>
-      </div>
-
-      <div class="resume-block-heading"><span class="resume-block-icon"><i class="fas fa-code"></i></span><div><span class="resume-eyebrow">CAREER</span><h3>Professional Experience</h3></div></div>
-      <div class="resume-timeline">
-        <div class="resume-timeline-item"><div class="resume-date"><span>Apr 2025</span><small>Present</small></div><div class="resume-dot"></div><article class="resume-card">
-          <div class="resume-card-top"><div><h4>Senior Software Engineer</h4><p class="resume-company"><i class="fas fa-building"></i> Samsung Electronics · Bengaluru, India</p></div><span class="resume-role-tag">Current Role</span></div>
-          <ul><li><strong>CRTM:</strong> Building a high-performance certificate lifecycle and authentication system for LTE/5G.</li><li><strong>HSMF:</strong> Implementing SMS over NAS for LTE HSS in line with 3GPP specifications.</li><li><strong>SDM Portal:</strong> Improved dashboard usability with widget auto-refresh and critical bug fixes.</li></ul>
-          <div class="resume-tags"><span>C++</span><span>LTE/5G</span><span>Distributed Systems</span><span>Security</span></div>
-        </article></div>
-
-        <div class="resume-timeline-item"><div class="resume-date"><span>Jul 2022</span><small>Mar 2025</small></div><div class="resume-dot"></div><article class="resume-card">
-          <div class="resume-card-top"><div><h4>Software Engineer 2</h4><p class="resume-company"><i class="fas fa-building"></i> Tarana Wireless, Inc. · Pune, India</p></div></div>
-          <ul><li><strong>Tarana Cloud Suite:</strong> Built backend microservices for 1000+ edge devices; improved network uptime by 25%.</li><li><strong>Banjo:</strong> Reduced unloaded ping latency by 40% through Payload Raster and bandwidth-allocation work.</li><li><strong>Accordion:</strong> Implemented MAC CCE multiplexing in C++; increased concurrent device support from 256 to 512.</li><li><strong>Reliability:</strong> Built crash/watchdog monitoring that reduced manual triage by 80% and improved MTTR.</li></ul>
-          <div class="resume-tags"><span>C++</span><span>Backend</span><span>Microservices</span><span>Wireless Systems</span></div>
-        </article></div>
-
-        <div class="resume-timeline-item"><div class="resume-date"><span>Jul 2021</span><small>Jul 2022</small></div><div class="resume-dot"></div><article class="resume-card">
-          <div class="resume-card-top"><div><h4>Associate Data Scientist</h4><p class="resume-company"><i class="fas fa-building"></i> National Payments Corporation of India (NPCI) · Hyderabad, India</p></div></div>
-          <ul><li><strong>UPI:</strong> Automated fraud-data ingestion for the UPI 3.0 Fraud Model; accelerated training workflows by 50%.</li><li><strong>RuPay &amp; IRGCS:</strong> Supported compliance-critical reporting with RBI and internal data teams.</li><li><strong>BHIM:</strong> Built UI for a voice-enabled testing suite; improved test coverage and reduced QA cycle time by 30%.</li></ul>
-          <div class="resume-tags"><span>Python</span><span>Data Science</span><span>UPI</span><span>Automation</span></div>
-        </article></div>
-      </div>
-
-      <div class="resume-block-heading resume-education-heading"><span class="resume-block-icon"><i class="fas fa-graduation-cap"></i></span><div><span class="resume-eyebrow">EDUCATION</span><h3>Academic Foundation</h3></div></div>
-      <div class="resume-education-card"><div class="resume-education-icon"><i class="fas fa-university"></i></div><div class="resume-education-content"><div class="resume-card-top"><div><h4>Bachelor of Technology — Computer Science Engineering</h4><p class="resume-company"><i class="fas fa-map-marker-alt"></i> National Institute of Technology, Patna, India</p></div><span class="resume-year">2017 — 2021</span></div><div class="resume-tags"><span>Data Structures &amp; Algorithms</span><span>Concurrency</span><span>Operating Systems</span><span>Networks</span><span>DBMS</span></div></div></div>
-
-      <div class="resume-download"><div><strong>Want the complete profile?</strong><span>Download the full resume for detailed experience and skills.</span></div><a class="btn btn-primary resume-download-btn" href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing" rel="noopener noreferrer" target="_blank">Download Resume <i class="fas fa-download"></i></a></div>
-    </div>
-  </section>
-
-  <!-- ======= Skills Section ======= -->
-  <section class="page-section" id="services">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Technical Skills</h2>
-            <h3 class="section-subheading text-muted">
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- ======= Hero Section ======= -->
+<header class="masthead">
+<div class="home" id="hero">
+<div class="container" data-aos="zoom-in" data-aos-delay="200">
+<div class="hero-content">
+<h1>I'm <span class="typed"></span></h1>
+<p class="typed-items" data-typed-person="Aniket Sharma">Engineer, Developer, Tech Enthusiast, Problem Solver, Systems Thinker</p>
+<ul class="list-unstyled list-social">
+<li><a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+<li><a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank"><i class="bx bxl-github"></i></a></li>
+<li><a aria-label="Twitter" href="https://twitter.com/this_is_Anik" rel="noopener noreferrer" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+<li><a aria-label="Instagram" href="https://www.instagram.com/aniket.sharma___" rel="noopener noreferrer" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+<li><a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<!-- End Hero -->
+<!-- ======= About Section ======= -->
+<section class="about about-modern" id="about">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">About Me</h2>
+<h3 class="section-subheading text-muted">Backend engineering, systems development &amp; scalable technology</h3>
+</div>
+</div>
+<div class="about-card">
+<div class="row align-items-center">
+<div class="col-lg-4 text-center" data-aos="fade-right">
+<div class="about-profile-wrap">
+<img alt="Aniket Sharma - Senior Software Engineer" class="img-fluid about-profile-image" src="img/Aniket.png"/>
+<div class="about-profile-badge">
+<i class="fas fa-code"></i>
+<span>Senior Software Engineer</span>
+</div>
+</div>
+</div>
+<div class="col-lg-8" data-aos="fade-left">
+<div class="about-content">
+<div class="about-intro-card">
+<i class="fas fa-server"></i>
+<div>
+<h4>Backend &amp; Distributed Systems</h4>
+<p>Building high-performance services, APIs and scalable backend systems.</p>
+</div>
+</div>
+<div class="about-intro-card">
+<i class="fas fa-network-wired"></i>
+<div>
+<h4>Telecom &amp; 4G/5G</h4>
+<p>Working on LTE/5G core-network systems, secure certificate management and SMS over NAS.</p>
+</div>
+</div>
+<div class="about-card-grid">
+<div class="about-info-card">
+<i class="fas fa-briefcase"></i>
+<div><h4>Experience</h4><p><strong>5+ years</strong> in software engineering</p></div>
+</div>
+<div class="about-info-card">
+<i class="fas fa-code"></i>
+<div><h4>Core Stack</h4><p><strong>C++ · Python · APIs</strong></p></div>
+</div>
+<div class="about-info-card">
+<i class="fas fa-building"></i>
+<div><h4>Current Role</h4><p><strong>Samsung Electronics</strong> · Bengaluru</p></div>
+</div>
+<div class="about-info-card">
+<i class="fas fa-graduation-cap"></i>
+<div><h4>Education</h4><p><strong>B.Tech, CSE</strong> · NIT Patna</p></div>
+</div>
+</div>
+<div class="about-actions">
+<a class="btn btn-primary about-action-btn" href="#resume">View Resume <i class="fas fa-arrow-right"></i></a>
+<a class="btn btn-outline-primary about-action-btn" href="#contact">Get In Touch <i class="fas fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- End About Section -->
+<!-- ======= Resume Section ======= -->
+<section class="resume resume-modern" id="resume">
+<div class="container" data-aos="fade-up">
+<div class="section-title text-center">
+<h2 class="section-heading text-uppercase">Resume</h2>
+<p class="section-subheading text-muted">A snapshot of my experience, education and engineering journey.</p>
+</div>
+<div class="resume-overview">
+<div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-briefcase"></i></span><div><strong>5+ Years</strong><span>Professional Experience</span></div></div>
+<div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-server"></i></span><div><strong>Backend &amp; Systems</strong><span>Scalable, high-performance software</span></div></div>
+<div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-broadcast-tower"></i></span><div><strong>Telecom &amp; 4G/5G</strong><span>Core-network systems &amp; protocols</span></div></div>
+</div>
+<div class="resume-block-heading"><span class="resume-block-icon"><i class="fas fa-code"></i></span><div><span class="resume-eyebrow">CAREER</span><h3>Professional Experience</h3></div></div>
+<div class="resume-timeline">
+<div class="resume-timeline-item"><div class="resume-date"><span>Apr 2025</span><small>Present</small></div><div class="resume-dot"></div><article class="resume-card">
+<div class="resume-card-top"><div><h4>Senior Software Engineer</h4><p class="resume-company"><i class="fas fa-building"></i> Samsung Electronics · Bengaluru, India</p></div><span class="resume-role-tag">Current Role</span></div>
+<ul><li><strong>CRTM:</strong> Building a high-performance certificate lifecycle and authentication system for LTE/5G.</li><li><strong>HSMF:</strong> Implementing SMS over NAS for LTE HSS in line with 3GPP specifications.</li><li><strong>SDM Portal:</strong> Improved dashboard usability with widget auto-refresh and critical bug fixes.</li></ul>
+<div class="resume-tags"><span>C++</span><span>LTE/5G</span><span>Distributed Systems</span><span>Security</span></div>
+</article></div>
+<div class="resume-timeline-item"><div class="resume-date"><span>Jul 2022</span><small>Mar 2025</small></div><div class="resume-dot"></div><article class="resume-card">
+<div class="resume-card-top"><div><h4>Software Engineer 2</h4><p class="resume-company"><i class="fas fa-building"></i> Tarana Wireless, Inc. · Pune, India</p></div></div>
+<ul><li><strong>Tarana Cloud Suite:</strong> Built backend microservices for 1000+ edge devices; improved network uptime by 25%.</li><li><strong>Banjo:</strong> Reduced unloaded ping latency by 40% through Payload Raster and bandwidth-allocation work.</li><li><strong>Accordion:</strong> Implemented MAC CCE multiplexing in C++; increased concurrent device support from 256 to 512.</li><li><strong>Reliability:</strong> Built crash/watchdog monitoring that reduced manual triage by 80% and improved MTTR.</li></ul>
+<div class="resume-tags"><span>C++</span><span>Backend</span><span>Microservices</span><span>Wireless Systems</span></div>
+</article></div>
+<div class="resume-timeline-item"><div class="resume-date"><span>Jul 2021</span><small>Jul 2022</small></div><div class="resume-dot"></div><article class="resume-card">
+<div class="resume-card-top"><div><h4>Associate Data Scientist</h4><p class="resume-company"><i class="fas fa-building"></i> National Payments Corporation of India (NPCI) · Hyderabad, India</p></div></div>
+<ul><li><strong>UPI:</strong> Automated fraud-data ingestion for the UPI 3.0 Fraud Model; accelerated training workflows by 50%.</li><li><strong>RuPay &amp; IRGCS:</strong> Supported compliance-critical reporting with RBI and internal data teams.</li><li><strong>BHIM:</strong> Built UI for a voice-enabled testing suite; improved test coverage and reduced QA cycle time by 30%.</li></ul>
+<div class="resume-tags"><span>Python</span><span>Data Science</span><span>UPI</span><span>Automation</span></div>
+</article></div>
+</div>
+<div class="resume-block-heading resume-education-heading"><span class="resume-block-icon"><i class="fas fa-graduation-cap"></i></span><div><span class="resume-eyebrow">EDUCATION</span><h3>Academic Foundation</h3></div></div>
+<div class="resume-education-card"><div class="resume-education-icon"><i class="fas fa-university"></i></div><div class="resume-education-content"><div class="resume-card-top"><div><h4>Bachelor of Technology — Computer Science Engineering</h4><p class="resume-company"><i class="fas fa-map-marker-alt"></i> National Institute of Technology, Patna, India</p></div><span class="resume-year">2017 — 2021</span></div><div class="resume-tags"><span>Data Structures &amp; Algorithms</span><span>Concurrency</span><span>Operating Systems</span><span>Networks</span><span>DBMS</span></div></div></div>
+<div class="resume-download"><div><strong>Want the complete profile?</strong><span>Download the full resume for detailed experience and skills.</span></div><a class="btn btn-primary resume-download-btn" href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing" rel="noopener noreferrer" target="_blank">Download Resume <i class="fas fa-download"></i></a></div>
+</div>
+</section>
+<!-- ======= Skills Section ======= -->
+<section class="page-section" id="services">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">Technical Skills</h2>
+<h3 class="section-subheading text-muted">
               Backend engineering, distributed systems, cloud-native development and data-driven technologies.
             </h3>
-            <br />
-          </div>
-        </div>
-        <div class="services-carousel owl-theme">
-
-          <div class="services-block">
-            <i class="fas fa-code"></i>
-            <span>C++ &amp; Python</span>
-            <p class="separator">
+<br/>
+</div>
+</div>
+<div class="services-carousel owl-theme">
+<div class="services-block">
+<i class="fas fa-code"></i>
+<span>C++ &amp; Python</span>
+<p class="separator">
               Primary programming languages for backend services, systems programming, automation and
               data-oriented applications.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-server"></i>
-            <span>Backend &amp; APIs</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-server"></i>
+<span>Backend &amp; APIs</span>
+<p class="separator">
               Designing and building backend services, REST APIs and service integrations with a focus on
               scalability, reliability and maintainability.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-project-diagram"></i>
-            <span>Distributed Systems</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-project-diagram"></i>
+<span>Distributed Systems</span>
+<p class="separator">
               Experience with distributed, low-latency systems, microservices and services that coordinate
               large numbers of devices and requests.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-sync-alt"></i>
-            <span>Concurrency &amp; Multithreading</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-sync-alt"></i>
+<span>Concurrency &amp; Multithreading</span>
+<p class="separator">
               Multithreaded and concurrent programming for performance-sensitive systems, with emphasis on
               synchronization, reliability and efficient resource usage.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-cloud"></i>
-            <span>Cloud-Native Systems</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-cloud"></i>
+<span>Cloud-Native Systems</span>
+<p class="separator">
               Backend architecture and services designed for scalable, reliable and production-oriented
               cloud environments.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-broadcast-tower"></i>
-            <span>Telecom &amp; 4G/5G</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-broadcast-tower"></i>
+<span>Telecom &amp; 4G/5G</span>
+<p class="separator">
               Software development for LTE/5G core-network systems, including HSS-related functionality,
               SMS over NAS and secure certificate lifecycle management.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-chart-line"></i>
-            <span>Data Science &amp; Machine Learning</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-chart-line"></i>
+<span>Data Science &amp; Machine Learning</span>
+<p class="separator">
               Applied data analysis and machine-learning experience, including fraud-data workflows,
               classification and deep-learning projects.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-database"></i>
-            <span>Databases &amp; Data</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-database"></i>
+<span>Databases &amp; Data</span>
+<p class="separator">
               Working knowledge of SQL, MongoDB and data-processing workflows for backend applications and
               analytics.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-globe"></i>
-            <span>Node.js &amp; Web Development</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-globe"></i>
+<span>Node.js &amp; Web Development</span>
+<p class="separator">
               Server-side JavaScript development with Node.js and Express, along with responsive web
               application development and API integration.
             </p>
-          </div>
-
-          <div class="services-block">
-            <i class="fas fa-lightbulb"></i>
-            <span>System Design &amp; Debugging</span>
-            <p class="separator">
+</div>
+<div class="services-block">
+<i class="fas fa-lightbulb"></i>
+<span>System Design &amp; Debugging</span>
+<p class="separator">
               Strong focus on scalable architecture, performance analysis, debugging, reliability and
               designing maintainable software systems.
             </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Services Section -->
-  <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Projects</h2>
-            <h3 class="section-subheading text-muted"> </h3>
-            <div class="row">
-              <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                <ul id="portfolio-flters">
-                  <li class="filter-active" data-filter="*">All</li>
-                  <li data-filter=".filter-ML">ML &amp; DL</li>
-                  <li data-filter=".filter-Data">Data Science</li>
-                  <li data-filter=".filter-Python">Python</li>
-                  <li data-filter=".filter-Other">Other</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row portfolio-container">
-          <div class="col-md-3 col-sm-6 portfolio-item filter-ML">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Spam classification project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/spam.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Spam Classifier</h4>
-              <p class="text-muted">NLP | Naive Bayes | Text Classification</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-Data">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Battle of the Neighborhoods project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/inside location.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Battle of the Neighborhoods</h4>
-              <p class="text-muted">Data Science | Foursquare API | K-Means</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-ML">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Artistic image generation project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/art.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Artistic Image Generation</h4>
-              <p class="text-muted">Deep Learning | VGG-19 | Neural Style Transfer</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-Python">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Tic Tac Toe project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/tictactoe1.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Tic Tac Toe</h4>
-              <p class="text-muted">Python | Package Development | PyPI</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-Python">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Decision Review System project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/dhoni.png" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Decision Review System</h4>
-              <p class="text-muted">Python | Tkinter | Video Processing</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-ML">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Trigger word detection project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/trigger.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Trigger Word Detection</h4>
-              <p class="text-muted">Deep Learning | Sequence Modeling | Audio Synthesis</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 portfolio-item filter-Python">
-            <a class="portfolio-link" aria-label="Open project details" data-toggle="modal" href="#portfolioModal7">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img alt="Indian Railways announcement system project" class="img-fluid" decoding="async" loading="lazy"
-                src="img/portfolio/railways.jpg" />
-            </a>
-            <div class="portfolio-caption">
-              <h4>Indian Railways Announcement System</h4>
-              <p class="text-muted">Python | Audio Processing | Data-driven Automation</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Blog -->
-  <section class="page-section" id="blog">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">My Thoughts</h2>
-            <h3 class="section-subheading text-muted"></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img alt="YOLO object detection illustration" class="rounded-circle img-fluid" decoding="async"
-                    loading="lazy" src="img/about/yolo.png" />
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <!-- <h4>2009-2011</h4> -->
-                    <h4 class="subheading">YOLO (You Only Look Once) </h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">An introduction to YOLO and single-stage object detection, covering how a
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- End Services Section -->
+<!-- Portfolio Grid -->
+<section class="bg-light page-section" id="portfolio">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">Projects</h2>
+<h3 class="section-subheading text-muted"> </h3>
+<div class="row">
+<div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+<ul id="portfolio-flters" class="portfolio-filter-pills" role="tablist" aria-label="Project filters">
+<li class="filter-active" data-filter="*" role="button" tabindex="0">All Projects</li>
+<li data-filter=".filter-ML" role="button" tabindex="0">AI &amp; ML</li>
+<li data-filter=".filter-Data" role="button" tabindex="0">Data Science</li>
+<li data-filter=".filter-Python" role="button" tabindex="0">Python &amp; Apps</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="row portfolio-container"><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Spam Classifier project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal1"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Spam Classifier project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/spam.jpg"/></div></a><div class="project-card-body"><h4>Spam Classifier</h4><div class="project-tags"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Data"><div class="project-card"><a aria-label="Open Battle of the Neighborhoods project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal2"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Battle of the Neighborhoods project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/inside location.jpg"/></div></a><div class="project-card-body"><h4>Battle of the Neighborhoods</h4><div class="project-tags"><span>Foursquare API</span><span>K-Means</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Artistic Image Generation project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal3"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Artistic Image Generation project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/art.jpg"/></div></a><div class="project-card-body"><h4>Artistic Image Generation</h4><div class="project-tags"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Tic Tac Toe project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal4"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Tic Tac Toe project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/tictactoe1.jpg"/></div></a><div class="project-card-body"><h4>Tic Tac Toe</h4><div class="project-tags"><span>Package Development</span><span>PyPI</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Decision Review System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal5"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Decision Review System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/dhoni.png"/></div></a><div class="project-card-body"><h4>Decision Review System</h4><div class="project-tags"><span>Tkinter</span><span>Video Processing</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Trigger Word Detection project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal6"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Trigger Word Detection project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/trigger.jpg"/></div></a><div class="project-card-body"><h4>Trigger Word Detection</h4><div class="project-tags"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Indian Railways Announcement System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal7"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Indian Railways Announcement System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/railways.jpg"/></div></a><div class="project-card-body"><h4>Indian Railways Announcement System</h4><div class="project-tags"><span>Audio Processing</span><span>Automation</span></div></div></div></div></div>
+</div>
+</div>
+</section>
+<!-- Blog -->
+<section class="page-section" id="blog">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">My Thoughts</h2>
+<h3 class="section-subheading text-muted"></h3>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12">
+<ul class="timeline">
+<li>
+<div class="timeline-image">
+<img alt="YOLO object detection illustration" class="rounded-circle img-fluid" decoding="async" loading="lazy" src="img/about/yolo.png"/>
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<!-- <h4>2009-2011</h4> -->
+<h4 class="subheading">YOLO (You Only Look Once) </h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">An introduction to YOLO and single-stage object detection, covering how a
                       neural network can locate and classify objects efficiently in an image.
                     </p>
-                    <p class="text-muted">
-                      <a href="https://medium.com/@imaniket/yolo-you-only-look-once-d6a040ee5292"
-                        rel="noopener noreferrer" target="_blank"><strong>Read
+<p class="text-muted">
+<a href="https://medium.com/@imaniket/yolo-you-only-look-once-d6a040ee5292" rel="noopener noreferrer" target="_blank"><strong>Read
                           more</strong></a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img alt="Neural style transfer generated image" class="rounded-circle img-fluid" decoding="async"
-                    loading="lazy" src="img/about/generated_image.jpg" />
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <!-- <h4>March 2011</h4> -->
-                    <h4 class="subheading">Art-Generation with Deep Neural Style Transfer</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Deep Learning • Computer Vision • Neural Style Transfer</p>
-                    <p class="text-muted">An introduction to Neural Style Transfer and how pretrained convolutional
+</p>
+</div>
+</div>
+</li>
+<li class="timeline-inverted">
+<div class="timeline-image">
+<img alt="Neural style transfer generated image" class="rounded-circle img-fluid" decoding="async" loading="lazy" src="img/about/generated_image.jpg"/>
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<!-- <h4>March 2011</h4> -->
+<h4 class="subheading">Art-Generation with Deep Neural Style Transfer</h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">Deep Learning • Computer Vision • Neural Style Transfer</p>
+<p class="text-muted">An introduction to Neural Style Transfer and how pretrained convolutional
                       networks can combine content and artistic style to generate new images.
                     </p>
-                    <p class="text-muted">
-                      <a href="https://medium.com/@imaniket/art-generation-with-deep-neural-style-transfer-d0a111c752cd"
-                        rel="noopener noreferrer" target="_blank"><strong>Read
+<p class="text-muted">
+<a href="https://medium.com/@imaniket/art-generation-with-deep-neural-style-transfer-d0a111c752cd" rel="noopener noreferrer" target="_blank"><strong>Read
                           more</strong></a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ======= GitHub Contributions Section ======= -->
-  <section class="bg-light page-section" id="git">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">GitHub Contributions</h2>
-            <h3 class="section-subheading text-muted"></h3>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="calendar">
+</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======= GitHub Contributions Section ======= -->
+<section class="bg-light page-section" id="git">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">GitHub Contributions</h2>
+<h3 class="section-subheading text-muted"></h3>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-12">
+<div class="calendar">
             Loading GitHub contributions...
           </div>
-          <p class="text-center mt-3 mb-0"><a href="https://github.com/imAniketSharma" target="_blank"
-              rel="noopener noreferrer"><strong>View GitHub Profile</strong></a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End GitHub Contributions Section -->
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2 class="text-center">Let's Get In Touch!</h2>
-        <p class="text-center">Give a call, send email or drop message and I
+<p class="text-center mt-3 mb-0"><a href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank"><strong>View GitHub Profile</strong></a></p>
+</div>
+</div>
+</div>
+</section>
+<!-- End GitHub Contributions Section -->
+<!-- ======= Contact Section ======= -->
+<section class="contact" id="contact">
+<div class="container" data-aos="fade-up">
+<div class="section-title">
+<h2 class="text-center">Let's Get In Touch!</h2>
+<p class="text-center">Give a call, send email or drop message and I
           will get back to you as soon as possible!</p>
-        <br>
-      </div>
+<br/>
+</div>
+<div class="row" data-aos="fade-in">
+<div class="col-lg-5 d-flex align-items-stretch">
+<div class="info">
+<div class="address">
+<i class="icofont-google-map"></i>
+<h4>Location:</h4>
+<p>Bangalore, India</p>
+</div>
+<div class="email">
+<i class="icofont-envelope"></i>
+<h4>Email:</h4>
+<p><a href="mailto:aniketsharma552@gmail.com">aniketsharma552@gmail.com</a></p>
+</div>
+<div class="phone">
+<i class="icofont-phone"></i>
+<h4>Call:</h4>
+<p><a href="tel:+919304147267">+91 93041 47267</a></p>
+</div>
+</div>
+</div>
+<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+<form action="mailto:aniketsharma552@gmail.com" class="php-email-form" enctype="text/plain" id="contact-form" method="post" role="form">
+<div class="form-row">
+<div class="form-group col-md-6">
+<label for="contact-name">Your Name</label>
+<input class="form-control" id="contact-name" minlength="2" name="name" required="" type="text"/>
+</div>
+<div class="form-group col-md-6">
+<label for="contact-email">Your Email</label>
+<input class="form-control" id="contact-email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="form-group">
+<label for="contact-subject">Subject</label>
+<input class="form-control" id="contact-subject" minlength="4" name="subject" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="contact-message">Message</label>
+<textarea class="form-control" id="contact-message" minlength="10" name="message" required="" rows="10"></textarea>
+</div>
+<div class="mb-3">
+<div class="loading">Preparing your email...</div>
+<div class="error-message"></div>
+<div class="sent-message">Your email client should open with your message ready to send.</div>
+</div>
+<div class="text-center">
+<button type="submit">Send Message</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- End Contact Section -->
+<!-- Footer -->
+<footer class="footer">
+<div class="container" data-aos="fade-up">
+<div class="row align-items-center">
+<div class="col-md-4">
+<span class="copyright">Copyright © Aniket Sharma</span>
+</div>
+<div class="col-md-4">
+<ul class="list-inline social-buttons">
+<li class="list-inline-item">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li class="list-inline-item">
+<a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-kaggle"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list-inline quicklinks">
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- Portfolio Modals -->
+<!-- Modal 1 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal1" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
 
-      <div class="row" data-aos="fade-in">
 
-        <div class="col-lg-5 d-flex align-items-stretch">
-          <div class="info">
-            <div class="address">
-              <i class="icofont-google-map"></i>
-              <h4>Location:</h4>
-              <p>Bangalore, India</p>
-            </div>
-
-            <div class="email">
-              <i class="icofont-envelope"></i>
-              <h4>Email:</h4>
-              <p><a href="mailto:aniketsharma552@gmail.com">aniketsharma552@gmail.com</a></p>
-            </div>
-
-            <div class="phone">
-              <i class="icofont-phone"></i>
-              <h4>Call:</h4>
-              <p><a href="tel:+919304147267">+91 93041 47267</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form id="contact-form" action="mailto:aniketsharma552@gmail.com" method="post"
-            enctype="text/plain" role="form" class="php-email-form">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="contact-name">Your Name</label>
-                <input type="text" name="name" class="form-control" id="contact-name"
-                  minlength="2" required />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="contact-email">Your Email</label>
-                <input type="email" class="form-control" name="email" id="contact-email" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input type="text" class="form-control" name="subject" id="contact-subject"
-                minlength="4" required />
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea class="form-control" name="message" id="contact-message" rows="10"
-                minlength="10" required></textarea>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Preparing your email...</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your email client should open with your message ready to send.</div>
-            </div>
-            <div class="text-center">
-              <button type="submit">Send Message</button>
-            </div>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-  <!-- End Contact Section -->
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container" data-aos="fade-up">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright © Aniket Sharma</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer"
-                target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-kaggle"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Portfolio Modals -->
-  <!-- Modal 1 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal1" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Spam Classification System</h3>
-                <p class="item-intro text-muted">A text-classification project that predicts whether a message is spam or legitimate.</p>
-                <img alt="Spam classification system screenshot" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/spam2.png" />
-                <div class="project-details">
-                  <p>The system applies a Naive Bayes approach to classify message text into spam and non-spam categories.</p>
-                  <p>The project demonstrates practical text preprocessing, probabilistic classification and evaluation of a
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Spam Classification System</h3><p class="item-intro text-muted">A text-classification project that predicts whether a message is spam or legitimate.</p><img alt="Spam classification system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/spam2.png"/><div class="project-details">
+<p>The system applies a Naive Bayes approach to classify message text into spam and non-spam categories.</p>
+<p>The project demonstrates practical text preprocessing, probabilistic classification and evaluation of a
                     machine-learning model for message filtering.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/spam-classifier-system"
-                    rel="noopener noreferrer" target="_blank"><strong>View Project</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Text classification using a Naive Bayes approach.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 6 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal6" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Trigger Word Detection</h3>
-                <p class="item-intro text-muted">A deep-learning project for detecting a spoken trigger word in audio.</p>
-                <img alt="Trigger word detection illustration" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/alexa.jpg" />
-                <div class="project-details">
-                  <p>The system is designed to detect the trigger word <strong>"activate"</strong> in an audio stream and
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Text classification using a Naive Bayes approach.</p><h3>Tech Stack</h3><div class="project-tech"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/spam-classifier-system" rel="noopener noreferrer" target="_blank">View Project</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 6 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal6" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Trigger Word Detection</h3><p class="item-intro text-muted">A deep-learning project for detecting a spoken trigger word in audio.</p><img alt="Trigger word detection illustration" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/alexa.jpg"/><div class="project-details">
+<p>The system is designed to detect the trigger word <strong>"activate"</strong> in an audio stream and
                     respond with a chime when the word is detected.</p>
-                  <p>Training data is synthesized from positive trigger-word recordings, negative speech examples and
+<p>Training data is synthesized from positive trigger-word recordings, negative speech examples and
                     background-noise clips to build an audio detection dataset.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/Trigger-word-detection-system"
-                    rel="noopener noreferrer" target="_blank"><strong>View Repository</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Audio classification and trigger-word detection.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 4 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal4" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Tic Tac Toe</h3>
-                <p class="item-intro text-muted">A Python package implementing the classic Tic Tac Toe game for the command line.</p>
-                <img alt="Tic Tac Toe project screenshot" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/tictactoe.png" />
-                <div class="project-details">
-                  <p>A lightweight Python implementation of the classic two-player 3×3 Tic Tac Toe game.</p>
-                  <p>The project was packaged for installation through PyPI and can be used from a Python environment.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>PyPI:</strong> <a href="https://pypi.org/project/my-tic-tac-toe/"
-                    rel="noopener noreferrer" target="_blank"><strong>View Package</strong></a></li>
-                  <br />
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/my-tic-tac-toe"
-                    rel="noopener noreferrer" target="_blank"><strong>View Repository</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Python package development and distribution through PyPI.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 3 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal3" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Artistic Image Generation</h3>
-                <p class="item-intro text-muted">Deep-learning project implementing Neural Style Transfer with a pretrained VGG-19 network.</p>
-                <img alt="Neural style transfer project screenshot" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/artistics.png" />
-                <div class="project-details">
-                  <p>Neural Style Transfer combines the content of one image with the visual style of another to generate a
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Audio classification and trigger-word detection.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Trigger-word-detection-system" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 4 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Tic Tac Toe</h3><p class="item-intro text-muted">A Python package implementing the classic Tic Tac Toe game for the command line.</p><img alt="Tic Tac Toe project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/tictactoe.png"/><div class="project-details">
+<p>A lightweight Python implementation of the classic two-player 3×3 Tic Tac Toe game.</p>
+<p>The project was packaged for installation through PyPI and can be used from a Python environment.</p>
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Python package development and distribution through PyPI.</p><h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Package Development</span><span>PyPI</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://pypi.org/project/my-tic-tac-toe/" rel="noopener noreferrer" target="_blank">View Package</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/my-tic-tac-toe" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 3 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal3" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Artistic Image Generation</h3><p class="item-intro text-muted">Deep-learning project implementing Neural Style Transfer with a pretrained VGG-19 network.</p><img alt="Neural style transfer project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/artistics.png"/><div class="project-details">
+<p>Neural Style Transfer combines the content of one image with the visual style of another to generate a
                     new image.</p>
-                  <p>The implementation uses a pretrained VGG-19 network and intermediate feature representations learned
+<p>The implementation uses a pretrained VGG-19 network and intermediate feature representations learned
                     from ImageNet to optimize the generated image.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/Artistic-Image-Generation"
-                    rel="noopener noreferrer" target="_blank"><strong>View Repository</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Neural Style Transfer using deep-learning feature representations.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 2 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal2" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Battle of the Neighborhoods</h3>
-                <p class="item-intro text-muted">A location-data analysis project exploring neighborhoods in Toronto for an
-                  Italian restaurant.</p>
-                <img alt="Toronto neighborhood analysis project" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/toronto.jpg" />
-                <div class="project-details">
-                  <p>The project uses neighborhood and venue information to compare areas in Toronto and identify
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Neural Style Transfer using deep-learning feature representations.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Artistic-Image-Generation" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 2 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal2" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Battle of the Neighborhoods</h3><p class="item-intro text-muted">A location-data analysis project exploring neighborhoods in Toronto for an
+                  Italian restaurant.</p><img alt="Toronto neighborhood analysis project" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/toronto.jpg"/><div class="project-details">
+<p>The project uses neighborhood and venue information to compare areas in Toronto and identify
                     potentially suitable locations for an Italian restaurant.</p>
-                  <p>It combines location data, venue information and clustering-based analysis to turn geographic data
+<p>It combines location data, venue information and clustering-based analysis to turn geographic data
                     into a business-location comparison.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>Live Project:</strong> <a href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/"
-                    rel="noopener noreferrer" target="_blank"><strong>View Project</strong></a></li>
-                  <br />
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/Battle-of-Neighborhoods"
-                    rel="noopener noreferrer" target="_blank"><strong>View Repository</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Location analytics and clustering for neighborhood comparison.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 5 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal5" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <h3 class="text-uppercase">Decision Review System</h3>
-                <p class="item-intro text-muted">A Python/Tkinter application for reviewing recorded cricket footage and supporting
-                  third-umpire-style decisions.</p>
-                <img alt="Decision Review System screenshot" class="img-fluid d-block mx-auto" decoding="async"
-                  loading="lazy" src="img/portfolio/drs.jpg" />
-                <div class="project-details">
-                  <p>The application provides a GUI for loading recorded video and reviewing cricket decisions such as
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Location analytics and clustering for neighborhood comparison.</p><h3>Tech Stack</h3><div class="project-tech"><span>Data Science</span><span>Foursquare API</span><span>K-Means</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/" rel="noopener noreferrer" target="_blank">View Project</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Battle-of-Neighborhoods" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 5 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal5" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Decision Review System</h3><p class="item-intro text-muted">A Python/Tkinter application for reviewing recorded cricket footage and supporting
+                  third-umpire-style decisions.</p><img alt="Decision Review System screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/drs.jpg"/><div class="project-details">
+<p>The application provides a GUI for loading recorded video and reviewing cricket decisions such as
                     run-outs, edges, LBW and catches.</p>
-                  <p>Video playback can be controlled to inspect footage in more detail and support a manual review workflow.</p>
-                </div>
-                <ul class="list-inline">
-                  <li><strong>GitHub:</strong> <a href="https://github.com/imAniketSharma/Decision-Review-System"
-                    rel="noopener noreferrer" target="_blank"><strong>View Repository</strong></a></li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4"><div class="portfolio-info"><h3>Project</h3>
-              <p>Python GUI and video-review application.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 7 -->
-  <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal7" role="dialog" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h3 class="text-uppercase">Indian Railways Announcement System</h3>
-                <p class="item-intro text-muted">A Python program that generates railway-style announcements from
-                  structured train information.</p>
-                <img alt="Indian Railways announcement system screenshot" class="img-fluid d-block mx-auto"
-                  decoding="async" loading="lazy" src="img/portfolio/railways1.jpg" />
-                <div class="project-details">
-                  <p>Generates railway-style station announcements from structured train information stored in an Excel database.</p>
-                  <p>Combines recorded audio segments for train number, name, source, destination and platform to create dynamic announcements.</p>
-                </div>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close</button>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Project</h3>
-                <p>See the project links above for the repository or live demo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
-  <script src="vendor/typed/typed.js"></script>
-  <script src="vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/venobox/venobox.min.js"></script>
-  <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js"></script>
-  <script>
+<p>Video playback can be controlled to inspect footage in more detail and support a manual review workflow.</p>
+</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+<p>Python GUI and video-review application.</p><h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Tkinter</span><span>Video Processing</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Decision-Review-System" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal 7 -->
+<div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal7" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="close-modal" data-dismiss="modal">
+<div class="lr">
+<div class="rl"></div>
+</div>
+</div>
+<div class="container" data-aos="fade-up">
+<div class="row">
+<div class="col-12">
+<div class="modal-body">
+<!-- Project Details Go Here -->
+
+<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Indian Railways Announcement System</h3><p class="item-intro text-muted">A Python program that generates railway-style announcements from
+                  structured train information.</p><img alt="Indian Railways announcement system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/railways1.jpg"/><div class="project-details">
+<p>Generates railway-style station announcements from structured train information stored in an Excel database.</p>
+<p>Combines recorded audio segments for train number, name, source, destination and platform to create dynamic announcements.</p>
+</div></div><div class="project-modal-side"><div class="portfolio-info">
+<h3>Project Overview</h3>
+<p>See the project links above for the repository or live demo.</p>
+<h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Audio Processing</span><span>Automation</span></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button">
+<i class="fas fa-times"></i>
+                  Close</button></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="js/agency.min.js"></script>
+<script src="vendor/typed/typed.js"></script>
+<script src="vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="vendor/venobox/venobox.min.js"></script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js"></script>
+<script>
     GitHubCalendar(".calendar", "imAniketSharma", {
       responsive: true,
       tooltips: true,
@@ -1300,8 +1542,7 @@
       cache: 3600
     });
   </script>
-
-  <script>
+<script>
     /*
      * github-calendar keeps the original GitHub-style calendar, tooltips and
      * streak layout. Its old default proxy can return zero for the summary
@@ -1502,8 +1743,7 @@
       refreshStats();
     })();
   </script>
-
-  <script>
+<script>
     // Static-site contact form: validates fields and opens the user's mail client.
     document.getElementById("contact-form").addEventListener("submit", function (event) {
       event.preventDefault();
@@ -1530,7 +1770,7 @@
       window.location.href = mailto;
     });
   </script>
-  <script>
+<script>
     // Prevent mouse clicks from leaving buttons/links in their persistent :focus state.
     // Keyboard users retain normal focus styling and accessibility.
     document.addEventListener("mouseup", function (event) {
@@ -1542,6 +1782,72 @@
       }
     });
   </script>
-</body>
 
+<style id="v28-project-card-height-fix">
+/* v28: filtered rows should size to the card content, not stretch to the portfolio section height. */
+#portfolio .portfolio-container {
+  align-items: start !important;
+  grid-auto-rows: max-content !important;
+}
+#portfolio .portfolio-container > .portfolio-item {
+  height: auto !important;
+  align-self: start !important;
+}
+#portfolio .portfolio-container > .portfolio-item .project-card {
+  height: auto !important;
+}
+</style>
+
+<style id="v27-project-filter-fix">
+/* v27: reliable project filtering while preserving the CSS grid */
+#portfolio .portfolio-container > .portfolio-item.project-filter-hidden { display: none !important; }
+#portfolio .portfolio-container > .portfolio-item.project-filter-visible { display: block !important; }
+</style>
+<script id="v27-project-filter-script">
+(function () {
+  function initProjectFilters() {
+    var container = document.querySelector('#portfolio .portfolio-container');
+    var filters = Array.prototype.slice.call(document.querySelectorAll('#portfolio-flters li'));
+    if (!container || !filters.length) return;
+
+    var items = Array.prototype.slice.call(container.querySelectorAll('.portfolio-item'));
+
+    function applyFilter(filter) {
+      var selector = filter.getAttribute('data-filter') || '*';
+      filters.forEach(function (item) { item.classList.remove('filter-active'); });
+      filter.classList.add('filter-active');
+
+      items.forEach(function (item) {
+        var matches = selector === '*' || item.matches(selector);
+        item.classList.toggle('project-filter-visible', matches);
+        item.classList.toggle('project-filter-hidden', !matches);
+      });
+    }
+
+    filters.forEach(function (filter) {
+      filter.addEventListener('click', function (event) {
+        event.preventDefault();
+        applyFilter(filter);
+      });
+      filter.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          applyFilter(filter);
+        }
+      });
+    });
+
+    var active = document.querySelector('#portfolio-flters li.filter-active') || filters[0];
+    applyFilter(active);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectFilters);
+  } else {
+    initProjectFilters();
+  }
+})();
+</script>
+
+</body>
 </html>
