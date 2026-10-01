@@ -19,1169 +19,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet"/>
-<link href="vendor/hover/hover.min.css" rel="stylesheet"/>
 <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet"/>
 <link href="vendor/icofont/icofont.min.css" rel="stylesheet"/>
 <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
-<link href="vendor/venobox/venobox.css" rel="stylesheet"/>
 <link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
 <link href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css" rel="stylesheet"/>
-<style>
-    /* Keep selected text readable on the light/dark sections. */
-    ::selection {
-      background: #b3d7ff;
-      color: #111111;
-    }
-
-    ::-moz-selection {
-      background: #b3d7ff;
-      color: #111111;
-    }
-  
-    /* Project cards: cleaner hierarchy while preserving the existing portfolio behavior. */
-    .portfolio-container {
-      margin-top: 10px;
-    }
-
-    .project-card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 100%;
-      box-shadow: 0 4px 18px rgba(0,0,0,.07);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.12);
-    }
-
-    .project-card-link {
-      display: block;
-      position: relative;
-    }
-
-    .project-media {
-      position: relative;
-      height: 215px;
-      overflow: hidden;
-      background: #f5f5f5;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .35s ease;
-    }
-
-    .project-card:hover .project-image {
-      transform: scale(1.04);
-    }
-
-    .project-card .portfolio-hover {
-      z-index: 2;
-    }
-
-    .project-card .portfolio-hover-content i {
-      font-size: 1.15rem;
-    }
-
-    .project-card-body {
-      padding: 22px 22px 18px;
-      min-height: 178px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-category {
-      display: inline-block;
-      width: fit-content;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: #edf6ff;
-      color: #4b82b8;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .project-card-body h4 {
-      margin: 0 0 12px;
-      font-size: 19px;
-      line-height: 1.3;
-      min-height: 49px;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .project-tags span {
-      font-size: 11px;
-      color: #777;
-      background: #f7f7f7;
-      border: 1px solid #ececec;
-      border-radius: 4px;
-      padding: 4px 7px;
-    }
-
-    .project-card-footer {
-      margin-top: auto;
-      padding-top: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #777;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .project-card-footer i {
-      color: #b3d7ff;
-      transition: transform .2s ease;
-    }
-
-    .project-card:hover .project-card-footer i {
-      transform: translateX(4px);
-    }
-
-    @media (max-width: 767.98px) {
-      .project-media {
-        height: 210px;
-      }
-      .project-card-body {
-        min-height: 0;
-        padding: 18px;
-      }
-      .project-card-body h4 {
-        min-height: 0;
-        font-size: 18px;
-      }
-    }
-</style>
-<style>
-    /* Responsive polish: preserve the existing desktop design while making
-       navigation, filters, cards, forms and the GitHub calendar usable on phones. */
-    #mainNav .navbar-brand {
-      font-family: "Kaushan Script", cursive;
-      font-weight: 400;
-      letter-spacing: .2px;
-    }
-
-    #mainNav .nav-link {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 700;
-      letter-spacing: .04em;
-      white-space: nowrap;
-    }
-
-    #mainNav .nav-link i {
-      margin-right: 5px;
-      font-size: .9em;
-    }
-
-    #portfolio-flters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-      padding-left: 0;
-    }
-
-    #portfolio-flters li {
-      margin: 3px 4px;
-    }
-
-    .services-block {
-      min-height: 255px;
-    }
-
-    .services-block > i {
-      display: inline-block;
-      line-height: 1;
-    }
-
-    .portfolio-caption h4 {
-      min-height: 48px;
-    }
-
-    .portfolio-caption p {
-      min-height: 42px;
-    }
-
-    .calendar {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .calendar > .js-calendar-graph {
-      min-width: 760px;
-    }
-
-    #contact-form textarea {
-      resize: vertical;
-    }
-
-    @media (max-width: 991.98px) {
-      #mainNav .navbar-collapse {
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      #mainNav .navbar-nav {
-        padding: 8px 0;
-      }
-
-      #mainNav .nav-link {
-        padding: 10px 0;
-      }
-
-      .masthead .hero-content h1 {
-        font-size: 42px;
-      }
-
-      .portfolio-container .portfolio-item {
-        margin-bottom: 30px;
-      }
-    }
-
-    @media (max-width: 575.98px) {
-      #mainNav .navbar-brand {
-        font-size: 17px;
-      }
-
-      #mainNav .navbar-toggler {
-        padding: 7px 10px;
-      }
-
-      .masthead .hero-content h1 {
-        font-size: 28px;
-        line-height: 1.2;
-        white-space: nowrap;
-      }
-
-      .masthead .hero-content h1 .typed {
-        white-space: nowrap;
-      }
-
-      /* Isotope can temporarily absolutely-position portfolio cards while
-         images/animations are initializing. On small screens, keep the cards
-         in normal document flow so they never overlap after a reload. */
-      .portfolio-container {
-        display: flex !important;
-        flex-wrap: wrap;
-      }
-
-      .portfolio-container .portfolio-item {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-        width: 100% !important;
-        margin-bottom: 30px;
-      }
-
-      .masthead .hero-content .typed-items {
-        font-size: 15px;
-      }
-
-      .section-heading {
-        font-size: 28px;
-      }
-
-      .section-subheading {
-        font-size: 14px;
-      }
-
-      #portfolio-flters li {
-        font-size: 12px;
-        padding: 7px 10px;
-      }
-
-      .portfolio-caption h4,
-      .portfolio-caption p {
-        min-height: 0;
-      }
-
-      .portfolio-modal .modal-dialog {
-        margin: 12px;
-      }
-
-      .portfolio-modal .modal-body {
-        padding: 25px 12px;
-      }
-
-      .contact .info,
-      #contact-form {
-        width: 100%;
-      }
-
-      .calendar > .js-calendar-graph {
-        min-width: 680px;
-      }
-    }
-  </style>
-<style>
-    #mainNav .nav-link:focus-visible,
-    #mainNav .navbar-toggler:focus-visible,
-    .portfolio-link:focus-visible,
-    #portfolio-flters li:focus-visible,
-    button:focus-visible,
-    a:focus-visible {
-      outline: 2px solid rgba(254, 209, 54, .9);
-      outline-offset: 3px;
-    }
-  </style>
-<style>
-    .about-modern {
-      padding-top: 90px;
-      padding-bottom: 90px;
-    }
-    .about-modern .section-subheading {
-      margin-bottom: 35px;
-    }
-    .about-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 42px;
-      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    .about-profile-wrap {
-      position: relative;
-      max-width: 300px;
-      margin: 0 auto;
-      padding: 10px 10px 28px;
-    }
-    .about-profile-image {
-      width: 100%;
-      max-width: 270px;
-      border-radius: 18px !important;
-      display: block;
-      margin: 0 auto;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-    .about-profile-badge {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-      background: #fff;
-      padding: 10px 16px;
-      border-radius: 30px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .3px;
-    }
-    .about-profile-badge i { margin: 0; }
-    .about-content { padding-left: 22px; }
-    .about-intro-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 17px 18px;
-      margin-bottom: 14px;
-      border-radius: 13px;
-      background: #f8f9fa;
-      border: 1px solid rgba(0, 0, 0, 0.045);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .about-intro-card:hover,
-    .about-info-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
-    }
-    .about-intro-card > i,
-    .about-info-card > i {
-      flex: 0 0 40px;
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: #fff;
-      font-size: 17px;
-      margin: 0;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-    }
-    .about-intro-card h4,
-    .about-info-card h4 {
-      margin: 0 0 3px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #333;
-    }
-    .about-intro-card p,
-    .about-info-card p {
-      margin: 0;
-      color: #777;
-      font-size: 12px;
-      line-height: 1.55;
-    }
-    .about-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 12px;
-    }
-    .about-info-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      padding: 16px;
-      border-radius: 13px;
-      background: #fff;
-      border: 1px solid #eee;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .about-info-card p strong { color: #555; }
-    .about-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 22px;
-    }
-    .about-action-btn {
-      border-radius: 25px;
-      padding: 10px 18px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .about-action-btn i { margin-left: 6px; }
-    @media (max-width: 991px) {
-      .about-content { padding-left: 0; margin-top: 35px; }
-      .about-card { padding: 32px; }
-    }
-    @media (max-width: 767px) {
-      .about-modern { padding-top: 65px; padding-bottom: 65px; }
-      .about-modern .section-subheading { line-height: 1.5; margin: 0 15px 28px; }
-      .about-card { padding: 25px 18px; border-radius: 15px; }
-      .about-profile-wrap { max-width: 245px; padding-bottom: 25px; }
-      .about-profile-image { max-width: 225px; }
-      .about-profile-badge { font-size: 10px; padding: 8px 12px; }
-      .about-content { margin-top: 30px; }
-      .about-intro-card { padding: 14px; }
-      .about-card-grid { grid-template-columns: 1fr; gap: 9px; }
-      .about-info-card { padding: 13px 14px; }
-      .about-actions { flex-direction: column; }
-      .about-action-btn { width: 100%; text-align: center; }
-    }
-  </style>
-<style>
-
-    /* Modern Resume */
-    .resume-modern { padding: 90px 0; }
-    .resume-modern .section-subheading { margin: 12px auto 45px; max-width: 650px; }
-    .resume-overview { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:58px; }
-    .resume-overview-card { display:flex; align-items:center; gap:15px; padding:20px; background:#fff; border:1px solid #eee; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,.05); }
-    .resume-overview-icon,.resume-block-icon { width:46px; height:46px; min-width:46px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#b3d7ff; color:#111111; }
-    .resume-overview-card strong { display:block; font-size:16px; margin-bottom:3px; }
-    .resume-overview-card span:not(.resume-overview-icon) { display:block; color:#777; font-size:12px; line-height:1.4; }
-    .resume-block-heading { display:flex; align-items:center; gap:15px; margin:0 0 30px; }
-    .resume-block-heading h3 { margin:3px 0 0; font-size:25px; font-weight:700; }
-    .resume-eyebrow { display:block; color:#999; font-size:11px; font-weight:700; letter-spacing:2px; }
-    .resume-timeline { position:relative; padding-bottom:8px; }
-    .resume-timeline:before { content:''; position:absolute; left:150px; top:5px; bottom:5px; width:2px; background:#e9e9e9; }
-    .resume-timeline-item { display:grid; grid-template-columns:125px 50px 1fr; gap:0; position:relative; margin-bottom:28px; }
-    .resume-date { text-align:right; padding:8px 18px 0 0; color:#555; font-size:13px; font-weight:700; line-height:1.5; }
-    .resume-date small { display:block; color:#999; font-weight:400; font-size:11px; }
-    .resume-dot { width:13px; height:13px; margin:11px auto 0; background:#b3d7ff; border:3px solid #fff; border-radius:50%; box-shadow:0 0 0 2px #b3d7ff; z-index:2; }
-    .resume-card { background:#fff; border:1px solid #eee; border-radius:13px; padding:25px 28px; box-shadow:0 8px 28px rgba(0,0,0,.055); transition:transform .25s ease,box-shadow .25s ease; }
-    .resume-card:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,.09); }
-    .resume-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; }
-    .resume-card h4 { margin:0 0 7px; font-size:20px; font-weight:700; color:#222; }
-    .resume-company { margin:0 0 17px; color:#777; font-size:13px; }
-    .resume-company i { margin-right:6px; }
-    .resume-role-tag,.resume-year { display:inline-block; padding:6px 10px; border-radius:20px; background:#eaf4ff; color:#24527a; font-size:10px; font-weight:700; white-space:nowrap; }
-    .resume-card ul { margin:0; padding-left:18px; }
-    .resume-card li { color:#666; font-size:13px; line-height:1.65; margin-bottom:7px; }
-    .resume-card li:last-child { margin-bottom:0; }
-    .resume-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:18px; }
-    .resume-tags span { padding:5px 9px; border-radius:15px; background:#f5f5f5; color:#666; font-size:10px; font-weight:600; }
-    .resume-education-heading { margin-top:55px; }
-    .resume-education-card { display:flex; gap:20px; align-items:flex-start; padding:25px 28px; background:#fff; border:1px solid #eee; border-radius:13px; box-shadow:0 8px 28px rgba(0,0,0,.05); }
-    .resume-education-icon { width:50px; height:50px; min-width:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:#f7f7f7; font-size:20px; }
-    .resume-education-content { flex:1; }
-    .resume-download { margin-top:42px; padding:22px 25px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-radius:13px; background:#212529; color:#fff; }
-    .resume-download strong { display:block; font-size:16px; margin-bottom:4px; }
-    .resume-download span { display:block; color:#bbb; font-size:12px; }
-    .resume-download-btn { white-space:nowrap; }
-    @media (max-width:767px) {
-      .resume-modern { padding:65px 0; }
-      .resume-overview { grid-template-columns:1fr; margin-bottom:45px; }
-      .resume-block-heading h3 { font-size:21px; }
-      .resume-timeline:before { left:7px; }
-      .resume-timeline-item { grid-template-columns:25px 1fr; gap:12px; }
-      .resume-date { grid-column:2; grid-row:1; text-align:left; padding:0; margin-bottom:7px; }
-      .resume-dot { grid-column:1; grid-row:1 / span 2; margin:6px 0 0; }
-      .resume-card { grid-column:2; padding:20px; }
-      .resume-card-top { flex-direction:column; gap:5px; }
-      .resume-card h4 { font-size:18px; }
-      .resume-education-card { padding:20px; flex-direction:column; }
-      .resume-education-card .resume-card-top { gap:10px; }
-      .resume-download { flex-direction:column; align-items:flex-start; }
-      .resume-download-btn { width:100%; }
-    }
-</style>
-<style>
-/* Project cards: image + concise information, with the original plus interaction. */
-.project-card .portfolio-hover-content i { font-size: 1.35rem; }
-.project-card .portfolio-hover-content { transition: transform .2s ease; }
-.project-card:hover .portfolio-hover-content { transform: scale(1.08); }
-.project-card-body { min-height: 150px; padding: 20px 22px 22px; }
-.project-card-body h4 { min-height: 0; margin-bottom: 12px; }
-
-/* Project detail modal: clearer two-column presentation on desktop. */
-.portfolio-modal .modal-dialog { max-width: 1120px; }
-.portfolio-modal .modal-content { border: 0; border-radius: 12px; overflow: hidden; }
-.portfolio-modal .container { max-width: 1080px; padding: 0 24px; }
-.portfolio-modal .project-modal-layout { display: flex; align-items: stretch; gap: 34px; }
-.portfolio-modal .project-modal-main { flex: 1.35; min-width: 0; }
-.portfolio-modal .project-modal-side { flex: .8; min-width: 260px; display: flex; }
-.portfolio-modal .modal-body { padding: 52px 0 42px; text-align: left; }
-.portfolio-modal .modal-body > h3 { margin-bottom: 8px; font-size: 28px; line-height: 1.2; }
-.portfolio-modal .modal-body > .item-intro { margin-bottom: 22px; font-size: 15px; line-height: 1.7; }
-.portfolio-modal .project-modal-main img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 8px; background: #f7f7f7; margin-bottom: 24px !important; }
-.portfolio-modal .project-details { font-size: 14px; line-height: 1.75; color: #555; }
-.portfolio-modal .project-details p { margin-bottom: 12px; }
-.portfolio-modal .portfolio-info { width: 100%; align-self: center; background: #f7faff; border-left: 3px solid #b3d7ff; border-radius: 8px; padding: 25px; }
-.portfolio-modal .portfolio-info h3 { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
-.portfolio-modal .portfolio-info p { color: #666; font-size: 14px; line-height: 1.7; margin-bottom: 18px; }
-.portfolio-modal .project-tech { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 20px; }
-.portfolio-modal .project-tech span { background: #fff; border: 1px solid #dcecff; color: #4b82b8; border-radius: 999px; padding: 5px 9px; font-size: 11px; font-weight: 700; }
-.portfolio-modal .project-links { list-style: none; padding: 0; margin: 0 0 22px; }
-.portfolio-modal .project-links li { margin-bottom: 9px; font-size: 13px; }
-.portfolio-modal .project-links a { color: #4b82b8; }
-.portfolio-modal .project-modal-side .btn { margin-top: 4px; }
-@media (max-width: 767.98px) {
-  .portfolio-modal .container { padding: 0 18px; }
-  .portfolio-modal .project-modal-layout { display: block; }
-  .portfolio-modal .modal-body { padding: 40px 0 30px; }
-  .portfolio-modal .modal-body > h3 { font-size: 22px; }
-  .portfolio-modal .project-modal-main img { max-height: 300px; }
-  .portfolio-modal .project-modal-side { display: block; min-width: 0; }
-  .portfolio-modal .portfolio-info { margin-top: 22px; padding: 20px; }
-}
-</style><style>
-/* v19 project polish */
-.project-card-body { min-height: 145px; justify-content: center; }
-.project-card .portfolio-hover-content i { font-size: 2rem !important; }
-.project-card .portfolio-hover-content { transform: scale(1); }
-.project-card:hover .portfolio-hover-content { transform: scale(1.12); }
-.project-card-body h4 { margin-bottom: 14px; }
-.project-tags { margin-top: 2px; }
-/* Keep a clean 3-column desktop grid; the seventh card starts the next row normally. */
-@media (min-width: 992px) {
-  #portfolio .portfolio-container > .portfolio-item { margin-left: 0; }
-}
-.portfolio-modal .portfolio-info { display:flex; flex-direction:column; }
-.portfolio-modal .project-actions { display:flex; flex-direction:column; gap:10px; margin: 4px 0 12px; }
-.portfolio-modal .project-action-btn { display:block; width:100%; text-align:center; border-radius:4px; padding:10px 14px; font-size:12px; font-weight:700; letter-spacing:.03em; }
-.portfolio-modal .project-close-btn { width:100%; margin-top:2px !important; border-radius:4px; padding:10px 14px; font-size:12px; font-weight:700; }
-.portfolio-modal .project-close-btn i { margin-right:6px; }
-@media (max-width: 767.98px) {
-  .portfolio-modal .project-actions { flex-direction:column; }
-  .portfolio-modal .project-action-btn, .portfolio-modal .project-close-btn { width:100%; }
-}
-</style>
-<style>
-/* v20 project grid + filter redesign */
-#portfolio .portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-#portfolio .portfolio-container > .portfolio-item {
-  display: flex;
-  margin-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-#portfolio .project-card {
-  width: 100%;
-  height: auto;
-  align-self: flex-start;
-}
-
-#portfolio-flters.portfolio-filter-pills {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 4px auto 38px;
-  padding: 6px;
-  list-style: none;
-  background: #f5f8fb;
-  border: 1px solid #e5edf5;
-  border-radius: 999px;
-  box-shadow: 0 5px 18px rgba(0,0,0,.04);
-}
-#portfolio-flters.portfolio-filter-pills li {
-  margin: 0;
-  padding: 10px 18px;
-  border-radius: 999px;
-  color: #666;
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  line-height: 1;
-  transition: all .2s ease;
-}
-#portfolio-flters.portfolio-filter-pills li:hover {
-  color: #4b82b8;
-  background: #fff;
-  border-color: #dcecff;
-}
-#portfolio-flters.portfolio-filter-pills li.filter-active {
-  color: #fff;
-  background: #4b82b8;
-  border-color: #4b82b8;
-  box-shadow: 0 5px 14px rgba(75,130,184,.22);
-}
-#portfolio-flters.portfolio-filter-pills li:focus-visible {
-  outline: 2px solid #b3d7ff;
-  outline-offset: 2px;
-}
-@media (max-width: 767.98px) {
-  #portfolio-flters.portfolio-filter-pills {
-    display: flex;
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 30px;
-    padding: 6px;
-  }
-  #portfolio-flters.portfolio-filter-pills li {
-    flex: 1 1 calc(50% - 8px);
-    text-align: center;
-    padding: 10px 8px;
-  }
-}
-@media (max-width: 575.98px) {
-  #portfolio .portfolio-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #portfolio .portfolio-container > .portfolio-item {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* v23: Bootstrap grid now uses col-lg-4 for exactly 3 cards per row. */
-#portfolio-flters.portfolio-filter-pills li {
-  color: #4b82b8 !important;
-}
-#portfolio-flters.portfolio-filter-pills li:hover {
-  color: #2f6f9f !important;
-}
-#portfolio-flters.portfolio-filter-pills li.filter-active {
-  color: #ffffff !important;
-  background: #4b82b8 !important;
-  border-color: #4b82b8 !important;
-}
-@media (max-width: 767.98px) {
-  #portfolio .portfolio-container > .portfolio-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  #portfolio .portfolio-container > .portfolio-item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* v22: make the project plus icon visually comparable to the modal close icon */
-#portfolio .project-card .portfolio-hover-content i {
-  font-size: 3rem !important;
-  line-height: 1;
-  font-weight: 300;
-  text-shadow: 0 2px 8px rgba(0,0,0,.18);
-}
-#portfolio .project-card .portfolio-hover-content {
-  transform: scale(1);
-}
-#portfolio .project-card:hover .portfolio-hover-content {
-  transform: scale(1.06);
-}
-@media (max-width: 767.98px) {
-  #portfolio .project-card .portfolio-hover-content i {
-    font-size: 2.7rem !important;
-  }
-}
-</style>
-
-<style id="v24-project-grid-fix">
-/* v24: deterministic project grid; do not let Isotope/Bootstrap inline positioning collapse the cards. */
-#portfolio .portfolio-container {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  grid-auto-rows: max-content !important;
-  align-items: start !important;
-  gap: 30px !important;
-  margin: 10px 0 0 !important;
-  width: 100% !important;
-}
-#portfolio .portfolio-container > .portfolio-item {
-  display: block !important;
-  width: auto !important;
-  max-width: none !important;
-  flex: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  position: relative !important;
-  left: auto !important;
-  top: auto !important;
-  transform: none !important;
-}
-#portfolio .project-card {
-  position: relative;
-  width: 100%;
-  height: auto !important;
-  align-self: start !important;
-}
-#portfolio .project-card-link {
-  position: relative !important;
-  display: block !important;
-  overflow: hidden !important;
-}
-#portfolio .project-media {
-  position: relative !important;
-  overflow: hidden !important;
-}
-#portfolio .project-card .portfolio-hover {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 5 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transition: opacity .25s ease, visibility .25s ease !important;
-}
-#portfolio .project-card .portfolio-hover-content {
-  position: relative !important;
-  z-index: 6 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: auto !important;
-  height: auto !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-#portfolio .project-card .portfolio-hover-content .project-plus {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 4.5rem !important;
-  line-height: .85 !important;
-  color: #fff !important;
-  font-weight: 300 !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,.25) !important;
-}
-#portfolio .project-card-link:hover .portfolio-hover,
-#portfolio .project-card-link:focus .portfolio-hover,
-#portfolio .project-card:hover .portfolio-hover {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-@media (max-width: 991.98px) {
-  #portfolio .portfolio-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-@media (max-width: 767.98px) {
-  #portfolio .portfolio-container {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 30px !important;
-  }
-  #portfolio .project-card .portfolio-hover-content .project-plus {
-    font-size: 4rem !important;
-  }
-}
-</style>
-
-
-<style id="v26-project-plus-fix">
-/* v26: centered, larger, crisp project plus icon */
-#portfolio .project-card .portfolio-hover {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-}
-#portfolio .project-card .portfolio-hover-content {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  width: 72px !important;
-  height: 72px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: translate(-50%, -50%) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  line-height: 1 !important;
-}
-#portfolio .project-card:hover .portfolio-hover-content {
-  transform: translate(-50%, -50%) scale(1.08) !important;
-}
-#portfolio .project-card .portfolio-hover-content .project-plus {
-  position: relative !important;
-  display: block !important;
-  width: 64px !important;
-  height: 64px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
-  color: transparent !important;
-}
-#portfolio .project-card .portfolio-hover-content .project-plus::before,
-#portfolio .project-card .portfolio-hover-content .project-plus::after {
-  content: "" !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  display: block !important;
-  width: 58px !important;
-  height: 6px !important;
-  border-radius: 4px !important;
-  background: #fff !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,.25) !important;
-  transform: translate(-50%, -50%) !important;
-}
-#portfolio .project-card .portfolio-hover-content .project-plus::after {
-  transform: translate(-50%, -50%) rotate(90deg) !important;
-}
-@media (max-width: 767.98px) {
-  #portfolio .project-card .portfolio-hover-content { width: 64px !important; height: 64px !important; }
-  #portfolio .project-card .portfolio-hover-content .project-plus { width: 56px !important; height: 56px !important; }
-  #portfolio .project-card .portfolio-hover-content .project-plus::before,
-  #portfolio .project-card .portfolio-hover-content .project-plus::after { width: 50px !important; height: 5px !important; }
-}
-</style>
-
-<style id="section-background-refresh-v30">
-  /* v30: cohesive alternating light/dark-neutral section rhythm. */
-  body { background:#f7f9fb; }
-
-  .page-section,
-  .about-modern,
-  .resume-modern,
-  .contact {
-    position:relative;
-    isolation:isolate;
-    overflow:hidden;
-  }
-
-  .page-section > .container,
-  .about-modern > .container,
-  .resume-modern > .container,
-  .contact > .container {
-    position:relative;
-    z-index:2;
-  }
-
-  /* About — soft cool canvas. */
-  #about {
-    background:
-      radial-gradient(circle at 8% 12%, rgba(179,215,255,.20), transparent 25%),
-      #f7f9fb;
-  }
-
-  /* Resume — clean white break between profile and career details. */
-  #resume { background:#ffffff; }
-
-  /* Skills — one step darker, with a barely-visible technical grid. */
-  #services {
-    background:
-      linear-gradient(rgba(72,100,125,.028) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(72,100,125,.028) 1px, transparent 1px),
-      #f1f4f7;
-    background-size:36px 36px;
-  }
-
-  /* Projects — bright so screenshots/project artwork stay dominant. */
-  #portfolio {
-    background:
-      radial-gradient(circle at 92% 8%, rgba(179,215,255,.14), transparent 23%),
-      #ffffff;
-  }
-
-  /* Thoughts — subtle gray-blue alternate. */
-  #blog {
-    background:
-      radial-gradient(circle at 7% 80%, rgba(179,215,255,.10), transparent 22%),
-      #f5f7f9;
-  }
-
-  /* GitHub — slightly cooler/darker continuation of the same palette. */
-  #git {
-    background:
-      radial-gradient(circle at 88% 18%, rgba(179,215,255,.18), transparent 24%),
-      #edf2f6;
-  }
-
-  /* Contact — final light-blue panel rather than an unrelated dark block. */
-  #contact {
-    background:
-      radial-gradient(circle at 88% 18%, rgba(179,215,255,.28), transparent 27%),
-      linear-gradient(135deg, #e8eff5 0%, #e1eaf2 100%);
-    color:#263746;
-  }
-
-  /* Explicit contrast fixes: restore all contact copy that was hidden by
-     inherited dark-theme rules in the previous version. */
-  #contact .section-title h2,
-  #contact .section-title p,
-  #contact .info h4,
-  #contact .info p,
-  #contact .info a,
-  #contact .php-email-form label,
-  #contact .php-email-form .loading,
-  #contact .php-email-form .error-message,
-  #contact .php-email-form .sent-message {
-    color:#263746 !important;
-  }
-
-  #contact .section-title p,
-  #contact .info p,
-  #contact .info a {
-    color:#526676 !important;
-  }
-
-  #contact .info,
-  #contact #contact-form {
-    position:relative;
-    z-index:2;
-  }
-
-  #contact .php-email-form input,
-  #contact .php-email-form textarea {
-    background:#ffffff;
-    color:#263746;
-    border-color:#d4dfe8;
-  }
-
-  #contact .php-email-form input::placeholder,
-  #contact .php-email-form textarea::placeholder {
-    color:#8796a3;
-  }
-
-  /* Small decorative ring keeps the alternating panels from feeling flat. */
-  #about::after,
-  #blog::after,
-  #git::after {
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    right:-145px;
-    bottom:-150px;
-    border:1px solid rgba(73,111,140,.09);
-    border-radius:50%;
-    box-shadow:0 0 0 45px rgba(73,111,140,.025),
-               0 0 0 90px rgba(73,111,140,.018);
-    z-index:0;
-    pointer-events:none;
-  }
-
-  @media (max-width:767px) {
-    #about::after,
-    #blog::after,
-    #git::after { display:none; }
-    #services { background-size:28px 28px; }
-  }
-</style>
-
-
-<style>
-/* v31 — Contact + footer visual treatment: calm, premium, engineering-focused */
-#contact {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(179,215,255,.38), transparent 24%),
-    radial-gradient(circle at 88% 82%, rgba(179,215,255,.24), transparent 28%),
-    linear-gradient(135deg, #eef4f8 0%, #e5edf3 52%, #f4f7f9 100%);
-}
-#contact::before {
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
-  right:-270px;
-  top:-230px;
-  border:1px solid rgba(60,104,139,.10);
-  border-radius:50%;
-  box-shadow:0 0 0 55px rgba(60,104,139,.025), 0 0 0 110px rgba(60,104,139,.018);
-  pointer-events:none;
-}
-#contact::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:48%;
-  height:1px;
-  background:linear-gradient(90deg, transparent, rgba(70,110,145,.18), transparent);
-  pointer-events:none;
-}
-#contact .section-title h2 {
-  color:#213544 !important;
-  font-weight:700;
-  letter-spacing:-.02em;
-}
-#contact .section-title p {
-  max-width:650px;
-  margin-left:auto;
-  margin-right:auto;
-  color:#5a6c7b !important;
-}
-#contact .info {
-  background:rgba(255,255,255,.72);
-  border:1px solid rgba(180,198,212,.75);
-  border-radius:16px;
-  padding:28px 30px;
-  box-shadow:0 12px 35px rgba(36,58,75,.07);
-  backdrop-filter:blur(5px);
-}
-#contact .info > div {
-  position:relative;
-  padding:5px 0 22px 62px;
-  margin-bottom:22px;
-  border-bottom:1px solid #e2e9ee;
-}
-#contact .info > div:last-child { border-bottom:0; margin-bottom:0; padding-bottom:5px; }
-#contact .info i {
-  position:absolute;
-  left:0;
-  top:2px;
-  width:42px;
-  height:42px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:12px;
-  background:#e8f3ff;
-  color:#3e79a8;
-  font-size:17px;
-}
-#contact .info h4 { margin:0 0 5px; color:#263b4b !important; font-size:14px; font-weight:700; }
-#contact .info p, #contact .info a { margin:0; color:#617383 !important; font-size:14px; line-height:1.55; }
-#contact .info a { transition:color .2s ease; }
-#contact .info a:hover { color:#2f6f9f !important; }
-#contact #contact-form {
-  background:rgba(255,255,255,.86);
-  border:1px solid rgba(180,198,212,.78);
-  border-radius:16px;
-  padding:30px;
-  box-shadow:0 12px 35px rgba(36,58,75,.08);
-  backdrop-filter:blur(5px);
-}
-#contact .php-email-form label { color:#3c5060 !important; font-size:12px; font-weight:700; margin-bottom:7px; }
-#contact .php-email-form input,
-#contact .php-email-form textarea {
-  border:1px solid #d5e0e8;
-  border-radius:9px;
-  box-shadow:none;
-  padding:11px 13px;
-  transition:border-color .2s ease, box-shadow .2s ease;
-}
-#contact .php-email-form input:focus,
-#contact .php-email-form textarea:focus {
-  border-color:#9fc9eb;
-  box-shadow:0 0 0 3px rgba(179,215,255,.22);
-}
-#contact .php-email-form button {
-  border-radius:999px;
-  padding:11px 25px;
-  border:1px solid #4f86b1;
-  background:#4f86b1;
-  box-shadow:0 7px 18px rgba(58,105,140,.18);
-  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-#contact .php-email-form button:hover { transform:translateY(-2px); background:#3f739b; box-shadow:0 10px 22px rgba(58,105,140,.22); }
-
-/* Footer becomes a deliberate visual anchor rather than another gray section. */
-.footer {
-  position:relative;
-  overflow:hidden;
-  padding:54px 0 22px;
-  color:#eaf2f7;
-  background:
-    radial-gradient(circle at 12% 0%, rgba(179,215,255,.16), transparent 30%),
-    radial-gradient(circle at 88% 100%, rgba(93,155,213,.13), transparent 34%),
-    linear-gradient(145deg,#101c25 0%,#172a36 52%,#0d1820 100%);
-  border-top:1px solid rgba(179,215,255,.18);
-}
-.footer::after {
-  content:""; position:absolute; inset:auto 0 0; height:1px;
-  background:linear-gradient(90deg,transparent,rgba(179,215,255,.45),transparent);
-}
-.footer .container { position:relative; z-index:3; }
-.footer-glow { position:absolute; border-radius:50%; pointer-events:none; border:1px solid rgba(179,215,255,.08); }
-.footer-glow-one { width:430px; height:430px; right:-220px; top:-285px; box-shadow:0 0 0 35px rgba(179,215,255,.018),0 0 0 72px rgba(179,215,255,.012); }
-.footer-glow-two { width:260px; height:260px; left:-185px; bottom:-185px; }
-.footer-main { display:flex; align-items:center; justify-content:space-between; gap:30px; }
-.footer-brand { display:inline-block; color:#fff; font-family:"Kaushan Script",cursive; font-size:30px; line-height:1; text-decoration:none; margin-bottom:9px; }
-.footer-brand:hover { color:#b3d7ff; text-decoration:none; }
-.footer-brand-block p { margin:0; color:#aebfca; font-size:12px; letter-spacing:.04em; }
-.footer-social-block { text-align:center; }
-.footer-social-block > span { display:block; color:#90a6b4; font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:9px; }
-.footer .social-buttons { margin:0; }
-.footer .social-buttons li { margin:0 4px; }
-.footer .social-buttons a {
-  display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px;
-  border:1px solid rgba(179,215,255,.22); border-radius:12px;
-  background:rgba(255,255,255,.045); color:#dce8ef;
-  box-shadow:0 8px 24px rgba(0,0,0,.12);
-  transition:transform .22s ease,background .22s ease,border-color .22s ease,color .22s ease;
-}
-.footer .social-buttons a:hover { transform:translateY(-4px); background:rgba(179,215,255,.13); border-color:rgba(179,215,255,.55); color:#fff; }
-.footer-top { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid rgba(179,215,255,.25); color:#dce8ef; background:rgba(255,255,255,.04); transition:all .22s ease; }
-.footer-top:hover { color:#10202b; background:#b3d7ff; border-color:#b3d7ff; transform:translateY(-3px); text-decoration:none; }
-.footer-bottom { margin-top:34px; padding-top:17px; border-top:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; gap:14px; color:#8296a3; font-size:10px; letter-spacing:.04em; }
-.footer-line { width:34px; height:1px; background:rgba(179,215,255,.35); }
-@media (max-width:767px) {
-  .footer { padding:42px 0 20px; }
-  .footer-main { flex-direction:column; text-align:center; gap:24px; }
-  .footer-brand { font-size:28px; }
-  .footer-brand-block p { max-width:280px; margin:0 auto; line-height:1.6; }
-  .footer-bottom { flex-direction:column; gap:8px; margin-top:27px; }
-  .footer-line { display:none; }
-  .footer-top { width:40px; height:40px; }
-}
-</style>
+<link href="css/overrides.css" rel="stylesheet"/>
 </head>
 <body id="page-top">
 <!-- Navigation -->
@@ -1220,6 +63,7 @@
 </div>
 </div>
 </nav>
+
 <!-- ======= Hero Section ======= -->
 <header class="masthead">
 <div class="home" id="hero">
@@ -1239,6 +83,7 @@
 </div>
 </header>
 <!-- End Hero -->
+
 <!-- ======= About Section ======= -->
 <section class="about about-modern" id="about">
 <div class="container" data-aos="fade-up">
@@ -1304,6 +149,7 @@
 </div>
 </section>
 <!-- End About Section -->
+
 <!-- ======= Resume Section ======= -->
 <section class="resume resume-modern" id="resume">
 <div class="container" data-aos="fade-up">
@@ -1339,6 +185,7 @@
 <div class="resume-download"><div><strong>Want the complete profile?</strong><span>Download the full resume for detailed experience and skills.</span></div><a class="btn btn-primary resume-download-btn" href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing" rel="noopener noreferrer" target="_blank">Download Resume <i class="fas fa-download"></i></a></div>
 </div>
 </section>
+
 <!-- ======= Skills Section ======= -->
 <section class="page-section" id="services">
 <div class="container" data-aos="fade-up">
@@ -1438,6 +285,7 @@
 </div>
 </section>
 <!-- End Services Section -->
+
 <!-- Portfolio Grid -->
 <section class="bg-light page-section" id="portfolio">
 <div class="container" data-aos="fade-up">
@@ -1458,10 +306,83 @@
 </div>
 </div>
 </div>
-<div class="row portfolio-container"><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Spam Classifier project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal1"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Spam Classifier project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/spam.jpg"/></div></a><div class="project-card-body"><h4>Spam Classifier</h4><div class="project-tags"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Data"><div class="project-card"><a aria-label="Open Battle of the Neighborhoods project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal2"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Battle of the Neighborhoods project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/inside location.jpg"/></div></a><div class="project-card-body"><h4>Battle of the Neighborhoods</h4><div class="project-tags"><span>Foursquare API</span><span>K-Means</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Artistic Image Generation project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal3"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Artistic Image Generation project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/art.jpg"/></div></a><div class="project-card-body"><h4>Artistic Image Generation</h4><div class="project-tags"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Tic Tac Toe project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal4"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Tic Tac Toe project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/tictactoe1.jpg"/></div></a><div class="project-card-body"><h4>Tic Tac Toe</h4><div class="project-tags"><span>Package Development</span><span>PyPI</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Decision Review System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal5"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Decision Review System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/dhoni.png"/></div></a><div class="project-card-body"><h4>Decision Review System</h4><div class="project-tags"><span>Tkinter</span><span>Video Processing</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-ML"><div class="project-card"><a aria-label="Open Trigger Word Detection project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal6"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Trigger Word Detection project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/trigger.jpg"/></div></a><div class="project-card-body"><h4>Trigger Word Detection</h4><div class="project-tags"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div></div></div></div><div class="col-lg-4 col-md-6 portfolio-item filter-Python"><div class="project-card"><a aria-label="Open Indian Railways Announcement System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal7"><div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div><img alt="Indian Railways Announcement System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/railways.jpg"/></div></a><div class="project-card-body"><h4>Indian Railways Announcement System</h4><div class="project-tags"><span>Audio Processing</span><span>Automation</span></div></div></div></div></div>
+</div>
+<div class="row portfolio-container">
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-ML">
+  <div class="project-card">
+    <a aria-label="Open Spam Classifier project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal1">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Spam Classifier project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/spam.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Spam Classifier</h4><div class="project-tags"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-Data">
+  <div class="project-card">
+    <a aria-label="Open Battle of the Neighborhoods project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal2">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Battle of the Neighborhoods project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/inside location.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Battle of the Neighborhoods</h4><div class="project-tags"><span>Foursquare API</span><span>K-Means</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-ML">
+  <div class="project-card">
+    <a aria-label="Open Artistic Image Generation project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal3">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Artistic Image Generation project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/art.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Artistic Image Generation</h4><div class="project-tags"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-Python">
+  <div class="project-card">
+    <a aria-label="Open Tic Tac Toe project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal4">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Tic Tac Toe project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/tictactoe1.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Tic Tac Toe</h4><div class="project-tags"><span>Package Development</span><span>PyPI</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-Python">
+  <div class="project-card">
+    <a aria-label="Open Decision Review System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal5">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Decision Review System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/dhoni.png"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Decision Review System</h4><div class="project-tags"><span>Tkinter</span><span>Video Processing</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-ML">
+  <div class="project-card">
+    <a aria-label="Open Trigger Word Detection project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal6">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Trigger Word Detection project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/trigger.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Trigger Word Detection</h4><div class="project-tags"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div></div>
+  </div>
+</div>
+<div class="col-lg-4 col-md-6 portfolio-item filter-Python">
+  <div class="project-card">
+    <a aria-label="Open Indian Railways Announcement System project details" class="portfolio-link project-card-link" data-toggle="modal" href="#portfolioModal7">
+      <div class="project-media"><div class="portfolio-hover"><div class="portfolio-hover-content"><span aria-hidden="true" class="project-plus">+</span></div></div>
+        <img alt="Indian Railways Announcement System project" class="img-fluid project-image" decoding="async" loading="lazy" src="img/portfolio/railways.jpg"/>
+      </div>
+    </a>
+    <div class="project-card-body"><h4>Indian Railways Announcement System</h4><div class="project-tags"><span>Audio Processing</span><span>Automation</span></div></div>
+  </div>
+</div>
 </div>
 </div>
 </section>
+
 <!-- Blog -->
 <section class="page-section" id="blog">
 <div class="container" data-aos="fade-up">
@@ -1522,6 +443,7 @@
 </div>
 </div>
 </section>
+
 <!-- ======= GitHub Contributions Section ======= -->
 <section class="bg-light page-section" id="git">
 <div class="container" data-aos="fade-up">
@@ -1544,6 +466,7 @@
 </div>
 </section>
 <!-- End GitHub Contributions Section -->
+
 <!-- ======= Contact Section ======= -->
 <section class="contact" id="contact">
 <div class="container" data-aos="fade-up">
@@ -1607,6 +530,7 @@
 </div>
 </section>
 <!-- End Contact Section -->
+
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-glow footer-glow-one"></div>
@@ -1640,180 +564,155 @@
     </div>
   </div>
 </footer>
-<!-- Portfolio Modals -->
-<!-- Modal 1 -->
+
+
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal1" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Spam Classification System</h3>
+          <p class="item-intro text-muted">A text-classification project that predicts whether a message is spam or legitimate.</p>
+          <img alt="Spam classification system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/spam2.png"/>
+          <div class="project-details"><p>The system applies a Naive Bayes approach to classify message text into spam and non-spam categories.</p>
+<p>The project demonstrates practical text preprocessing, probabilistic classification and evaluation of a machine-learning model for message filtering.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Text classification using a Naive Bayes approach.</p><h3>Tech Stack</h3><div class="project-tech"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/spam-classifier-system" rel="noopener noreferrer" target="_blank">View Project</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Spam Classification System</h3><p class="item-intro text-muted">A text-classification project that predicts whether a message is spam or legitimate.</p><img alt="Spam classification system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/spam2.png"/><div class="project-details">
-<p>The system applies a Naive Bayes approach to classify message text into spam and non-spam categories.</p>
-<p>The project demonstrates practical text preprocessing, probabilistic classification and evaluation of a
-                    machine-learning model for message filtering.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Text classification using a Naive Bayes approach.</p><h3>Tech Stack</h3><div class="project-tech"><span>NLP</span><span>Naive Bayes</span><span>Text Classification</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/spam-classifier-system" rel="noopener noreferrer" target="_blank">View Project</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 6 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal6" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Trigger Word Detection</h3>
+          <p class="item-intro text-muted">A deep-learning project for detecting a spoken trigger word in audio.</p>
+          <img alt="Trigger word detection illustration" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/alexa.jpg"/>
+          <div class="project-details"><p>The system is designed to detect the trigger word activate in an audio stream and respond with a chime when the word is detected.</p>
+<p>Training data is synthesized from positive trigger-word recordings, negative speech examples and background-noise clips to build an audio detection dataset.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Audio classification and trigger-word detection.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Trigger-word-detection-system" rel="noopener noreferrer" target="_blank">View Repository</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Trigger Word Detection</h3><p class="item-intro text-muted">A deep-learning project for detecting a spoken trigger word in audio.</p><img alt="Trigger word detection illustration" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/alexa.jpg"/><div class="project-details">
-<p>The system is designed to detect the trigger word <strong>"activate"</strong> in an audio stream and
-                    respond with a chime when the word is detected.</p>
-<p>Training data is synthesized from positive trigger-word recordings, negative speech examples and
-                    background-noise clips to build an audio detection dataset.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Audio classification and trigger-word detection.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio Synthesis</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Trigger-word-detection-system" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 4 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal4" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Tic Tac Toe</h3>
+          <p class="item-intro text-muted">A Python package implementing the classic Tic Tac Toe game for the command line.</p>
+          <img alt="Tic Tac Toe project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/tictactoe.png"/>
+          <div class="project-details"><p>A lightweight Python implementation of the classic two-player 3×3 Tic Tac Toe game.</p>
+<p>The project was packaged for installation through PyPI and can be used from a Python environment.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Python package development and distribution through PyPI.</p><h3>Tech Stack</h3><div class="project-tech"><span>Package Development</span><span>PyPI</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://pypi.org/project/my-tic-tac-toe/" rel="noopener noreferrer" target="_blank">View Package</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/my-tic-tac-toe" rel="noopener noreferrer" target="_blank">View Repository</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Tic Tac Toe</h3><p class="item-intro text-muted">A Python package implementing the classic Tic Tac Toe game for the command line.</p><img alt="Tic Tac Toe project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/tictactoe.png"/><div class="project-details">
-<p>A lightweight Python implementation of the classic two-player 3×3 Tic Tac Toe game.</p>
-<p>The project was packaged for installation through PyPI and can be used from a Python environment.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Python package development and distribution through PyPI.</p><h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Package Development</span><span>PyPI</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://pypi.org/project/my-tic-tac-toe/" rel="noopener noreferrer" target="_blank">View Package</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/my-tic-tac-toe" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 3 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal3" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Artistic Image Generation</h3>
+          <p class="item-intro text-muted">Deep-learning project implementing Neural Style Transfer with a pretrained VGG-19 network.</p>
+          <img alt="Neural style transfer project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/artistics.png"/>
+          <div class="project-details"><p>Neural Style Transfer combines the content of one image with the visual style of another to generate a new image.</p>
+<p>The implementation uses a pretrained VGG-19 network and intermediate feature representations learned from ImageNet to optimize the generated image.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Neural Style Transfer using deep-learning feature representations.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Artistic-Image-Generation" rel="noopener noreferrer" target="_blank">View Repository</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Artistic Image Generation</h3><p class="item-intro text-muted">Deep-learning project implementing Neural Style Transfer with a pretrained VGG-19 network.</p><img alt="Neural style transfer project screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/artistics.png"/><div class="project-details">
-<p>Neural Style Transfer combines the content of one image with the visual style of another to generate a
-                    new image.</p>
-<p>The implementation uses a pretrained VGG-19 network and intermediate feature representations learned
-                    from ImageNet to optimize the generated image.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Neural Style Transfer using deep-learning feature representations.</p><h3>Tech Stack</h3><div class="project-tech"><span>Deep Learning</span><span>VGG-19</span><span>Neural Style Transfer</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Artistic-Image-Generation" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 2 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal2" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Battle of the Neighborhoods</h3>
+          <p class="item-intro text-muted">A location-data analysis project exploring neighborhoods in Toronto for an Italian restaurant.</p>
+          <img alt="Toronto neighborhood analysis project" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/toronto.jpg"/>
+          <div class="project-details"><p>The project uses neighborhood and venue information to compare areas in Toronto and identify potentially suitable locations for an Italian restaurant.</p>
+<p>It combines location data, venue information and clustering-based analysis to turn geographic data into a business-location comparison.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Location analytics and clustering for neighborhood comparison.</p><h3>Tech Stack</h3><div class="project-tech"><span>Foursquare API</span><span>K-Means</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/" rel="noopener noreferrer" target="_blank">View Project</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Battle-of-Neighborhoods" rel="noopener noreferrer" target="_blank">View Repository</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Battle of the Neighborhoods</h3><p class="item-intro text-muted">A location-data analysis project exploring neighborhoods in Toronto for an
-                  Italian restaurant.</p><img alt="Toronto neighborhood analysis project" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/toronto.jpg"/><div class="project-details">
-<p>The project uses neighborhood and venue information to compare areas in Toronto and identify
-                    potentially suitable locations for an Italian restaurant.</p>
-<p>It combines location data, venue information and clustering-based analysis to turn geographic data
-                    into a business-location comparison.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Location analytics and clustering for neighborhood comparison.</p><h3>Tech Stack</h3><div class="project-tech"><span>Data Science</span><span>Foursquare API</span><span>K-Means</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/" rel="noopener noreferrer" target="_blank">View Project</a><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Battle-of-Neighborhoods" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 5 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal5" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Decision Review System</h3>
+          <p class="item-intro text-muted">A Python/Tkinter application for reviewing recorded cricket footage and supporting third-umpire-style decisions.</p>
+          <img alt="Decision Review System screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/drs.jpg"/>
+          <div class="project-details"><p>The application provides a GUI for loading recorded video and reviewing cricket decisions such as run-outs, edges, LBW and catches.</p>
+<p>Video playback can be controlled to inspect footage in more detail and support a manual review workflow.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>Python GUI and video-review application.</p><h3>Tech Stack</h3><div class="project-tech"><span>Tkinter</span><span>Video Processing</span></div>
+          <div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Decision-Review-System" rel="noopener noreferrer" target="_blank">View Repository</a></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
+</div>
 
-
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Decision Review System</h3><p class="item-intro text-muted">A Python/Tkinter application for reviewing recorded cricket footage and supporting
-                  third-umpire-style decisions.</p><img alt="Decision Review System screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/drs.jpg"/><div class="project-details">
-<p>The application provides a GUI for loading recorded video and reviewing cricket decisions such as
-                    run-outs, edges, LBW and catches.</p>
-<p>Video playback can be controlled to inspect footage in more detail and support a manual review workflow.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
-<p>Python GUI and video-review application.</p><h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Tkinter</span><span>Video Processing</span></div><div class="project-actions"><a class="btn btn-primary project-action-btn" href="https://github.com/imAniketSharma/Decision-Review-System" rel="noopener noreferrer" target="_blank">View Repository</a></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Modal 7 -->
 <div aria-hidden="true" class="portfolio-modal modal fade" id="portfolioModal7" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="close-modal" data-dismiss="modal">
-<div class="lr">
-<div class="rl"></div>
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="close-modal" data-dismiss="modal"><div class="lr"><div class="rl"></div></div></div>
+    <div class="container" data-aos="fade-up"><div class="row"><div class="col-12"><div class="modal-body">
+      <div class="project-modal-layout">
+        <div class="project-modal-main"><h3 class="text-uppercase">Indian Railways Announcement System</h3>
+          <p class="item-intro text-muted">A Python program that generates railway-style announcements from structured train information.</p>
+          <img alt="Indian Railways announcement system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/railways1.jpg"/>
+          <div class="project-details"><p>Generates railway-style station announcements from structured train information stored in an Excel database.</p>
+<p>Combines recorded audio segments for train number, name, source, destination and platform to create dynamic announcements.</p></div>
+        </div>
+        <div class="project-modal-side"><div class="portfolio-info"><h3>Project Overview</h3>
+          <p>See the project links above for the repository or live demo.</p><h3>Tech Stack</h3><div class="project-tech"><span>Audio Processing</span><span>Automation</span></div>
+          <div class="project-actions"></div>
+          <button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button"><i class="fas fa-times"></i> Close</button>
+        </div></div>
+      </div>
+    </div></div></div></div>
+  </div></div>
 </div>
-</div>
-<div class="container" data-aos="fade-up">
-<div class="row">
-<div class="col-12">
-<div class="modal-body">
-<!-- Project Details Go Here -->
 
-<div class="project-modal-layout"><div class="project-modal-main"><h3 class="text-uppercase">Indian Railways Announcement System</h3><p class="item-intro text-muted">A Python program that generates railway-style announcements from
-                  structured train information.</p><img alt="Indian Railways announcement system screenshot" class="img-fluid d-block mx-auto" decoding="async" loading="lazy" src="img/portfolio/railways1.jpg"/><div class="project-details">
-<p>Generates railway-style station announcements from structured train information stored in an Excel database.</p>
-<p>Combines recorded audio segments for train number, name, source, destination and platform to create dynamic announcements.</p>
-</div></div><div class="project-modal-side"><div class="portfolio-info">
-<h3>Project Overview</h3>
-<p>See the project links above for the repository or live demo.</p>
-<h3>Tech Stack</h3><div class="project-tech"><span>Python</span><span>Audio Processing</span><span>Automation</span></div><button class="btn btn-primary project-close-btn" data-dismiss="modal" type="button">
-<i class="fas fa-times"></i>
-                  Close</button></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1822,325 +721,12 @@
 <!-- Custom scripts for this template -->
 <script src="js/agency.min.js"></script>
 <script src="vendor/typed/typed.js"></script>
-<script src="vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="vendor/venobox/venobox.min.js"></script>
 <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js"></script>
-<script>
-    GitHubCalendar(".calendar", "imAniketSharma", {
-      responsive: true,
-      tooltips: true,
-      global_stats: true,
-      cache: 3600
-    });
-  </script>
-<script>
-    /*
-     * github-calendar keeps the original GitHub-style calendar, tooltips and
-     * streak layout. Its old default proxy can return zero for the summary
-     * counters, so refresh only those counters from a current contribution API.
-     */
-    (function () {
-      var username = "imAniketSharma";
-      var endpoint =
-        "https://github-contributions-api.jogruber.de/v4/" +
-        encodeURIComponent(username) + "?y=last";
-
-      function formatDate(dateString) {
-        var date = new Date(dateString + "T00:00:00");
-        return date.toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric"
-        });
-      }
-
-      function shortDate(dateString) {
-        var date = new Date(dateString + "T00:00:00");
-        return date.toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric"
-        });
-      }
-
-      function getStats(days) {
-        var active = days
-          .filter(function (d) { return d && d.date; })
-          .sort(function (a, b) { return a.date.localeCompare(b.date); });
-
-        var total = active.reduce(function (sum, d) {
-          return sum + Number(d.count || 0);
-        }, 0);
-
-        var longestDays = 0;
-        var longestStart = null;
-        var longestEnd = null;
-        var run = 0;
-        var runStart = null;
-        var previous = null;
-
-        active.forEach(function (day) {
-          var date = new Date(day.date + "T00:00:00");
-          var consecutive = previous &&
-            (date - previous === 24 * 60 * 60 * 1000);
-
-          if (Number(day.count || 0) > 0) {
-            if (!consecutive || run === 0) {
-              run = 1;
-              runStart = day.date;
-            } else {
-              run += 1;
-            }
-
-            if (run > longestDays) {
-              longestDays = run;
-              longestStart = runStart;
-              longestEnd = day.date;
-            }
-          } else {
-            run = 0;
-            runStart = null;
-          }
-
-          previous = date;
-        });
-
-        var currentDays = 0;
-        var currentStart = null;
-        var currentEnd = null;
-
-        // GitHub-style current streak: today if active; otherwise count back
-        // from yesterday. Ignore future dates if an API includes one.
-        var today = new Date();
-        today.setHours(0, 0, 0, 0);
-
-        var usable = active.filter(function (d) {
-          return new Date(d.date + "T00:00:00") <= today;
-        });
-
-        if (usable.length) {
-          var i = usable.length - 1;
-          var lastDate = new Date(usable[i].date + "T00:00:00");
-
-          if (lastDate.getTime() === today.getTime() &&
-              Number(usable[i].count || 0) === 0) {
-            i--;
-          } else if (lastDate.getTime() < today.getTime()) {
-            // Start from yesterday only when yesterday is the latest date.
-            var yesterday = new Date(today);
-            yesterday.setDate(yesterday.getDate() - 1);
-            if (lastDate.getTime() !== yesterday.getTime()) {
-              i = -1;
-            }
-          }
-
-          if (i >= 0 && Number(usable[i].count || 0) > 0) {
-            currentEnd = usable[i].date;
-            currentStart = usable[i].date;
-            currentDays = 1;
-
-            for (var j = i - 1; j >= 0; j--) {
-              var d1 = new Date(usable[j + 1].date + "T00:00:00");
-              var d0 = new Date(usable[j].date + "T00:00:00");
-
-              if ((d1 - d0) === 24 * 60 * 60 * 1000 &&
-                  Number(usable[j].count || 0) > 0) {
-                currentDays++;
-                currentStart = usable[j].date;
-              } else {
-                break;
-              }
-            }
-          }
-        }
-
-        return {
-          total: total,
-          longestDays: longestDays,
-          longestStart: longestStart,
-          longestEnd: longestEnd,
-          currentDays: currentDays,
-          currentStart: currentStart,
-          currentEnd: currentEnd
-        };
-      }
-
-      function updateCalendarStats(stats) {
-        var columns = document.querySelectorAll(".calendar .contrib-column");
-        if (columns.length < 3) return false;
-
-        var values = [
-          stats.total,
-          stats.longestDays,
-          stats.currentDays
-        ];
-
-        var ranges = [
-          null,
-          stats.longestStart && stats.longestEnd
-            ? shortDate(stats.longestStart) + " – " + shortDate(stats.longestEnd)
-            : "Rock - Hard Place",
-          stats.currentStart && stats.currentEnd
-            ? shortDate(stats.currentStart) + " – " + shortDate(stats.currentEnd)
-            : "Rock - Hard Place"
-        ];
-
-        columns.forEach(function (column, index) {
-          var number = column.querySelector(".contrib-number");
-          if (number && values[index] !== undefined) {
-            number.textContent = Number(values[index]).toLocaleString("en-US");
-          }
-
-          var muted = column.querySelectorAll(".text-muted");
-          if (index > 0 && muted.length > 1 && ranges[index]) {
-            muted[muted.length - 1].textContent = ranges[index];
-          }
-        });
-
-        return true;
-      }
-
-      function refreshStats() {
-        fetch(endpoint, {
-          method: "GET",
-          cache: "no-store",
-          headers: { "Accept": "application/json" }
-        })
-          .then(function (response) {
-            if (!response.ok) throw new Error("GitHub contribution API returned " + response.status);
-            return response.json();
-          })
-          .then(function (data) {
-            if (!data || !Array.isArray(data.contributions)) {
-              throw new Error("Invalid contribution data");
-            }
-
-            var stats = getStats(data.contributions);
-
-            // github-calendar renders asynchronously, so wait for its original
-            // stats DOM before replacing only the incorrect numbers.
-            var attempts = 0;
-            var timer = setInterval(function () {
-              attempts++;
-              if (updateCalendarStats(stats) || attempts >= 30) {
-                clearInterval(timer);
-              }
-            }, 250);
-          })
-          .catch(function (error) {
-            console.warn("Unable to refresh GitHub contribution totals:", error);
-          });
-      }
-
-      refreshStats();
-    })();
-  </script>
-<script>
-    // Static-site contact form: validates fields and opens the user's mail client.
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-      }
-
-      var name = document.getElementById("contact-name").value.trim();
-      var email = document.getElementById("contact-email").value.trim();
-      var subject = document.getElementById("contact-subject").value.trim();
-      var message = document.getElementById("contact-message").value.trim();
-
-      var body =
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n\n" +
-        message;
-
-      var mailto = "mailto:aniketsharma552@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailto;
-    });
-  </script>
-<script>
-    // Prevent mouse clicks from leaving buttons/links in their persistent :focus state.
-    // Keyboard users retain normal focus styling and accessibility.
-    document.addEventListener("mouseup", function (event) {
-      if (event.button !== 0) return;
-
-      var target = event.target.closest("a, button, .btn, #portfolio-flters li");
-      if (target && document.activeElement === target) {
-        target.blur();
-      }
-    });
-  </script>
-
-<style id="v28-project-card-height-fix">
-/* v28: filtered rows should size to the card content, not stretch to the portfolio section height. */
-#portfolio .portfolio-container {
-  align-items: start !important;
-  grid-auto-rows: max-content !important;
-}
-#portfolio .portfolio-container > .portfolio-item {
-  height: auto !important;
-  align-self: start !important;
-}
-#portfolio .portfolio-container > .portfolio-item .project-card {
-  height: auto !important;
-}
-</style>
-
-<style id="v27-project-filter-fix">
-/* v27: reliable project filtering while preserving the CSS grid */
-#portfolio .portfolio-container > .portfolio-item.project-filter-hidden { display: none !important; }
-#portfolio .portfolio-container > .portfolio-item.project-filter-visible { display: block !important; }
-</style>
-<script id="v27-project-filter-script">
-(function () {
-  function initProjectFilters() {
-    var container = document.querySelector('#portfolio .portfolio-container');
-    var filters = Array.prototype.slice.call(document.querySelectorAll('#portfolio-flters li'));
-    if (!container || !filters.length) return;
-
-    var items = Array.prototype.slice.call(container.querySelectorAll('.portfolio-item'));
-
-    function applyFilter(filter) {
-      var selector = filter.getAttribute('data-filter') || '*';
-      filters.forEach(function (item) { item.classList.remove('filter-active'); });
-      filter.classList.add('filter-active');
-
-      items.forEach(function (item) {
-        var matches = selector === '*' || item.matches(selector);
-        item.classList.toggle('project-filter-visible', matches);
-        item.classList.toggle('project-filter-hidden', !matches);
-      });
-    }
-
-    filters.forEach(function (filter) {
-      filter.addEventListener('click', function (event) {
-        event.preventDefault();
-        applyFilter(filter);
-      });
-      filter.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          applyFilter(filter);
-        }
-      });
-    });
-
-    var active = document.querySelector('#portfolio-flters li.filter-active') || filters[0];
-    applyFilter(active);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initProjectFilters);
-  } else {
-    initProjectFilters();
-  }
-})();
-</script>
-
+<script src="js/github-calendar.js"></script>
+<script src="js/github-calendar-stats.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/ui-focus.js"></script>
+<script src="js/project-filters.js"></script>
 </body>
 </html>
