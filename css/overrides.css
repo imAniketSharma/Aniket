@@ -1083,6 +1083,8 @@
   transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 #contact .php-email-form button:hover { transform:translateY(-2px); background:#3f739b; box-shadow:0 10px 22px rgba(58,105,140,.22); }
+#contact .contact-form-status { margin:16px 0 0; color:#526676; font-size:13px; line-height:1.5; text-align:center; }
+#contact .contact-form-status a { color:#2f6f9f; font-weight:700; text-decoration:underline; }
 
 /* Footer becomes a deliberate visual anchor rather than another gray section. */
 .footer {
