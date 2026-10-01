@@ -365,6 +365,62 @@
     }
   </style>
 
+<style>
+
+    /* Modern Resume */
+    .resume-modern { padding: 90px 0; }
+    .resume-modern .section-subheading { margin: 12px auto 45px; max-width: 650px; }
+    .resume-overview { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:58px; }
+    .resume-overview-card { display:flex; align-items:center; gap:15px; padding:20px; background:#fff; border:1px solid #eee; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,.05); }
+    .resume-overview-icon,.resume-block-icon { width:46px; height:46px; min-width:46px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#b3d7ff; color:#111111; }
+    .resume-overview-card strong { display:block; font-size:16px; margin-bottom:3px; }
+    .resume-overview-card span:not(.resume-overview-icon) { display:block; color:#777; font-size:12px; line-height:1.4; }
+    .resume-block-heading { display:flex; align-items:center; gap:15px; margin:0 0 30px; }
+    .resume-block-heading h3 { margin:3px 0 0; font-size:25px; font-weight:700; }
+    .resume-eyebrow { display:block; color:#999; font-size:11px; font-weight:700; letter-spacing:2px; }
+    .resume-timeline { position:relative; padding-bottom:8px; }
+    .resume-timeline:before { content:''; position:absolute; left:150px; top:5px; bottom:5px; width:2px; background:#e9e9e9; }
+    .resume-timeline-item { display:grid; grid-template-columns:125px 50px 1fr; gap:0; position:relative; margin-bottom:28px; }
+    .resume-date { text-align:right; padding:8px 18px 0 0; color:#555; font-size:13px; font-weight:700; line-height:1.5; }
+    .resume-date small { display:block; color:#999; font-weight:400; font-size:11px; }
+    .resume-dot { width:13px; height:13px; margin:11px auto 0; background:#b3d7ff; border:3px solid #fff; border-radius:50%; box-shadow:0 0 0 2px #b3d7ff; z-index:2; }
+    .resume-card { background:#fff; border:1px solid #eee; border-radius:13px; padding:25px 28px; box-shadow:0 8px 28px rgba(0,0,0,.055); transition:transform .25s ease,box-shadow .25s ease; }
+    .resume-card:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,.09); }
+    .resume-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; }
+    .resume-card h4 { margin:0 0 7px; font-size:20px; font-weight:700; color:#222; }
+    .resume-company { margin:0 0 17px; color:#777; font-size:13px; }
+    .resume-company i { margin-right:6px; }
+    .resume-role-tag,.resume-year { display:inline-block; padding:6px 10px; border-radius:20px; background:#eaf4ff; color:#24527a; font-size:10px; font-weight:700; white-space:nowrap; }
+    .resume-card ul { margin:0; padding-left:18px; }
+    .resume-card li { color:#666; font-size:13px; line-height:1.65; margin-bottom:7px; }
+    .resume-card li:last-child { margin-bottom:0; }
+    .resume-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:18px; }
+    .resume-tags span { padding:5px 9px; border-radius:15px; background:#f5f5f5; color:#666; font-size:10px; font-weight:600; }
+    .resume-education-heading { margin-top:55px; }
+    .resume-education-card { display:flex; gap:20px; align-items:flex-start; padding:25px 28px; background:#fff; border:1px solid #eee; border-radius:13px; box-shadow:0 8px 28px rgba(0,0,0,.05); }
+    .resume-education-icon { width:50px; height:50px; min-width:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:#f7f7f7; font-size:20px; }
+    .resume-education-content { flex:1; }
+    .resume-download { margin-top:42px; padding:22px 25px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-radius:13px; background:#212529; color:#fff; }
+    .resume-download strong { display:block; font-size:16px; margin-bottom:4px; }
+    .resume-download span { display:block; color:#bbb; font-size:12px; }
+    .resume-download-btn { white-space:nowrap; }
+    @media (max-width:767px) {
+      .resume-modern { padding:65px 0; }
+      .resume-overview { grid-template-columns:1fr; margin-bottom:45px; }
+      .resume-block-heading h3 { font-size:21px; }
+      .resume-timeline:before { left:7px; }
+      .resume-timeline-item { grid-template-columns:25px 1fr; gap:12px; }
+      .resume-date { grid-column:2; grid-row:1; text-align:left; padding:0; margin-bottom:7px; }
+      .resume-dot { grid-column:1; grid-row:1 / span 2; margin:6px 0 0; }
+      .resume-card { grid-column:2; padding:20px; }
+      .resume-card-top { flex-direction:column; gap:5px; }
+      .resume-card h4 { font-size:18px; }
+      .resume-education-card { padding:20px; flex-direction:column; }
+      .resume-education-card .resume-card-top { gap:10px; }
+      .resume-download { flex-direction:column; align-items:flex-start; }
+      .resume-download-btn { width:100%; }
+    }
+</style>
 </head>
 
 <body id="page-top">
@@ -503,78 +559,44 @@
   </section>
   <!-- End About Section -->
   <!-- ======= Resume Section ======= -->
-  <section class="resume" id="resume">
+  <section class="resume resume-modern" id="resume">
     <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Resume</h2>
-          <h3 class="section-subheading text-muted"></h3>
-          <br />
-        </div>
+      <div class="section-title text-center">
+        <h2 class="section-heading text-uppercase">Resume</h2>
+        <p class="section-subheading text-muted">A snapshot of my experience, education and engineering journey.</p>
       </div>
-      <div class="row">
-        <div class="col-lg-6" data-aos="fade-up">
-          <h3 class="resume-title">Education &amp; Technical Training</h3>
-          <div class="resume-item">
-            <h4>Bachelor of Technology - Computer Science Engineering</h4>
-            <h5>June 2017 - June 2021</h5>
-            <p><em>National Institute of Technology, Patna, India</em></p>
-            <ul>
-              <li>Data Structures &amp; Algorithms</li>
-              <li>Multithreading &amp; Concurrency</li>
-              <li>Operating Systems, Computer Networks &amp; DBMS</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Node.js - The Complete Guide</h4>
-            <h5>2021 - 2022</h5>
-            <p><em>Udemy</em></p>
-            <ul>
-              <li>Node.js, Express.js &amp; REST APIs</li>
-              <li>MongoDB, GraphQL &amp; backend application development</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Senior Software Engineer</h4>
-            <h5>April 2025 - Present</h5>
-            <p><em>Samsung Electronics, Bengaluru, India</em></p>
-            <ul>
-              <li><strong>CRTM:</strong> Building a high-performance certificate lifecycle and authentication system for LTE/5G.</li>
-              <li><strong>HSMF:</strong> Implementing SMS over NAS for LTE HSS in line with 3GPP specifications.</li>
-              <li><strong>SDM Portal:</strong> Improved dashboard usability with widget auto-refresh and critical bug fixes.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Software Engineer 2</h4>
-            <h5>July 2022 - March 2025</h5>
-            <p><em>Tarana Wireless, Inc., Pune, India</em></p>
-            <ul>
-              <li><strong>Tarana Cloud Suite:</strong> Built backend microservices for 1000+ edge devices; improved network uptime by 25%.</li>
-              <li><strong>Banjo:</strong> Reduced unloaded ping latency by 40% through Payload Raster and bandwidth-allocation work.</li>
-              <li><strong>Accordion:</strong> Implemented MAC CCE multiplexing in C++; increased concurrent device support from 256 to 512.</li>
-              <li><strong>Reliability:</strong> Built crash/watchdog monitoring that reduced manual triage by 80% and improved MTTR.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Associate Data Scientist</h4>
-            <h5>July 2021 - July 2022</h5>
-            <p><em>National Payments Corporation of India (NPCI), Hyderabad, India</em></p>
-            <ul>
-              <li><strong>UPI:</strong> Automated fraud-data ingestion for the UPI 3.0 Fraud Model; accelerated training workflows by 50%.</li>
-              <li><strong>RuPay &amp; IRGCS:</strong> Supported compliance-critical reporting with RBI and internal data teams.</li>
-              <li><strong>BHIM:</strong> Built UI for a voice-enabled testing suite; improved test coverage and reduced QA cycle time by 30%.</li>
-            </ul>
-          </div>
-        </div>
+
+      <div class="resume-overview">
+        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-briefcase"></i></span><div><strong>5+ Years</strong><span>Professional Experience</span></div></div>
+        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-server"></i></span><div><strong>Backend &amp; Systems</strong><span>Scalable, high-performance software</span></div></div>
+        <div class="resume-overview-card"><span class="resume-overview-icon"><i class="fas fa-broadcast-tower"></i></span><div><strong>Telecom &amp; 4G/5G</strong><span>Core-network systems &amp; protocols</span></div></div>
       </div>
-      <br />
-      <p class="lead mb-5">Download the
-        <a href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing"
-          rel="noopener noreferrer" target="_blank"><strong>Resume</strong></a>
-      </p>
+
+      <div class="resume-block-heading"><span class="resume-block-icon"><i class="fas fa-code"></i></span><div><span class="resume-eyebrow">CAREER</span><h3>Professional Experience</h3></div></div>
+      <div class="resume-timeline">
+        <div class="resume-timeline-item"><div class="resume-date"><span>Apr 2025</span><small>Present</small></div><div class="resume-dot"></div><article class="resume-card">
+          <div class="resume-card-top"><div><h4>Senior Software Engineer</h4><p class="resume-company"><i class="fas fa-building"></i> Samsung Electronics · Bengaluru, India</p></div><span class="resume-role-tag">Current Role</span></div>
+          <ul><li><strong>CRTM:</strong> Building a high-performance certificate lifecycle and authentication system for LTE/5G.</li><li><strong>HSMF:</strong> Implementing SMS over NAS for LTE HSS in line with 3GPP specifications.</li><li><strong>SDM Portal:</strong> Improved dashboard usability with widget auto-refresh and critical bug fixes.</li></ul>
+          <div class="resume-tags"><span>C++</span><span>LTE/5G</span><span>Distributed Systems</span><span>Security</span></div>
+        </article></div>
+
+        <div class="resume-timeline-item"><div class="resume-date"><span>Jul 2022</span><small>Mar 2025</small></div><div class="resume-dot"></div><article class="resume-card">
+          <div class="resume-card-top"><div><h4>Software Engineer 2</h4><p class="resume-company"><i class="fas fa-building"></i> Tarana Wireless, Inc. · Pune, India</p></div></div>
+          <ul><li><strong>Tarana Cloud Suite:</strong> Built backend microservices for 1000+ edge devices; improved network uptime by 25%.</li><li><strong>Banjo:</strong> Reduced unloaded ping latency by 40% through Payload Raster and bandwidth-allocation work.</li><li><strong>Accordion:</strong> Implemented MAC CCE multiplexing in C++; increased concurrent device support from 256 to 512.</li><li><strong>Reliability:</strong> Built crash/watchdog monitoring that reduced manual triage by 80% and improved MTTR.</li></ul>
+          <div class="resume-tags"><span>C++</span><span>Backend</span><span>Microservices</span><span>Wireless Systems</span></div>
+        </article></div>
+
+        <div class="resume-timeline-item"><div class="resume-date"><span>Jul 2021</span><small>Jul 2022</small></div><div class="resume-dot"></div><article class="resume-card">
+          <div class="resume-card-top"><div><h4>Associate Data Scientist</h4><p class="resume-company"><i class="fas fa-building"></i> National Payments Corporation of India (NPCI) · Hyderabad, India</p></div></div>
+          <ul><li><strong>UPI:</strong> Automated fraud-data ingestion for the UPI 3.0 Fraud Model; accelerated training workflows by 50%.</li><li><strong>RuPay &amp; IRGCS:</strong> Supported compliance-critical reporting with RBI and internal data teams.</li><li><strong>BHIM:</strong> Built UI for a voice-enabled testing suite; improved test coverage and reduced QA cycle time by 30%.</li></ul>
+          <div class="resume-tags"><span>Python</span><span>Data Science</span><span>UPI</span><span>Automation</span></div>
+        </article></div>
+      </div>
+
+      <div class="resume-block-heading resume-education-heading"><span class="resume-block-icon"><i class="fas fa-graduation-cap"></i></span><div><span class="resume-eyebrow">EDUCATION</span><h3>Academic Foundation</h3></div></div>
+      <div class="resume-education-card"><div class="resume-education-icon"><i class="fas fa-university"></i></div><div class="resume-education-content"><div class="resume-card-top"><div><h4>Bachelor of Technology — Computer Science Engineering</h4><p class="resume-company"><i class="fas fa-map-marker-alt"></i> National Institute of Technology, Patna, India</p></div><span class="resume-year">2017 — 2021</span></div><div class="resume-tags"><span>Data Structures &amp; Algorithms</span><span>Concurrency</span><span>Operating Systems</span><span>Networks</span><span>DBMS</span></div></div></div>
+
+      <div class="resume-download"><div><strong>Want the complete profile?</strong><span>Download the full resume for detailed experience and skills.</span></div><a class="btn btn-primary resume-download-btn" href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing" rel="noopener noreferrer" target="_blank">Download Resume <i class="fas fa-download"></i></a></div>
     </div>
   </section>
 
