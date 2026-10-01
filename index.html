@@ -889,6 +889,299 @@
   #portfolio .project-card .portfolio-hover-content .project-plus::after { width: 50px !important; height: 5px !important; }
 }
 </style>
+
+<style id="section-background-refresh-v30">
+  /* v30: cohesive alternating light/dark-neutral section rhythm. */
+  body { background:#f7f9fb; }
+
+  .page-section,
+  .about-modern,
+  .resume-modern,
+  .contact {
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+  }
+
+  .page-section > .container,
+  .about-modern > .container,
+  .resume-modern > .container,
+  .contact > .container {
+    position:relative;
+    z-index:2;
+  }
+
+  /* About — soft cool canvas. */
+  #about {
+    background:
+      radial-gradient(circle at 8% 12%, rgba(179,215,255,.20), transparent 25%),
+      #f7f9fb;
+  }
+
+  /* Resume — clean white break between profile and career details. */
+  #resume { background:#ffffff; }
+
+  /* Skills — one step darker, with a barely-visible technical grid. */
+  #services {
+    background:
+      linear-gradient(rgba(72,100,125,.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(72,100,125,.028) 1px, transparent 1px),
+      #f1f4f7;
+    background-size:36px 36px;
+  }
+
+  /* Projects — bright so screenshots/project artwork stay dominant. */
+  #portfolio {
+    background:
+      radial-gradient(circle at 92% 8%, rgba(179,215,255,.14), transparent 23%),
+      #ffffff;
+  }
+
+  /* Thoughts — subtle gray-blue alternate. */
+  #blog {
+    background:
+      radial-gradient(circle at 7% 80%, rgba(179,215,255,.10), transparent 22%),
+      #f5f7f9;
+  }
+
+  /* GitHub — slightly cooler/darker continuation of the same palette. */
+  #git {
+    background:
+      radial-gradient(circle at 88% 18%, rgba(179,215,255,.18), transparent 24%),
+      #edf2f6;
+  }
+
+  /* Contact — final light-blue panel rather than an unrelated dark block. */
+  #contact {
+    background:
+      radial-gradient(circle at 88% 18%, rgba(179,215,255,.28), transparent 27%),
+      linear-gradient(135deg, #e8eff5 0%, #e1eaf2 100%);
+    color:#263746;
+  }
+
+  /* Explicit contrast fixes: restore all contact copy that was hidden by
+     inherited dark-theme rules in the previous version. */
+  #contact .section-title h2,
+  #contact .section-title p,
+  #contact .info h4,
+  #contact .info p,
+  #contact .info a,
+  #contact .php-email-form label,
+  #contact .php-email-form .loading,
+  #contact .php-email-form .error-message,
+  #contact .php-email-form .sent-message {
+    color:#263746 !important;
+  }
+
+  #contact .section-title p,
+  #contact .info p,
+  #contact .info a {
+    color:#526676 !important;
+  }
+
+  #contact .info,
+  #contact #contact-form {
+    position:relative;
+    z-index:2;
+  }
+
+  #contact .php-email-form input,
+  #contact .php-email-form textarea {
+    background:#ffffff;
+    color:#263746;
+    border-color:#d4dfe8;
+  }
+
+  #contact .php-email-form input::placeholder,
+  #contact .php-email-form textarea::placeholder {
+    color:#8796a3;
+  }
+
+  /* Small decorative ring keeps the alternating panels from feeling flat. */
+  #about::after,
+  #blog::after,
+  #git::after {
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    right:-145px;
+    bottom:-150px;
+    border:1px solid rgba(73,111,140,.09);
+    border-radius:50%;
+    box-shadow:0 0 0 45px rgba(73,111,140,.025),
+               0 0 0 90px rgba(73,111,140,.018);
+    z-index:0;
+    pointer-events:none;
+  }
+
+  @media (max-width:767px) {
+    #about::after,
+    #blog::after,
+    #git::after { display:none; }
+    #services { background-size:28px 28px; }
+  }
+</style>
+
+
+<style>
+/* v31 — Contact + footer visual treatment: calm, premium, engineering-focused */
+#contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(179,215,255,.38), transparent 24%),
+    radial-gradient(circle at 88% 82%, rgba(179,215,255,.24), transparent 28%),
+    linear-gradient(135deg, #eef4f8 0%, #e5edf3 52%, #f4f7f9 100%);
+}
+#contact::before {
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-270px;
+  top:-230px;
+  border:1px solid rgba(60,104,139,.10);
+  border-radius:50%;
+  box-shadow:0 0 0 55px rgba(60,104,139,.025), 0 0 0 110px rgba(60,104,139,.018);
+  pointer-events:none;
+}
+#contact::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:48%;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(70,110,145,.18), transparent);
+  pointer-events:none;
+}
+#contact .section-title h2 {
+  color:#213544 !important;
+  font-weight:700;
+  letter-spacing:-.02em;
+}
+#contact .section-title p {
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+  color:#5a6c7b !important;
+}
+#contact .info {
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(180,198,212,.75);
+  border-radius:16px;
+  padding:28px 30px;
+  box-shadow:0 12px 35px rgba(36,58,75,.07);
+  backdrop-filter:blur(5px);
+}
+#contact .info > div {
+  position:relative;
+  padding:5px 0 22px 62px;
+  margin-bottom:22px;
+  border-bottom:1px solid #e2e9ee;
+}
+#contact .info > div:last-child { border-bottom:0; margin-bottom:0; padding-bottom:5px; }
+#contact .info i {
+  position:absolute;
+  left:0;
+  top:2px;
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:#e8f3ff;
+  color:#3e79a8;
+  font-size:17px;
+}
+#contact .info h4 { margin:0 0 5px; color:#263b4b !important; font-size:14px; font-weight:700; }
+#contact .info p, #contact .info a { margin:0; color:#617383 !important; font-size:14px; line-height:1.55; }
+#contact .info a { transition:color .2s ease; }
+#contact .info a:hover { color:#2f6f9f !important; }
+#contact #contact-form {
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(180,198,212,.78);
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 12px 35px rgba(36,58,75,.08);
+  backdrop-filter:blur(5px);
+}
+#contact .php-email-form label { color:#3c5060 !important; font-size:12px; font-weight:700; margin-bottom:7px; }
+#contact .php-email-form input,
+#contact .php-email-form textarea {
+  border:1px solid #d5e0e8;
+  border-radius:9px;
+  box-shadow:none;
+  padding:11px 13px;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+#contact .php-email-form input:focus,
+#contact .php-email-form textarea:focus {
+  border-color:#9fc9eb;
+  box-shadow:0 0 0 3px rgba(179,215,255,.22);
+}
+#contact .php-email-form button {
+  border-radius:999px;
+  padding:11px 25px;
+  border:1px solid #4f86b1;
+  background:#4f86b1;
+  box-shadow:0 7px 18px rgba(58,105,140,.18);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+#contact .php-email-form button:hover { transform:translateY(-2px); background:#3f739b; box-shadow:0 10px 22px rgba(58,105,140,.22); }
+
+/* Footer becomes a deliberate visual anchor rather than another gray section. */
+.footer {
+  position:relative;
+  overflow:hidden;
+  padding:54px 0 22px;
+  color:#eaf2f7;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(179,215,255,.16), transparent 30%),
+    radial-gradient(circle at 88% 100%, rgba(93,155,213,.13), transparent 34%),
+    linear-gradient(145deg,#101c25 0%,#172a36 52%,#0d1820 100%);
+  border-top:1px solid rgba(179,215,255,.18);
+}
+.footer::after {
+  content:""; position:absolute; inset:auto 0 0; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(179,215,255,.45),transparent);
+}
+.footer .container { position:relative; z-index:3; }
+.footer-glow { position:absolute; border-radius:50%; pointer-events:none; border:1px solid rgba(179,215,255,.08); }
+.footer-glow-one { width:430px; height:430px; right:-220px; top:-285px; box-shadow:0 0 0 35px rgba(179,215,255,.018),0 0 0 72px rgba(179,215,255,.012); }
+.footer-glow-two { width:260px; height:260px; left:-185px; bottom:-185px; }
+.footer-main { display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.footer-brand { display:inline-block; color:#fff; font-family:"Kaushan Script",cursive; font-size:30px; line-height:1; text-decoration:none; margin-bottom:9px; }
+.footer-brand:hover { color:#b3d7ff; text-decoration:none; }
+.footer-brand-block p { margin:0; color:#aebfca; font-size:12px; letter-spacing:.04em; }
+.footer-social-block { text-align:center; }
+.footer-social-block > span { display:block; color:#90a6b4; font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:9px; }
+.footer .social-buttons { margin:0; }
+.footer .social-buttons li { margin:0 4px; }
+.footer .social-buttons a {
+  display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px;
+  border:1px solid rgba(179,215,255,.22); border-radius:12px;
+  background:rgba(255,255,255,.045); color:#dce8ef;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  transition:transform .22s ease,background .22s ease,border-color .22s ease,color .22s ease;
+}
+.footer .social-buttons a:hover { transform:translateY(-4px); background:rgba(179,215,255,.13); border-color:rgba(179,215,255,.55); color:#fff; }
+.footer-top { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid rgba(179,215,255,.25); color:#dce8ef; background:rgba(255,255,255,.04); transition:all .22s ease; }
+.footer-top:hover { color:#10202b; background:#b3d7ff; border-color:#b3d7ff; transform:translateY(-3px); text-decoration:none; }
+.footer-bottom { margin-top:34px; padding-top:17px; border-top:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; gap:14px; color:#8296a3; font-size:10px; letter-spacing:.04em; }
+.footer-line { width:34px; height:1px; background:rgba(179,215,255,.35); }
+@media (max-width:767px) {
+  .footer { padding:42px 0 20px; }
+  .footer-main { flex-direction:column; text-align:center; gap:24px; }
+  .footer-brand { font-size:28px; }
+  .footer-brand-block p { max-width:280px; margin:0 auto; line-height:1.6; }
+  .footer-bottom { flex-direction:column; gap:8px; margin-top:27px; }
+  .footer-line { display:none; }
+  .footer-top { width:40px; height:40px; }
+}
+</style>
 </head>
 <body id="page-top">
 <!-- Navigation -->
@@ -1316,36 +1609,36 @@
 <!-- End Contact Section -->
 <!-- Footer -->
 <footer class="footer">
-<div class="container" data-aos="fade-up">
-<div class="row align-items-center">
-<div class="col-md-4">
-<span class="copyright">Copyright © Aniket Sharma</span>
-</div>
-<div class="col-md-4">
-<ul class="list-inline social-buttons">
-<li class="list-inline-item">
-<a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-</li>
-<li class="list-inline-item">
-<a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-</li>
-<li class="list-inline-item">
-<a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer" target="_blank">
-<i class="fab fa-kaggle"></i>
-</a>
-</li>
-</ul>
-</div>
-<div class="col-md-4">
-<ul class="list-inline quicklinks">
-</ul>
-</div>
-</div>
-</div>
+  <div class="footer-glow footer-glow-one"></div>
+  <div class="footer-glow footer-glow-two"></div>
+  <div class="container" data-aos="fade-up">
+    <div class="footer-main">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="#page-top">Aniket Sharma</a>
+        <p>Backend Engineer · Systems · Scalable Software</p>
+      </div>
+      <div class="footer-social-block">
+        <span>Connect with me</span>
+        <ul class="list-inline social-buttons">
+          <li class="list-inline-item">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/imaniketsharma/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="GitHub" href="https://github.com/imAniketSharma" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a aria-label="Kaggle" href="https://www.kaggle.com/iamaniket" rel="noopener noreferrer" target="_blank"><i class="fab fa-kaggle"></i></a>
+          </li>
+        </ul>
+      </div>
+      <a class="footer-top" href="#page-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aniket Sharma. All rights reserved.</span>
+      <span class="footer-line"></span>
+      <span>Built with curiosity &amp; code.</span>
+    </div>
+  </div>
 </footer>
 <!-- Portfolio Modals -->
 <!-- Modal 1 -->
