@@ -1,1744 +1,295 @@
 <!doctype html>
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      name="viewport"
-    />
-    <meta
-      content="Aniket Sharma - Senior Software Engineer, software developer and technology enthusiast."
-      name="description"
-    />
-    <meta content="Aniket Sharma" name="author" />
-    <title>Aniket Sharma</title>
-    <!-- add icon link -->
-    <link href="img/as.png" rel="icon" type="image/x-icon" />
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom fonts for this template -->
-    <link
-      href="vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet" />
-    <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet" />
-    <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="vendor/owl.carousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css"
-      rel="stylesheet"
-    />
-    <link href="css/overrides.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aniket Sharma — Senior Software Engineer building reliable software, backend services and scalable systems across domains.">
+  <meta name="author" content="Aniket Sharma">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Aniket Sharma — Senior Software Engineer</title>
+  <link rel="icon" href="img/as.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar-responsive.css" rel="stylesheet">
+  <link href="css/portfolio-v2.css" rel="stylesheet">
+</head>
+<body id="top">
+  <div class="site-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container" data-aos="fade-up">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"
-          >Aniket Sharma</a
-        >
-        <button
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="navbar-toggler navbar-toggler-right"
-          data-target="#navbarResponsive"
-          data-toggle="collapse"
-          type="button"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about"
-                ><i class="fas fa-user"></i><strong> About</strong></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#resume"
-                ><i class="fas fa-file-alt"></i><strong> Resume</strong></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services"
-                ><i class="fas fa-cogs"></i><strong> Skills</strong></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio"
-                ><i class="fas fa-code"></i><strong> Projects</strong></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://datascienceepicenter.com"
-                rel="noopener noreferrer"
-                target="_blank"
-                ><i class="fas fa-blog"></i><strong> Blogs</strong></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact"
-                ><i class="fas fa-envelope"></i><strong> Contact</strong></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <header class="site-header" id="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Aniket Sharma home">
+        <span class="brand-script">Aniket Sharma</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-resume" href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- ======= Hero Section ======= -->
-    <header class="masthead">
-      <div class="home" id="hero">
-        <div class="container" data-aos="zoom-in" data-aos-delay="200">
-          <div class="hero-content">
-            <h1>I'm <span class="typed"></span></h1>
-            <p class="typed-items" data-typed-person="Aniket Sharma">
-              Engineer, Developer, Tech Enthusiast, Problem Solver
-            </p>
-            <ul class="list-unstyled list-social">
-              <li>
-                <a
-                  aria-label="LinkedIn"
-                  href="https://www.linkedin.com/in/imaniketsharma/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="bx bxl-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  aria-label="GitHub"
-                  href="https://github.com/imAniketSharma"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="bx bxl-github"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  aria-label="Twitter"
-                  href="https://twitter.com/this_is_Anik"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="bx bxl-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  aria-label="Instagram"
-                  href="https://www.instagram.com/aniket.sharma___"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="bx bxl-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  aria-label="Kaggle"
-                  href="https://www.kaggle.com/iamaniket"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="fab fa-kaggle"></i
-                ></a>
-              </li>
-            </ul>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> SENIOR SOFTWARE ENGINEER · BENGALURU</p>
+          <h1>I build software<br><span>that solves real problems.</span></h1>
+          <p class="hero-lede">5+ years building reliable software across systems, backend services and data-driven applications — with a focus on performance, scalability and clean engineering.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">Explore experience <span>↓</span></a>
+            <a class="button button-ghost" href="#work">View selected work <span>↗</span></a>
+          </div>
+          <div class="hero-socials" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/imaniketsharma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/imAniketSharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/this_is_Anik" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.kaggle.com/iamaniket" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- End Hero -->
 
-    <!-- ======= About Section ======= -->
-    <section class="about about-modern" id="about">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About Me</h2>
-            <h3 class="section-subheading text-muted">
-              Backend engineering, systems development &amp; scalable technology
-            </h3>
-          </div>
-        </div>
-        <div class="about-card">
-          <div class="row align-items-center">
-            <div class="col-lg-4 text-center" data-aos="fade-right">
-              <div class="about-profile-wrap">
-                <img
-                  alt="Aniket Sharma - Senior Software Engineer"
-                  class="img-fluid about-profile-image"
-                  src="img/Aniket.png"
-                />
-                <div class="about-profile-badge">
-                  <i class="fas fa-code"></i>
-                  <span>Senior Software Engineer</span>
-                </div>
-              </div>
+        <div class="hero-visual" aria-label="Engineering systems visual">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="system-panel">
+            <div class="panel-top"><span>ENGINEERING FOCUS</span><span class="status"><i></i> BUILDING</span></div>
+            <div class="system-title">Systems that scale.</div>
+            <div class="system-stack">
+              <div class="stack-row"><span class="stack-index">01</span><span>Backend &amp; APIs</span><b>→</b></div>
+              <div class="stack-row"><span class="stack-index">02</span><span>Distributed Systems</span><b>→</b></div>
+              <div class="stack-row"><span class="stack-index">03</span><span>Data &amp; AI Applications</span><b>→</b></div>
+              <div class="stack-row"><span class="stack-index">04</span><span>Performance &amp; Reliability</span><b>→</b></div>
             </div>
-            <div class="col-lg-8" data-aos="fade-left">
-              <div class="about-content">
-                <div class="about-intro-card">
-                  <i class="fas fa-server"></i>
-                  <div>
-                    <h4>Backend &amp; Distributed Systems</h4>
-                    <p>
-                      Building high-performance services, APIs and scalable
-                      backend systems.
-                    </p>
-                  </div>
-                </div>
-                <div class="about-intro-card">
-                  <i class="fas fa-network-wired"></i>
-                  <div>
-                    <h4>Telecom &amp; 4G/5G</h4>
-                    <p>
-                      Working on LTE/5G core-network systems, secure certificate
-                      management and SMS over NAS.
-                    </p>
-                  </div>
-                </div>
-                <div class="about-card-grid">
-                  <div class="about-info-card">
-                    <i class="fas fa-briefcase"></i>
-                    <div>
-                      <h4>Experience</h4>
-                      <p><strong>5+ years</strong> in software engineering</p>
-                    </div>
-                  </div>
-                  <div class="about-info-card">
-                    <i class="fas fa-code"></i>
-                    <div>
-                      <h4>Core Stack</h4>
-                      <p><strong>C++ · Python · APIs</strong></p>
-                    </div>
-                  </div>
-                  <div class="about-info-card">
-                    <i class="fas fa-building"></i>
-                    <div>
-                      <h4>Current Role</h4>
-                      <p><strong>Samsung Electronics</strong> · Bengaluru</p>
-                    </div>
-                  </div>
-                  <div class="about-info-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <div>
-                      <h4>Education</h4>
-                      <p><strong>B.Tech, CSE</strong> · NIT Patna</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="about-actions">
-                  <a class="btn btn-primary about-action-btn" href="#resume"
-                    >View Resume <i class="fas fa-arrow-right"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary about-action-btn"
-                    href="#contact"
-                    >Get In Touch <i class="fas fa-envelope"></i
-                  ></a>
-                </div>
-              </div>
+            <div class="panel-footer"><span>C++</span><span>Python</span><span>SQL</span><span>Linux</span></div>
+          </div>
+          <div class="hero-code"><span>01</span><code>design → build → debug → improve</code></div>
+        </div>
+      </div>
+      <div class="hero-bottom shell">
+        <span>SCROLL TO EXPLORE</span><span class="line"></span><span>01 / 07</span>
+      </div>
+    </section>
+
+    <!-- Snapshot -->
+    <section class="snapshot section-dark">
+      <div class="shell snapshot-grid">
+        <div><span class="metric">05+</span><span class="metric-label">years of engineering</span></div>
+        <div><span class="metric">C++</span><span class="metric-label">systems &amp; performance</span></div>
+        <div><span class="metric">Backend</span><span class="metric-label">services &amp; APIs</span></div>
+        <div><span class="metric">Systems</span><span class="metric-label">performance &amp; reliability</span></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-light" id="about">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark"><span>01</span> ABOUT</p>
+          <h2>Engineering is more than writing code.</h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-photo reveal">
+            <img src="img/Aniket.png" alt="Aniket Sharma">
+            <div class="photo-caption"><span>Senior Software Engineer</span><span>NIT Patna · CSE</span></div>
+          </div>
+          <div class="about-copy reveal">
+            <p class="lead">I’m a software engineer focused on building reliable, maintainable software and turning complex problems into practical systems.</p>
+            <p>Over the past 5+ years, I’ve worked across software engineering, backend services, distributed systems and data-driven applications. I’ve built production components, APIs, automation and system software across different kinds of products and engineering environments.</p>
+            <p>My background includes telecom infrastructure, but the engineering problems I work on are broader: designing services, debugging complex systems, improving performance and building software that is reliable in production.</p>
+            <div class="focus-list">
+              <div><span>01</span><strong>Backend Systems</strong><small>APIs · services · reliability</small></div>
+              <div><span>02</span><strong>Distributed Systems</strong><small>concurrency · scale · performance</small></div>
+              <div><span>03</span><strong>Performance &amp; Reliability</strong><small>debugging · scale · optimization</small></div>
+              <div><span>04</span><strong>Product Engineering</strong><small>APIs · automation · AI applications</small></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End About Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section class="resume resume-modern" id="resume">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <h2 class="section-heading text-uppercase">Resume</h2>
-          <p class="section-subheading text-muted">
-            A snapshot of my experience, education and engineering journey.
-          </p>
+    <!-- Experience -->
+    <section class="section section-tint" id="experience">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark"><span>02</span> EXPERIENCE</p>
+          <h2>Five years of building real systems.</h2>
+          <p class="section-intro">A progression across data, backend engineering, systems software and production infrastructure — with experience adapting to different technical domains.</p>
         </div>
-        <div class="resume-overview">
-          <div class="resume-overview-card">
-            <span class="resume-overview-icon"
-              ><i class="fas fa-briefcase"></i
-            ></span>
-            <div>
-              <strong>5+ Years</strong><span>Professional Experience</span>
+        <div class="experience-list">
+          <article class="experience-item reveal">
+            <div class="experience-date"><span>APR 2025</span><small>PRESENT</small></div>
+            <div class="experience-marker"><span></span></div>
+            <div class="experience-card">
+              <div class="experience-top"><div><p class="mono-label">CURRENT ROLE</p><h3>Senior Software Engineer</h3><p class="company">Samsung Electronics <span>·</span> Bengaluru, India</p></div><span class="current-pill">CURRENT</span></div>
+              <p class="experience-summary">Building and maintaining production software for complex, high-availability systems, with responsibility spanning implementation, debugging, reliability and integration.</p>
+              <div class="experience-highlights"><div><b>Systems</b><span>Developed and maintained production components involving authentication, service integration and reliability.</span></div><div><b>Engineering</b><span>Investigated complex issues, implemented fixes and improved system behavior across multiple components.</span></div><div><b>Product</b><span>Delivered usability improvements, automation and critical fixes across engineering workflows.</span></div></div>
+              <div class="tag-row"><span>C++</span><span>Backend</span><span>Systems</span><span>Reliability</span></div>
             </div>
-          </div>
-          <div class="resume-overview-card">
-            <span class="resume-overview-icon"
-              ><i class="fas fa-server"></i
-            ></span>
-            <div>
-              <strong>Backend &amp; Systems</strong
-              ><span>Scalable, high-performance software</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-date"><span>JUL 2022</span><small>MAR 2025</small></div>
+            <div class="experience-marker"><span></span></div>
+            <div class="experience-card">
+              <div class="experience-top"><div><p class="mono-label">WIRELESS SYSTEMS</p><h3>Software Engineer 2</h3><p class="company">Tarana Wireless, Inc. <span>·</span> Pune, India</p></div></div>
+              <p class="experience-summary">Built and improved production software for high-performance systems, spanning backend services, C++ components, device-scale workloads and reliability tooling.</p>
+              <div class="experience-highlights"><div><b>Cloud Suite</b><span>Backend microservices supporting 1000+ edge devices; improved network uptime by 25%.</span></div><div><b>Banjo</b><span>Reduced unloaded ping latency by 40% through payload raster and bandwidth-allocation work.</span></div><div><b>Reliability</b><span>Built crash/watchdog monitoring that reduced manual triage by 80% and improved MTTR.</span></div></div>
+              <div class="tag-row"><span>C++</span><span>Backend</span><span>Microservices</span><span>Performance</span></div>
             </div>
-          </div>
-          <div class="resume-overview-card">
-            <span class="resume-overview-icon"
-              ><i class="fas fa-broadcast-tower"></i
-            ></span>
-            <div>
-              <strong>Telecom &amp; 4G/5G</strong
-              ><span>Core-network systems &amp; protocols</span>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-date"><span>JUL 2021</span><small>JUL 2022</small></div>
+            <div class="experience-marker"><span></span></div>
+            <div class="experience-card">
+              <div class="experience-top"><div><p class="mono-label">PAYMENTS + DATA</p><h3>Associate Data Scientist</h3><p class="company">National Payments Corporation of India (NPCI) <span>·</span> Hyderabad, India</p></div></div>
+              <p class="experience-summary">Worked on data workflows, analytics and automation supporting large-scale payment systems and internal engineering teams.</p>
+              <div class="experience-highlights"><div><b>UPI</b><span>Automated fraud-data ingestion for the UPI 3.0 fraud model; accelerated training workflows by 50%.</span></div><div><b>RuPay &amp; IRGCS</b><span>Supported compliance-critical reporting with RBI and internal data teams.</span></div><div><b>BHIM</b><span>Built UI for a voice-enabled testing suite, improving test coverage and reducing QA cycle time.</span></div></div>
+              <div class="tag-row"><span>Python</span><span>Data</span><span>Automation</span><span>Analytics</span></div>
             </div>
-          </div>
+          </article>
         </div>
-        <div class="resume-block-heading">
-          <span class="resume-block-icon"><i class="fas fa-code"></i></span>
-          <div>
-            <span class="resume-eyebrow">CAREER</span>
-            <h3>Professional Experience</h3>
-          </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section section-light" id="work">
+      <div class="shell">
+        <div class="section-heading work-heading reveal">
+          <div><p class="eyebrow dark"><span>03</span> SELECTED WORK</p><h2>Projects that show how I build.</h2></div>
+          <a class="text-link" href="https://github.com/imAniketSharma" target="_blank" rel="noopener noreferrer">View all on GitHub ↗</a>
         </div>
-        <div class="resume-timeline">
-          <div class="resume-timeline-item">
-            <div class="resume-date">
-              <span>Apr 2025</span><small>Present</small>
-            </div>
-            <div class="resume-dot"></div>
-            <article class="resume-card">
-              <div class="resume-card-top">
-                <div>
-                  <h4>Senior Software Engineer</h4>
-                  <p class="resume-company">
-                    <i class="fas fa-building"></i> Samsung Electronics ·
-                    Bengaluru, India
-                  </p>
-                </div>
-                <span class="resume-role-tag">Current Role</span>
-              </div>
-              <ul>
-                <li>
-                  <strong>CRTM:</strong> Building a high-performance certificate
-                  lifecycle and authentication system for LTE/5G.
-                </li>
-                <li>
-                  <strong>HSMF:</strong> Implementing SMS over NAS for LTE HSS
-                  in line with 3GPP specifications.
-                </li>
-                <li>
-                  <strong>SDM Portal:</strong> Improved dashboard usability with
-                  widget auto-refresh and critical bug fixes.
-                </li>
-              </ul>
-              <div class="resume-tags">
-                <span>C++</span><span>LTE/5G</span
-                ><span>Distributed Systems</span><span>Security</span>
-              </div>
+        <div class="work-grid">
+          <article class="work-card work-featured reveal">
+            <div class="work-index">01</div><div class="work-body"><p class="work-type">SYSTEMS / PYTHON</p><h3>Tic Tac Toe — Python Package</h3><p>A lightweight command-line game packaged for installation through PyPI — an early example of turning a small application into a reusable distributable package.</p><div class="tag-row"><span>Python</span><span>Package Development</span><span>PyPI</span></div><div class="work-actions"><a href="https://pypi.org/project/my-tic-tac-toe/" target="_blank" rel="noopener noreferrer">View package ↗</a><a href="https://github.com/imAniketSharma/my-tic-tac-toe" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-index">02</div><div class="work-body"><p class="work-type">MACHINE LEARNING</p><h3>Spam Classifier</h3><p>Text classification system using NLP and Naive Bayes to distinguish spam from non-spam messages.</p><div class="tag-row"><span>NLP</span><span>Naive Bayes</span><span>Classification</span></div><div class="work-actions"><a href="https://github.com/imAniketSharma/spam-classifier-system" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-index">03</div><div class="work-body"><p class="work-type">COMPUTER VISION</p><h3>Artistic Image Generation</h3><p>Neural Style Transfer using a pretrained VGG-19 network to combine image content with artistic style.</p><div class="tag-row"><span>Deep Learning</span><span>VGG-19</span><span>Computer Vision</span></div><div class="work-actions"><a href="https://github.com/imAniketSharma/Artistic-Image-Generation" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-index">04</div><div class="work-body"><p class="work-type">AUDIO / ML</p><h3>Trigger Word Detection</h3><p>Audio classification system trained on synthesized positive, negative and background-noise examples to detect a trigger word.</p><div class="tag-row"><span>Deep Learning</span><span>Sequence Modeling</span><span>Audio</span></div><div class="work-actions"><a href="https://github.com/imAniketSharma/Trigger-word-detection-system" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-index">05</div><div class="work-body"><p class="work-type">APPLICATION</p><h3>Decision Review System</h3><p>Python GUI and video-processing application exploring computer-assisted review workflows.</p><div class="tag-row"><span>Tkinter</span><span>Python</span><span>Video Processing</span></div><div class="work-actions"><a href="https://github.com/imAniketSharma/Decision-Review-System" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+          <article class="work-card reveal">
+            <div class="work-index">06</div><div class="work-body"><p class="work-type">DATA / GEO</p><h3>Battle of the Neighborhoods</h3><p>Location analysis using Foursquare data and K-Means clustering to explore neighborhood similarity.</p><div class="tag-row"><span>Foursquare API</span><span>K-Means</span><span>Data Science</span></div><div class="work-actions"><a href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/" target="_blank" rel="noopener noreferrer">Live project ↗</a><a href="https://github.com/imAniketSharma/Battle-of-Neighborhoods" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div>
+          </article>
+        </div>
+        <div class="work-note reveal"><span>Next chapter</span><p>Current side projects are moving deeper into backend architecture, system design and AI-powered applications.</p></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-tint expertise-section" id="skills">
+      <div class="shell">
+        <div class="expertise-heading reveal">
+          <p class="eyebrow dark"><span>04</span> TECHNICAL EXPERTISE</p>
+          <h2>Tools change. <em>How I engineer</em> stays.</h2>
+          <p>Backend engineering, systems thinking, data and the tools that help turn ideas into dependable software.</p>
+        </div>
+
+        <div class="expertise-carousel reveal" data-expertise-carousel>
+          <div class="expertise-track" data-expertise-track>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">01</span><i class="fas fa-code" aria-hidden="true"></i></div>
+              <h3>Languages &amp; Programming</h3>
+              <p>Comfortable moving between low-level systems work and higher-level application development.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>C++</span><span>Python</span><span>JavaScript</span><span>SQL</span></div></div>
+            </article>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">02</span><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+              <h3>Backend &amp; APIs</h3>
+              <p>Designing services and APIs with clean boundaries, practical abstractions and production reliability in mind.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>REST APIs</span><span>Node.js</span><span>FastAPI</span><span>Microservices</span></div></div>
+            </article>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">03</span><i class="fas fa-database" aria-hidden="true"></i></div>
+              <h3>Data &amp; AI</h3>
+              <p>Working with data models, databases and applied AI concepts to build useful data-driven applications.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>PostgreSQL</span><span>MongoDB</span><span>LLMs</span><span>RAG</span></div></div>
+            </article>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">04</span><i class="fas fa-sitemap" aria-hidden="true"></i></div>
+              <h3>Systems &amp; Architecture</h3>
+              <p>Breaking complex problems into reliable components with attention to scale, concurrency and performance.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>System Design</span><span>Concurrency</span><span>Distributed Systems</span></div></div>
+            </article>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">05</span><i class="fas fa-terminal" aria-hidden="true"></i></div>
+              <h3>Engineering Practice</h3>
+              <p>Debugging and improving software through testing, observability, performance analysis and disciplined iteration.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>Debugging</span><span>Testing</span><span>Performance</span><span>OOP</span></div></div>
+            </article>
+            <article class="expertise-card">
+              <div class="expertise-card-top"><span class="expertise-index">06</span><i class="fas fa-toolbox" aria-hidden="true"></i></div>
+              <h3>Tools &amp; Platforms</h3>
+              <p>The everyday engineering toolkit used to build, run, inspect and ship software efficiently.</p>
+              <div class="expertise-core"><span>CORE</span><div class="expertise-tags"><span>Linux</span><span>Git</span><span>Docker</span><span>CMake</span><span>Kafka</span></div></div>
             </article>
           </div>
-          <div class="resume-timeline-item">
-            <div class="resume-date">
-              <span>Jul 2022</span><small>Mar 2025</small>
-            </div>
-            <div class="resume-dot"></div>
-            <article class="resume-card">
-              <div class="resume-card-top">
-                <div>
-                  <h4>Software Engineer 2</h4>
-                  <p class="resume-company">
-                    <i class="fas fa-building"></i> Tarana Wireless, Inc. ·
-                    Pune, India
-                  </p>
-                </div>
-              </div>
-              <ul>
-                <li>
-                  <strong>Tarana Cloud Suite:</strong> Built backend
-                  microservices for 1000+ edge devices; improved network uptime
-                  by 25%.
-                </li>
-                <li>
-                  <strong>Banjo:</strong> Reduced unloaded ping latency by 40%
-                  through Payload Raster and bandwidth-allocation work.
-                </li>
-                <li>
-                  <strong>Accordion:</strong> Implemented MAC CCE multiplexing
-                  in C++; increased concurrent device support from 256 to 512.
-                </li>
-                <li>
-                  <strong>Reliability:</strong> Built crash/watchdog monitoring
-                  that reduced manual triage by 80% and improved MTTR.
-                </li>
-              </ul>
-              <div class="resume-tags">
-                <span>C++</span><span>Backend</span><span>Microservices</span
-                ><span>Wireless Systems</span>
-              </div>
-            </article>
-          </div>
-          <div class="resume-timeline-item">
-            <div class="resume-date">
-              <span>Jul 2021</span><small>Jul 2022</small>
-            </div>
-            <div class="resume-dot"></div>
-            <article class="resume-card">
-              <div class="resume-card-top">
-                <div>
-                  <h4>Associate Data Scientist</h4>
-                  <p class="resume-company">
-                    <i class="fas fa-building"></i> National Payments
-                    Corporation of India (NPCI) · Hyderabad, India
-                  </p>
-                </div>
-              </div>
-              <ul>
-                <li>
-                  <strong>UPI:</strong> Automated fraud-data ingestion for the
-                  UPI 3.0 Fraud Model; accelerated training workflows by 50%.
-                </li>
-                <li>
-                  <strong>RuPay &amp; IRGCS:</strong> Supported
-                  compliance-critical reporting with RBI and internal data
-                  teams.
-                </li>
-                <li>
-                  <strong>BHIM:</strong> Built UI for a voice-enabled testing
-                  suite; improved test coverage and reduced QA cycle time by
-                  30%.
-                </li>
-              </ul>
-              <div class="resume-tags">
-                <span>Python</span><span>Data Science</span><span>UPI</span
-                ><span>Automation</span>
-              </div>
-            </article>
+
+          <div class="expertise-controls">
+            <button class="expertise-arrow" type="button" data-expertise-prev aria-label="Previous expertise">←</button>
+            <div class="expertise-dots" data-expertise-dots aria-label="Expertise slides"></div>
+            <button class="expertise-arrow" type="button" data-expertise-next aria-label="Next expertise">→</button>
           </div>
         </div>
-        <div class="resume-block-heading resume-education-heading">
-          <span class="resume-block-icon"
-            ><i class="fas fa-graduation-cap"></i
-          ></span>
-          <div>
-            <span class="resume-eyebrow">EDUCATION</span>
-            <h3>Academic Foundation</h3>
-          </div>
-        </div>
-        <div class="resume-education-card">
-          <div class="resume-education-icon">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="resume-education-content">
-            <div class="resume-card-top">
-              <div>
-                <h4>Bachelor of Technology — Computer Science Engineering</h4>
-                <p class="resume-company">
-                  <i class="fas fa-map-marker-alt"></i> National Institute of
-                  Technology, Patna, India
-                </p>
-              </div>
-              <span class="resume-year">2017 — 2021</span>
-            </div>
-            <div class="resume-tags">
-              <span>Data Structures &amp; Algorithms</span
-              ><span>Concurrency</span><span>Operating Systems</span
-              ><span>Networks</span><span>DBMS</span>
-            </div>
-          </div>
-        </div>
-        <div class="resume-download">
-          <div>
-            <strong>Want the complete profile?</strong
-            ><span
-              >Download the full resume for detailed experience and
-              skills.</span
-            >
-          </div>
-          <a
-            class="btn btn-primary resume-download-btn"
-            href="https://drive.google.com/file/d/1Wbndvfu0s_iI0hT1RDrQHCiWG_XImSWk/view?usp=sharing"
-            rel="noopener noreferrer"
-            target="_blank"
-            >Download Resume <i class="fas fa-download"></i
-          ></a>
+
+        <div class="expertise-footnote reveal"><span>ENGINEERING MINDSET</span><strong>Learn the tool. Understand the system. Build the solution.</strong></div>
+      </div>
+    </section>
+
+    <!-- Notes -->
+    <section class="section section-light" id="notes">
+      <div class="shell">
+        <div class="section-heading work-heading reveal"><div><p class="eyebrow dark"><span>05</span> ENGINEERING NOTES</p><h2>Things I’ve explored and explained.</h2></div><a class="text-link" href="https://datascienceepicenter.com" target="_blank" rel="noopener noreferrer">Visit blog ↗</a></div>
+        <div class="notes-grid">
+          <article class="note-card reveal"><div class="note-top"><span>COMPUTER VISION</span><span>01</span></div><h3>YOLO — You Only Look Once</h3><p>An introduction to YOLO and single-stage object detection, covering how a neural network can locate and classify objects efficiently in an image.</p><a href="https://medium.com/@imaniket/yolo-you-only-look-once-d6a040ee5292" target="_blank" rel="noopener noreferrer">Read note ↗</a></article>
+          <article class="note-card reveal"><div class="note-top"><span>DEEP LEARNING</span><span>02</span></div><h3>Art-Generation with Neural Style Transfer</h3><p>An introduction to Neural Style Transfer and how pretrained convolutional networks can combine content and artistic style to generate new images.</p><a href="https://medium.com/@imaniket/art-generation-with-deep-neural-style-transfer-d0a111c752cd" target="_blank" rel="noopener noreferrer">Read note ↗</a></article>
+          <article class="note-card note-next reveal"><div class="note-top"><span>COMING NEXT</span><span>03</span></div><h3>Systems, architecture &amp; AI</h3><p>Future notes will focus more on system design, backend architecture, distributed systems and practical AI engineering.</p><span class="note-muted">In progress</span></article>
         </div>
       </div>
     </section>
 
-    <!-- ======= Skills Section ======= -->
-    <section class="page-section" id="services">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Technical Skills</h2>
-              <h3 class="section-subheading text-muted">
-                Backend engineering, distributed systems, cloud-native
-                development and data-driven technologies.
-              </h3>
-              <br />
-            </div>
-          </div>
-          <div class="services-carousel owl-theme">
-            <div class="services-block">
-              <i class="fas fa-code"></i>
-              <span>C++ &amp; Python</span>
-              <p class="separator">
-                Primary programming languages for backend services, systems
-                programming, automation and data-oriented applications.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-server"></i>
-              <span>Backend &amp; APIs</span>
-              <p class="separator">
-                Designing and building backend services, REST APIs and service
-                integrations with a focus on scalability, reliability and
-                maintainability.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-project-diagram"></i>
-              <span>Distributed Systems</span>
-              <p class="separator">
-                Experience with distributed, low-latency systems, microservices
-                and services that coordinate large numbers of devices and
-                requests.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-sync-alt"></i>
-              <span>Concurrency &amp; Multithreading</span>
-              <p class="separator">
-                Multithreaded and concurrent programming for
-                performance-sensitive systems, with emphasis on synchronization,
-                reliability and efficient resource usage.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-cloud"></i>
-              <span>Cloud-Native Systems</span>
-              <p class="separator">
-                Backend architecture and services designed for scalable,
-                reliable and production-oriented cloud environments.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-broadcast-tower"></i>
-              <span>Telecom &amp; 4G/5G</span>
-              <p class="separator">
-                Software development for LTE/5G core-network systems, including
-                HSS-related functionality, SMS over NAS and secure certificate
-                lifecycle management.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-chart-line"></i>
-              <span>Data Science &amp; Machine Learning</span>
-              <p class="separator">
-                Applied data analysis and machine-learning experience, including
-                fraud-data workflows, classification and deep-learning projects.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-database"></i>
-              <span>Databases &amp; Data</span>
-              <p class="separator">
-                Working knowledge of SQL, MongoDB and data-processing workflows
-                for backend applications and analytics.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-globe"></i>
-              <span>Node.js &amp; Web Development</span>
-              <p class="separator">
-                Server-side JavaScript development with Node.js and Express,
-                along with responsive web application development and API
-                integration.
-              </p>
-            </div>
-            <div class="services-block">
-              <i class="fas fa-lightbulb"></i>
-              <span>System Design &amp; Debugging</span>
-              <p class="separator">
-                Strong focus on scalable architecture, performance analysis,
-                debugging, reliability and designing maintainable software
-                systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Services Section -->
-
-    <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="portfolio">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Projects</h2>
-              <h3 class="section-subheading text-muted"></h3>
-              <div class="row">
-                <div
-                  class="col-lg-12 d-flex justify-content-center"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <ul
-                    id="portfolio-flters"
-                    class="portfolio-filter-pills"
-                    role="tablist"
-                    aria-label="Project filters"
-                  >
-                    <li
-                      class="filter-active"
-                      data-filter="*"
-                      role="button"
-                      tabindex="0"
-                    >
-                      All Projects
-                    </li>
-                    <li data-filter=".filter-ML" role="button" tabindex="0">
-                      AI &amp; ML
-                    </li>
-                    <li data-filter=".filter-Data" role="button" tabindex="0">
-                      Data Science
-                    </li>
-                    <li data-filter=".filter-Python" role="button" tabindex="0">
-                      Python &amp; Apps
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
-            <div class="project-card">
-              <a
-                aria-label="Open Spam Classifier project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal1"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Spam Classifier project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/spam.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Spam Classifier</h4>
-                <div class="project-tags">
-                  <span>NLP</span><span>Naive Bayes</span
-                  ><span>Text Classification</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Data">
-            <div class="project-card">
-              <a
-                aria-label="Open Battle of the Neighborhoods project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal2"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Battle of the Neighborhoods project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/inside location.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Battle of the Neighborhoods</h4>
-                <div class="project-tags">
-                  <span>Foursquare API</span><span>K-Means</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
-            <div class="project-card">
-              <a
-                aria-label="Open Artistic Image Generation project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal3"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Artistic Image Generation project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/art.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Artistic Image Generation</h4>
-                <div class="project-tags">
-                  <span>Deep Learning</span><span>VGG-19</span
-                  ><span>Neural Style Transfer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Python">
-            <div class="project-card">
-              <a
-                aria-label="Open Tic Tac Toe project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal4"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Tic Tac Toe project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/tictactoe1.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Tic Tac Toe</h4>
-                <div class="project-tags">
-                  <span>Package Development</span><span>PyPI</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Python">
-            <div class="project-card">
-              <a
-                aria-label="Open Decision Review System project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal5"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Decision Review System project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/dhoni.png"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Decision Review System</h4>
-                <div class="project-tags">
-                  <span>Tkinter</span><span>Video Processing</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ML">
-            <div class="project-card">
-              <a
-                aria-label="Open Trigger Word Detection project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal6"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Trigger Word Detection project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/trigger.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Trigger Word Detection</h4>
-                <div class="project-tags">
-                  <span>Deep Learning</span><span>Sequence Modeling</span
-                  ><span>Audio Synthesis</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Python">
-            <div class="project-card">
-              <a
-                aria-label="Open Indian Railways Announcement System project details"
-                class="portfolio-link project-card-link"
-                data-toggle="modal"
-                href="#portfolioModal7"
-              >
-                <div class="project-media">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content">
-                      <span aria-hidden="true" class="project-plus">+</span>
-                    </div>
-                  </div>
-                  <img
-                    alt="Indian Railways Announcement System project"
-                    class="img-fluid project-image"
-                    decoding="async"
-                    loading="lazy"
-                    src="img/portfolio/railways.jpg"
-                  />
-                </div>
-              </a>
-              <div class="project-card-body">
-                <h4>Indian Railways Announcement System</h4>
-                <div class="project-tags">
-                  <span>Audio Processing</span><span>Automation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- GitHub -->
+    <section class="github-section section-dark" id="github">
+      <div class="shell">
+        <div class="github-head reveal"><div><p class="eyebrow"><span>06</span> OPEN SOURCE &amp; GITHUB</p><h2>Building and learning in public.</h2></div><a class="button button-light" href="https://github.com/imAniketSharma" target="_blank" rel="noopener noreferrer">View GitHub profile ↗</a></div>
+        <div class="github-frame reveal"><div class="calendar">Loading GitHub contributions...</div></div>
       </div>
     </section>
 
-    <!-- Blog -->
-    <section class="page-section" id="blog">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">My Thoughts</h2>
-              <h3 class="section-subheading text-muted"></h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="timeline">
-                <li>
-                  <div class="timeline-image">
-                    <img
-                      alt="YOLO object detection illustration"
-                      class="rounded-circle img-fluid"
-                      decoding="async"
-                      loading="lazy"
-                      src="img/about/yolo.png"
-                    />
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <!-- <h4>2009-2011</h4> -->
-                      <h4 class="subheading">YOLO (You Only Look Once)</h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">
-                        An introduction to YOLO and single-stage object
-                        detection, covering how a neural network can locate and
-                        classify objects efficiently in an image.
-                      </p>
-                      <p class="text-muted">
-                        <a
-                          href="https://medium.com/@imaniket/yolo-you-only-look-once-d6a040ee5292"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Read more</strong></a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="timeline-inverted">
-                  <div class="timeline-image">
-                    <img
-                      alt="Neural style transfer generated image"
-                      class="rounded-circle img-fluid"
-                      decoding="async"
-                      loading="lazy"
-                      src="img/about/generated_image.jpg"
-                    />
-                  </div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <!-- <h4>March 2011</h4> -->
-                      <h4 class="subheading">
-                        Art-Generation with Deep Neural Style Transfer
-                      </h4>
-                    </div>
-                    <div class="timeline-body">
-                      <p class="text-muted">
-                        Deep Learning • Computer Vision • Neural Style Transfer
-                      </p>
-                      <p class="text-muted">
-                        An introduction to Neural Style Transfer and how
-                        pretrained convolutional networks can combine content
-                        and artistic style to generate new images.
-                      </p>
-                      <p class="text-muted">
-                        <a
-                          href="https://medium.com/@imaniket/art-generation-with-deep-neural-style-transfer-d0a111c752cd"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Read more</strong></a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-layout">
+        <div class="contact-copy reveal"><p class="eyebrow dark"><span>07</span> LET’S CONNECT</p><h2>Have an interesting engineering problem?</h2><p>I’m open to software engineering opportunities, backend work and projects where strong engineering can make a measurable difference.</p><a class="button button-primary" href="mailto:aniketsharma552@gmail.com">Send me an email ↗</a></div>
+        <div class="contact-details reveal"><a href="mailto:aniketsharma552@gmail.com"><span>Email</span><strong>aniketsharma552@gmail.com</strong><b>↗</b></a><a href="tel:+919304147267"><span>Phone</span><strong>+91 93041 47267</strong><b>↗</b></a><a href="https://www.linkedin.com/in/imaniketsharma/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>/in/imaniketsharma</strong><b>↗</b></a><a href="https://github.com/imAniketSharma" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>@imAniketSharma</strong><b>↗</b></a></div>
       </div>
     </section>
+  </main>
 
-    <!-- ======= GitHub Contributions Section ======= -->
-    <section class="bg-light page-section" id="git">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">
-                GitHub Contributions
-              </h2>
-              <h3 class="section-subheading text-muted"></h3>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <div class="calendar">Loading GitHub contributions...</div>
-            <p class="text-center mt-3 mb-0">
-              <a
-                href="https://github.com/imAniketSharma"
-                rel="noopener noreferrer"
-                target="_blank"
-                ><strong>View GitHub Profile</strong></a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End GitHub Contributions Section -->
+  <footer class="site-footer">
+    <div class="shell footer-top"><div><a class="footer-brand" href="#top">Aniket Sharma</a><p>Backend Engineer · Systems · Scalable Software</p></div><div class="footer-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#notes">Notes</a></div><div class="footer-socials"><a href="https://www.linkedin.com/in/imaniketsharma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/imAniketSharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="mailto:aniketsharma552@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div></div>
+    <div class="shell footer-bottom"><span>© 2026 Aniket Sharma</span><span>Built with curiosity &amp; code.</span><a href="#top">Back to top ↑</a></div>
+  </footer>
 
-    <!-- ======= Contact Section ======= -->
-    <section class="contact" id="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2 class="text-center">Let's Get In Touch!</h2>
-          <p class="text-center">
-            Give a call, send email or drop message and I will get back to you
-            as soon as possible!
-          </p>
-          <br />
-        </div>
-        <div class="row" data-aos="fade-in">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Bangalore, India</p>
-              </div>
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>
-                  <a href="mailto:aniketsharma552@gmail.com"
-                    >aniketsharma552@gmail.com</a
-                  >
-                </p>
-              </div>
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p><a href="tel:+919304147267">+91 93041 47267</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form
-              action="mailto:aniketsharma552@gmail.com"
-              class="php-email-form"
-              enctype="text/plain"
-              id="contact-form"
-              method="post"
-              role="form"
-            >
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="contact-name">Your Name</label>
-                  <input
-                    class="form-control"
-                    id="contact-name"
-                    minlength="2"
-                    name="name"
-                    required=""
-                    type="text"
-                  />
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="contact-email">Your Email</label>
-                  <input
-                    class="form-control"
-                    id="contact-email"
-                    name="email"
-                    required=""
-                    type="email"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="contact-subject">Subject</label>
-                <input
-                  class="form-control"
-                  id="contact-subject"
-                  minlength="4"
-                  name="subject"
-                  required=""
-                  type="text"
-                />
-              </div>
-              <div class="form-group">
-                <label for="contact-message">Message</label>
-                <textarea
-                  class="form-control"
-                  id="contact-message"
-                  minlength="10"
-                  name="message"
-                  required=""
-                  rows="10"
-                ></textarea>
-              </div>
-              <p
-                class="contact-form-status"
-                id="contact-form-status"
-                role="status"
-                aria-live="polite"
-                hidden
-              ></p>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Contact Section -->
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-glow footer-glow-one"></div>
-      <div class="footer-glow footer-glow-two"></div>
-      <div class="container" data-aos="fade-up">
-        <div class="footer-main">
-          <div class="footer-brand-block">
-            <a class="footer-brand" href="#page-top">Aniket Sharma</a>
-            <p>Backend Engineer · Systems · Scalable Software</p>
-          </div>
-          <div class="footer-social-block">
-            <span>Connect with me</span>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a
-                  aria-label="LinkedIn"
-                  href="https://www.linkedin.com/in/imaniketsharma/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  aria-label="GitHub"
-                  href="https://github.com/imAniketSharma"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  aria-label="Kaggle"
-                  href="https://www.kaggle.com/iamaniket"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  ><i class="fab fa-kaggle"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <a
-            class="footer-top js-scroll-trigger"
-            href="#page-top"
-            aria-label="Back to top"
-          >
-            <i class="fas fa-arrow-up"></i>
-          </a>
-        </div>
-        <div class="footer-bottom">
-          <span>© 2026 Aniket Sharma. All rights reserved.</span>
-          <span class="footer-line"></span>
-          <span>Built with curiosity &amp; code.</span>
-        </div>
-      </div>
-    </footer>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal1"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">Spam Classification System</h3>
-                      <p class="item-intro text-muted">
-                        A text-classification project that predicts whether a
-                        message is spam or legitimate.
-                      </p>
-                      <img
-                        alt="Spam classification system screenshot"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/spam2.png"
-                      />
-                      <div class="project-details">
-                        <p>
-                          The system applies a Naive Bayes approach to classify
-                          message text into spam and non-spam categories.
-                        </p>
-                        <p>
-                          The project demonstrates practical text preprocessing,
-                          probabilistic classification and evaluation of a
-                          machine-learning model for message filtering.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>Text classification using a Naive Bayes approach.</p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>NLP</span><span>Naive Bayes</span
-                          ><span>Text Classification</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/spam-classifier-system"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Project</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal6"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">Trigger Word Detection</h3>
-                      <p class="item-intro text-muted">
-                        A deep-learning project for detecting a spoken trigger
-                        word in audio.
-                      </p>
-                      <img
-                        alt="Trigger word detection illustration"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/alexa.jpg"
-                      />
-                      <div class="project-details">
-                        <p>
-                          The system is designed to detect the trigger word
-                          activate in an audio stream and respond with a chime
-                          when the word is detected.
-                        </p>
-                        <p>
-                          Training data is synthesized from positive
-                          trigger-word recordings, negative speech examples and
-                          background-noise clips to build an audio detection
-                          dataset.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>Audio classification and trigger-word detection.</p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Deep Learning</span
-                          ><span>Sequence Modeling</span
-                          ><span>Audio Synthesis</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/Trigger-word-detection-system"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Repository</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal4"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">Tic Tac Toe</h3>
-                      <p class="item-intro text-muted">
-                        A Python package implementing the classic Tic Tac Toe
-                        game for the command line.
-                      </p>
-                      <img
-                        alt="Tic Tac Toe project screenshot"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/tictactoe.png"
-                      />
-                      <div class="project-details">
-                        <p>
-                          A lightweight Python implementation of the classic
-                          two-player 3×3 Tic Tac Toe game.
-                        </p>
-                        <p>
-                          The project was packaged for installation through PyPI
-                          and can be used from a Python environment.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>
-                          Python package development and distribution through
-                          PyPI.
-                        </p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Package Development</span><span>PyPI</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://pypi.org/project/my-tic-tac-toe/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Package</a
-                          ><a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/my-tic-tac-toe"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Repository</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal3"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">Artistic Image Generation</h3>
-                      <p class="item-intro text-muted">
-                        Deep-learning project implementing Neural Style Transfer
-                        with a pretrained VGG-19 network.
-                      </p>
-                      <img
-                        alt="Neural style transfer project screenshot"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/artistics.png"
-                      />
-                      <div class="project-details">
-                        <p>
-                          Neural Style Transfer combines the content of one
-                          image with the visual style of another to generate a
-                          new image.
-                        </p>
-                        <p>
-                          The implementation uses a pretrained VGG-19 network
-                          and intermediate feature representations learned from
-                          ImageNet to optimize the generated image.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>
-                          Neural Style Transfer using deep-learning feature
-                          representations.
-                        </p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Deep Learning</span><span>VGG-19</span
-                          ><span>Neural Style Transfer</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/Artistic-Image-Generation"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Repository</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal2"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">
-                        Battle of the Neighborhoods
-                      </h3>
-                      <p class="item-intro text-muted">
-                        A location-data analysis project exploring neighborhoods
-                        in Toronto for an Italian restaurant.
-                      </p>
-                      <img
-                        alt="Toronto neighborhood analysis project"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/toronto.jpg"
-                      />
-                      <div class="project-details">
-                        <p>
-                          The project uses neighborhood and venue information to
-                          compare areas in Toronto and identify potentially
-                          suitable locations for an Italian restaurant.
-                        </p>
-                        <p>
-                          It combines location data, venue information and
-                          clustering-based analysis to turn geographic data into
-                          a business-location comparison.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>
-                          Location analytics and clustering for neighborhood
-                          comparison.
-                        </p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Foursquare API</span><span>K-Means</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://imaniketsharma.github.io/Battle-of-Neighborhoods/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Project</a
-                          ><a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/Battle-of-Neighborhoods"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Repository</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal5"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">Decision Review System</h3>
-                      <p class="item-intro text-muted">
-                        A Python/Tkinter application for reviewing recorded
-                        cricket footage and supporting third-umpire-style
-                        decisions.
-                      </p>
-                      <img
-                        alt="Decision Review System screenshot"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/drs.jpg"
-                      />
-                      <div class="project-details">
-                        <p>
-                          The application provides a GUI for loading recorded
-                          video and reviewing cricket decisions such as
-                          run-outs, edges, LBW and catches.
-                        </p>
-                        <p>
-                          Video playback can be controlled to inspect footage in
-                          more detail and support a manual review workflow.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>Python GUI and video-review application.</p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Tkinter</span><span>Video Processing</span>
-                        </div>
-                        <div class="project-actions">
-                          <a
-                            class="btn btn-primary project-action-btn"
-                            href="https://github.com/imAniketSharma/Decision-Review-System"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            >View Repository</a
-                          >
-                        </div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="portfolio-modal modal fade"
-      id="portfolioModal7"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-body">
-                  <div class="project-modal-layout">
-                    <div class="project-modal-main">
-                      <h3 class="text-uppercase">
-                        Indian Railways Announcement System
-                      </h3>
-                      <p class="item-intro text-muted">
-                        A Python program that generates railway-style
-                        announcements from structured train information.
-                      </p>
-                      <img
-                        alt="Indian Railways announcement system screenshot"
-                        class="img-fluid d-block mx-auto"
-                        decoding="async"
-                        loading="lazy"
-                        src="img/portfolio/railways1.jpg"
-                      />
-                      <div class="project-details">
-                        <p>
-                          Generates railway-style station announcements from
-                          structured train information stored in an Excel
-                          database.
-                        </p>
-                        <p>
-                          Combines recorded audio segments for train number,
-                          name, source, destination and platform to create
-                          dynamic announcements.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="project-modal-side">
-                      <div class="portfolio-info">
-                        <h3>Project Overview</h3>
-                        <p>
-                          See the project links above for the repository or live
-                          demo.
-                        </p>
-                        <h3>Tech Stack</h3>
-                        <div class="project-tech">
-                          <span>Audio Processing</span><span>Automation</span>
-                        </div>
-                        <div class="project-actions"></div>
-                        <button
-                          class="btn btn-primary project-close-btn"
-                          data-dismiss="modal"
-                          type="button"
-                        >
-                          <i class="fas fa-times"></i> Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
-    <script src="vendor/typed/typed.js"></script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js"></script>
-    <script src="js/github-calendar.js"></script>
-    <script src="js/github-calendar-stats.js"></script>
-    <script src="js/contact-form.js"></script>
-    <script src="js/ui-focus.js"></script>
-    <script src="js/project-filters.js"></script>
-  </body>
+  <script src="https://unpkg.com/github-calendar@2.3.4/dist/github-calendar.min.js"></script>
+  <script src="js/github-calendar.js"></script>
+  <script src="js/github-calendar-stats.js"></script>
+  <script src="js/portfolio-v2.js"></script>
+</body>
 </html>
